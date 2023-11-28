@@ -3,6 +3,11 @@ import React, { FC } from "react";
 import styles from './Header.module.scss'
 import metal from '../../imgs/metal.jpg'
 import wood from '../../imgs/wood.jpg'
+import portal from '../../imgs/portal.jpg'
+import laminate from '../../imgs/laminate.jpg'
+import ceiling from '../../imgs/ceiling.jpg'
+import { Link } from "react-router-dom";
+import HeaderMenu from "../HeaderMenu/HeaderMenu";
 // import Logo from "../Logo/Logo";
 
 interface HeaderProps {
@@ -14,25 +19,13 @@ const Header: FC<HeaderProps> = () => {
   return (
     <div className={styles.header_wrapper}>
       <header>
-        <div className={styles.header}>
-          <h1>Мир дверей</h1>
-            <ul>
-              <li>Адрес: г. Александров ул. Красный переулок 16</li>
-              <li>График работы: Пн-пт: c 9:00 до 19:00,<br></br> Сб-вс: с 9:00 до 17:00</li>
-              <li id={styles.number}>+7 (910) 188-24-74</li>
-            </ul>
-        </div>
-        <menu id={styles.links}>
-          <ul>
-            <li>Каталог</li>
-            <li>О нас</li>
-            <li>Контакты</li>
-            <li>Услуги</li>
-          </ul>
-        </menu>
+        {/* <HeaderMenu></HeaderMenu> */}
         <img className={styles.webpack} src={metal} alt=""/>
         <img className={styles.webpack} src={wood} alt=""/>
-        <menu>
+        <img className={styles.webpack} src={portal} alt=""/>
+        <img className={styles.webpack} src={laminate} alt=""/>
+        <img className={styles.webpack} src={ceiling} alt=""/>
+        {/* <menu>
           <ul>
             <li>Межкомнатные двери</li>
             <li>Металлические двери</li>
@@ -40,7 +33,7 @@ const Header: FC<HeaderProps> = () => {
             <li>Ламинат</li>
             <li>Натяжные потолки</li>
           </ul>
-        </menu>
+        </menu> */}
         <div className={styles.items_wrapper}>
           <div className={styles.items}>
             <a href="">

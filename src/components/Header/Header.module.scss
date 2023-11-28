@@ -5,61 +5,17 @@
 }
 
 .header_wrapper{
+ 
   header{
-    padding-top: 20px;
-    max-width: var(--main-size);
-    margin: 0 auto;
-    height: 10vh;
-  
-    display: flex;
-    flex-direction: column;
+    // padding-top: 25px;
+    // max-width: var(--main-size);
+    // margin: 0 auto;
+    // height: 10vh;
+    // display: flex;
+    // flex-direction: column;
     
-    .header{
-      display: flex;
-      justify-content: space-between;
-      
-      ul{
-        display: flex;
-        align-items: center;
-        li{
-          font-weight: 400;
-          font-size: 16px;
-          color: #000;
-          transition: .3s;
-          margin: 0 20px;
-        }
-        #number{
-          font-weight: 500;
-        }
-      }
-    }
-    menu{
-      padding-top: 20px;
-      margin-bottom: 20px;
-      ul{
-        display: flex;
-        justify-content: center;
-        li{
-          font-size: 18px;
-          font-weight: 400;
-          margin: 0px 20px;
-          text-transform: uppercase;
-          color: #000;
-          transition: .3s;
-        }
-        li:hover{
-          color:var(--main-color);
-          cursor: pointer;
-        }
-      }
-    }
-    #links{
-      ul{
-        li{
-          font-weight: 500;
-        }
-      }
-    }
+   
+    
     .items_wrapper{
       
       .items{
@@ -70,23 +26,29 @@
         right: 0;
         
         a{
+          
           overflow: hidden;
           .item{
             width: 33vw;
-            height: 250px;
+            min-height: 250px;
             display: flex;
             align-items: center;
             justify-content: center;
             transition: .3s;
             p{
+              color: #D2001A;
               font-size: 24px;
               text-transform: uppercase;
-              color: #000000;
               font-weight: 500;
-            } 
+              transition: .3s;
+            }  
+            
           }   
           .item:hover{
             transform: scale(1.1);
+            p{
+              color: #FFDE00;
+            }
           }
         }
         
@@ -95,7 +57,7 @@
     #wood{
       // background: url('assets/images/header_bg.jpg') ;
       background: 
-		    linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3),), 
+		    linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35),), 
 		    url('images/wood.jpg');
       background-size: cover;
       background-repeat: no-repeat;
@@ -105,7 +67,7 @@
     }
     #metal{
       background: 
-		    linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3),), 
+        linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35),), 
 		    url('images/metal.jpg');
       background-size: cover;
       background-repeat: no-repeat;
@@ -115,18 +77,27 @@
     }
     #portal{
       background: 
-      linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3),), 
-      url('images/metal.jpg');
+      linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35),), 
+        url('images/portal.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
     }
     #laminat{
       background: 
-      linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3),), 
-      url('images/metal.jpg');
+      linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35),), 
+        url('images/laminate.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
     }
     #ceiling{
       background: 
-      linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3),), 
-      url('images/metal.jpg');
+      linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35),), 
+        url('images/ceiling.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
     }
     
   }

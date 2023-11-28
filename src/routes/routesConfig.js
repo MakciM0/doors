@@ -1,10 +1,10 @@
-
+import Catalog from '../page/catalog'
 
 const routesConfig = [
-  // {
-  //   path: '/Person',
-  //   element: <PersonPage></PersonPage>,
-  // },
+  {
+    path: '/Catalog',
+    element: <Catalog></Catalog>,
+  },
   
   // Error
 ]
