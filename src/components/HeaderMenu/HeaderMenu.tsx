@@ -10,7 +10,7 @@ interface HeaderMenuProps {
  
 const HeaderMenu: FC<HeaderMenuProps> = () => {
   return (
-    <div>
+    <>
     <div className={styles.header_wrapper}>
     <div className={styles.header}>
       
@@ -34,8 +34,7 @@ const HeaderMenu: FC<HeaderMenuProps> = () => {
           <li>Услуги</li>
         </ul>
       </menu>
-    
-    </div>
+      </>
   );
 }
  

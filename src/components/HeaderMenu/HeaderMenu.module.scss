@@ -1,6 +1,8 @@
+
+
 .header_wrapper{
- background: linear-gradient(90deg, rgba(210,0,26,1) 0%, rgb(180, 0, 9) 50%, rgba(210,0,26,1) 100%);
- min-height: 10vh;
+  background: linear-gradient(90deg, rgba(210,0,26,1) 0%, rgb(180, 0, 9) 50%, rgba(210,0,26,1) 100%);
+  min-height: 10vh;
     flex-direction: column;
   .header{
     display: flex;
@@ -10,7 +12,6 @@
     max-width: var(--main-size);
     margin: 0 auto;
     
-   
     h1{
       a{
         text-transform: uppercase;
@@ -35,7 +36,7 @@
   }
 }
 
-menu{
+#links{
   max-width: var(--main-size);
   margin: 10px auto;
   padding: 10px 0;
@@ -46,11 +47,20 @@ menu{
     justify-content: center;
     li{
       font-size: 18px;
-      font-weight: 400;
+      font-weight: 500;
       margin: 0px 20px;
       text-transform: uppercase;
       color: #000;
       transition: .3s;
+
+      a{
+        color: #000;
+        font-size: 18px;
+        font-weight: 500;
+      }
+      a:hover{
+        color:var(--red-color);
+      }
     }
     li:hover{
       color:var(--red-color);
@@ -58,10 +68,4 @@ menu{
     }
   }
 }
-#links{
-  ul{
-    li{
-      font-weight: 500;
-    }
-  }
-}
+
