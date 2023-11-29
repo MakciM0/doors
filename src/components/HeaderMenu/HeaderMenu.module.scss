@@ -12,8 +12,11 @@
     
    
     h1{
-      text-transform: uppercase;
-      color: var(--yellow-color);
+      a{
+        text-transform: uppercase;
+        color: var(--yellow-color);   
+      }
+
     }
     ul{
       display: flex;

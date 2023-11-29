@@ -20,38 +20,40 @@
       
       .items{
         display: flex;
-        flex-wrap: wrap;
+        flex-direction: column;
+        // flex-wrap: wrap;
         position: absolute;
         left: 0;
         right: 0;
-        
-        a{
-          
-          overflow: hidden;
-          .item{
-            width: 33vw;
-            min-height: 250px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: .3s;
-            p{
-              color: #D2001A;
-              font-size: 24px;
-              text-transform: uppercase;
-              font-weight: 500;
+
+        .items_top, .items_bottom{
+          display: flex;
+          a{
+            overflow: hidden;
+            .item{
+              width: 33.33vw;
+              min-height: 250px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
               transition: .3s;
-            }  
-            
-          }   
-          .item:hover{
-            transform: scale(1.1);
-            p{
-              color: #FFDE00;
+              p{
+                color: #D2001A;
+                font-size: 24px;
+                text-transform: uppercase;
+                font-weight: 500;
+                transition: .3s;
+              }  
+              
+            }   
+            .item:hover{
+              transform: scale(1.1);
+              p{
+                color: #FFDE00;
+              }
             }
           }
         }
-        
       }
     }
     #wood{

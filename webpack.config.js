@@ -1,12 +1,14 @@
 
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = {
     entry: { 
       filename: path.resolve(__dirname, "src/index.tsx") 
     },
     output: {
+        // publicPath: './',
         path: path.resolve(__dirname, "dist"),
         filename: '[name][contenthash].js',
         clean: true,
@@ -14,7 +16,10 @@ module.exports = {
     },
     module: {
         rules: [
-            { test: /\.(html)$/, use: ['html-loader'] },
+            {
+              test: /\.html$/,
+              use: 'html-loader'
+            },
             {
               test: /\.(js|jsx)$/,    
               exclude: /node_modules/,
@@ -66,6 +71,15 @@ module.exports = {
             filename: 'index.html',
             template: "./src/index.html",
         }),
+        new CopyPlugin({
+          patterns: [
+            {
+              from: path.resolve(__dirname, 'src/imgs'),
+              to:   path.resolve(__dirname, 'dist/images')
+            }
+          ]
+        })
+        
     ],
     devServer: {
         port: 3002,

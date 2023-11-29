@@ -1,4 +1,4 @@
-import Catalog from '../page/catalog'
+import Catalog from '../page/Catalog'
 
 const routesConfig = [
   {
