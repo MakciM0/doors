@@ -1,8 +1,12 @@
-import React, {FC, useState} from "react";
+import React, {FC, useEffect, useState} from "react";
 
 import styles from './Catalog.module.scss'
 
 import { DB } from "../../database";
+import { NavLink } from "react-router-dom";
+import Filters from "../../components/Filters/Filters";
+import { TItem } from "../../const/types";
+import { nullItem } from "../../const/const";
 
 interface CatalogProps {
   
@@ -11,13 +15,23 @@ interface CatalogProps {
 const Catalog: FC<CatalogProps> = () => {
 
   const [currentPage, setCurrentPage] = useState<number>(1);
+  const [currentFilter, setCurrentFilter] = useState<string>('wood')
+  const [records, setRecords] = useState<TItem[]>([])
+  const [nPage, setNPage] = useState<number>(1)
 
   const recordsPerPage = 6;
   const lastIndex = currentPage * recordsPerPage;
   const firstIndex = lastIndex - recordsPerPage;
-  const records = DB.slice(firstIndex, lastIndex);
-  const nPage = Math.ceil(DB.length / recordsPerPage);
+  // const nPage = Math.ceil(DB.length / recordsPerPage);
   const numbers = Array.from(Array(nPage), (_, index) => index + 1);
+  // let records = DB.slice(firstIndex, lastIndex);
+  useEffect(() =>{
+    //При изменение records делать .filter? 
+      setRecords((DB.filter((item) => item.style === currentFilter )).slice(firstIndex, lastIndex))
+      setNPage(Math.ceil((DB.filter((item) => item.style === currentFilter ).length / recordsPerPage)))
+    }, [currentFilter, currentPage])
+
+
 
   const handlePrevPage = () => {
     if (currentPage > 1) {
@@ -33,10 +47,19 @@ const Catalog: FC<CatalogProps> = () => {
     setCurrentPage(id)
   };
 
+  
+  
+
   return (
   <div className={styles.catalog}>
     <div className={styles.filters}>
-      filsters
+      {/* <Filters></Filters> */}
+
+    <ul>
+      <li onClick={() => setCurrentFilter('wood')}>Межкомнатные двери</li>
+      <li onClick={() => setCurrentFilter('metal')}>Железные двери</li>
+    </ul>
+
     </div>
     <div className={styles.shop}>
       <div className={styles.pagination_items}>
@@ -49,7 +72,7 @@ const Catalog: FC<CatalogProps> = () => {
               Цена за полотно:{el.price} ₽<br></br>
               <span className={styles.set}>Цена за комплект: {el.fullPrice} ₽</span>
             </span>
-            <button>Подробнее</button>
+            <NavLink to={`/Catalog/` + el.id}>Подробнее</NavLink>
           </div>
         ))}
       </div>

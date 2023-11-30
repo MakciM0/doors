@@ -1,0 +1,20 @@
+.ShopItem_wrapper{
+    max-width: var(--main-size);
+    margin: 0 auto;
+  .ShopItem{
+    display: flex;
+    justify-content: space-around;
+    .image{
+    
+    }
+    .info{
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      span{
+        font-size: 20px;
+        color: #000;
+      }
+    }
+  }
+}

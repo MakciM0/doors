@@ -6,6 +6,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 // import Catalog from "./page/Catalog/Catalog";
 import HeaderMenu from "./components/HeaderMenu/HeaderMenu";
 import Catalog from "./page/Catalog/Catalog";
+import ShopItem from "./components/ShopItem/ShopItem";
 
 
 
@@ -18,13 +19,16 @@ function App() {
         <Routes>
             <Route
               path={"/"}
-              element={<Header></Header>}
-            ></Route>
+              element={<Header></Header>}>
+            </Route>
             <Route
               path={"/Catalog"}
-              element={<Catalog></Catalog>}
-            ></Route>
-            
+              element={<Catalog></Catalog>}>
+            </Route>
+            <Route
+              path={"/Catalog/:id"}
+              element={<ShopItem></ShopItem>}>
+            </Route>
         </Routes>
       </BrowserRouter>
     </div>
