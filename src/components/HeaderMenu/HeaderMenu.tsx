@@ -1,5 +1,7 @@
 import React, {FC} from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
+
+import {animateScroll as scroll, Link, ScrollLink} from 'react-scroll'
 
 import styles from './HeaderMenu.module.scss'
 import { NavLink } from "react-router-dom";
@@ -29,10 +31,16 @@ const HeaderMenu: FC<HeaderMenuProps> = () => {
       <menu id={styles.links}>
         <ul>
           <li><NavLink to="/Catalog">Каталог</NavLink></li>
-          <li>О нас</li>
-          <li>Контакты</li>
+          {/* <li>О нас</li> */}
+          <li> 
+            <a href="/#about">О нас</a>
+          </li>
+          <li> 
+            <a href="/#contact">Контакты</a>
+          </li>
           <li>Услуги</li>
         </ul>
+        
       </menu>
       </>
   );

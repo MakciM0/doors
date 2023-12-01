@@ -17,12 +17,12 @@
    
     
     .items_wrapper{
-      
+      position: relative;
       .items{
         display: flex;
         flex-direction: column;
         // flex-wrap: wrap;
-        position: absolute;
+        // position: absolute;
         left: 0;
         right: 0;
 

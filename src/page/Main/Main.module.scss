@@ -1,0 +1,19 @@
+.Main{
+
+  .onTop{
+    text-align: right;
+    position: fixed;
+    bottom: 50px;
+    right:  50px;
+    img{
+      width: 100px;
+      height: 100px;
+      opacity: .6;
+      transition: .3s;
+      cursor: pointer;
+    }
+    img:hover{
+      opacity: 1;
+    }
+  }
+}

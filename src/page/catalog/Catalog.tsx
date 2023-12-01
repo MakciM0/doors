@@ -22,11 +22,9 @@ const Catalog: FC<CatalogProps> = () => {
   const recordsPerPage = 6;
   const lastIndex = currentPage * recordsPerPage;
   const firstIndex = lastIndex - recordsPerPage;
-  // const nPage = Math.ceil(DB.length / recordsPerPage);
   const numbers = Array.from(Array(nPage), (_, index) => index + 1);
-  // let records = DB.slice(firstIndex, lastIndex);
+
   useEffect(() =>{
-    //При изменение records делать .filter? 
       setRecords((DB.filter((item) => item.style === currentFilter )).slice(firstIndex, lastIndex))
       setNPage(Math.ceil((DB.filter((item) => item.style === currentFilter ).length / recordsPerPage)))
     }, [currentFilter, currentPage])
@@ -47,17 +45,14 @@ const Catalog: FC<CatalogProps> = () => {
     setCurrentPage(id)
   };
 
-  
-  
-
   return (
   <div className={styles.catalog}>
     <div className={styles.filters}>
       {/* <Filters></Filters> */}
 
     <ul>
-      <li onClick={() => setCurrentFilter('wood')}>Межкомнатные двери</li>
-      <li onClick={() => setCurrentFilter('metal')}>Железные двери</li>
+      <li className={currentFilter === 'wood' ? styles.filter_active : ''} onClick={() => setCurrentFilter('wood')}>Межкомнатные двери</li>
+      <li className={currentFilter === 'metal' ? styles.filter_active : ''} onClick={() => setCurrentFilter('metal')}>Железные двери</li>
     </ul>
 
     </div>
