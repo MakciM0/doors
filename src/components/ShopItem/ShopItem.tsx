@@ -29,15 +29,21 @@ const ShopItem: FC<ShopItemProps> = () => {
           <img src={`/images/${item.type}/${item.style}/door${item.id}.jpg` } alt="" />
         </div>
         <div className={styles.info}>
-          <span>{item.name}</span>
-          <span>{item.material}</span>
-          <span>Цена за полотно {item.price} ₽</span>
-          <span>Цена за комплект {item.fullPrice} ₽</span>
+          <div className={styles.name}>
+            <p>{item.name}</p>
+          </div>
+          <div className={styles.material}>
+            <p>Материал: {item.material}</p>
+          </div>
           <div className={styles.colors}>
             цвета
           </div>
           <div className={styles.sizes}>
             размеры
+          </div>
+          <div className={styles.price}>
+            <p>Цена за полотно {item.price} ₽</p>
+            <p>Цена за комплект {item.fullPrice} ₽</p>
           </div>
         </div>
       </div>
