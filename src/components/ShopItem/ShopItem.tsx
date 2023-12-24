@@ -16,10 +16,13 @@ const ShopItem: FC<ShopItemProps> = () => {
   const match = useMatch("/Catalog/:id");
   const idMatch = match?.params.id;
   const [item, setItem] = useState<TItem>(nullItem)
+  
 
   useEffect (() =>{
     setItem (DB.find((item) => item.id === idMatch))
   }, [])
+  const [currentPrice, setCurrentPrice] = useState<number>(item.price)
+  const [currentSize, setCurrentSize] = useState<string>(item.sizes[0])
 
   console.log(item)
   return (
@@ -39,13 +42,33 @@ const ShopItem: FC<ShopItemProps> = () => {
             цвета
           </div>
           <div className={styles.sizes}>
-            размеры
+            Размеры
+            {item.sizes.map((size, index) =>(
+              <button key={index}
+                onClick={() => setCurrentSize(item.sizes[index])} 
+                className={`${currentSize === item.sizes[index] ? styles.size_active : ''}`}
+              >{size}</button>
+              ))}
           </div>
           <div className={styles.price}>
-            <p>Цена за полотно {item.price} ₽</p>
-            <p>Цена за комплект {item.fullPrice} ₽</p>
+            <button 
+              onClick={() => setCurrentPrice(item.price)} 
+              className={`${currentPrice === item.price ? styles.price_active : ''}`}
+                >Цена за полотно {item.price} ₽
+            </button>
+            <button 
+              onClick={() => setCurrentPrice(item.fullPrice)}
+              className={`${currentPrice === item.fullPrice ? styles.price_active : ''}`}
+                >Цена за комплект {item.fullPrice} 
+            </button>
+            {/* <p>Цена за комплект {item.fullPrice} ₽</p> */}
           </div>
         </div>
+      </div>
+      <div className={styles.buttons}>
+        <button>Добавить в корзину</button>
+        <div className={styles.line}></div>
+        <p>Заказать замер и проконсультироваться можно по телефону : +7 (910) 188-24-74</p>
       </div>
     </div>
     );

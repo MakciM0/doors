@@ -1,22 +1,30 @@
 import React, { FC } from "react";
 
-import styles from './Header.module.scss'
+import { useAppDispatch } from "../../store/appHooks";
+import { SetCurrentFilter} from "../../store/productsSlice";
+import { Link } from "react-router-dom";
+import HeaderMenu from "../HeaderMenu/HeaderMenu";
+import { NavLink } from "react-router-dom";
+// import Catalog from "../../page/Catalog/Catalog";
+// import Logo from "../Logo/Logo";
+
+
 import metal from '../../imgs/metal.jpg'
 import wood from '../../imgs/wood.jpg'
 import portal from '../../imgs/portal.jpg'
 import laminate from '../../imgs/laminate.jpg'
 import ceiling from '../../imgs/ceiling.jpg'
-import { Link } from "react-router-dom";
-import HeaderMenu from "../HeaderMenu/HeaderMenu";
-// import Catalog from "../../page/Catalog/Catalog";
-// import Logo from "../Logo/Logo";
 
+import styles from './Header.module.scss'
 interface HeaderProps {
   
 }
 
  
 const Header: FC<HeaderProps> = () => {
+
+  const dispatch = useAppDispatch()
+
   return (
     <div className={styles.header_wrapper}>
       <header>
@@ -39,16 +47,16 @@ const Header: FC<HeaderProps> = () => {
         <div className={styles.items_wrapper}>
           <div className={styles.items}>
             <div className={styles.items_top}>
-              <a href="">
+              <NavLink to="/Catalog" onClick={() => dispatch(SetCurrentFilter('wood'))}>
                 <div className={styles.item} id={styles.wood}>
                   <p>Межкомнатные двери</p>
                 </div>
-              </a>
-              <a href="">
+              </NavLink>
+              <NavLink to="/Catalog" onClick={() => dispatch(SetCurrentFilter('metal'))}>
                 <div className={styles.item} id={styles.metal}>
                   <p>Металлические двери</p>
                 </div>
-              </a>
+              </NavLink>
             </div>
             <div className={styles.items_bottom}>
               <a href="">

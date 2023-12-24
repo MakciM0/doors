@@ -8,6 +8,6 @@ export const nullItem : TItem = {
   material: "",
   price: 0,
   fullPrice: 0,
-  size: "",
+  sizes: ['', ''],
   color: ""
 }

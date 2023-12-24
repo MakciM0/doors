@@ -8,6 +8,7 @@ import Catalog from "./page/Catalog/Catalog";
 import ShopItem from "./components/ShopItem/ShopItem";
 import Main from "./page/Main/Main";
 import Header from "./components/Header/Header";
+import Footer from "./components/Footer/Footer";
 
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
               element={<ShopItem></ShopItem>}>
             </Route>
         </Routes>
+        <Footer></Footer>
       </BrowserRouter>
     </div>
   );

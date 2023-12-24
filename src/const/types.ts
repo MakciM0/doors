@@ -9,6 +9,6 @@ export type TItem =
     material: string,
     price: number,
     fullPrice : number,
-    size: string,
+    sizes: string[],
     color: string,
   }

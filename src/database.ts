@@ -13,7 +13,7 @@ export const DB : TItem[] = [
 
     price: 90001,
     fullPrice : 5500,
-    size: '60x100',
+    sizes: ['600x2000', '700x2000', '800x2000', '900x2000'],
     color: 'black',
   },
   {
@@ -26,7 +26,7 @@ export const DB : TItem[] = [
 
     price: 90002,
     fullPrice : 5500,
-    size: '60x100',
+    sizes: ['600x2000', '700x2000', '800x2000', '900x2000'],
     color: 'black',
   },
   {
@@ -39,7 +39,7 @@ export const DB : TItem[] = [
 
     price: 90003,
     fullPrice : 5500,
-    size: '60x100',
+    sizes: ['600x2000', '700x2000', '800x2000', '900x2000'],
     color: 'black',
   },
   {
@@ -52,7 +52,7 @@ export const DB : TItem[] = [
 
     price: 90004,
     fullPrice : 5500,
-    size: '60x100',
+    sizes: ['600x2000', '700x2000', '800x2000', '900x2000'],
     color: 'black',
   },
   {
@@ -65,7 +65,7 @@ export const DB : TItem[] = [
 
     price: 90005,
     fullPrice : 5500,
-    size: '60x100',
+    sizes: ['600x2000', '700x2000', '800x2000', '900x2000'],
     color: 'black',
   },
   {
@@ -78,7 +78,7 @@ export const DB : TItem[] = [
 
     price: 90006,
     fullPrice : 5500,
-    size: '60x100',
+    sizes: ['600x2000', '700x2000', '800x2000', '900x2000'],
     color: 'black',
   },
   {
@@ -91,7 +91,7 @@ export const DB : TItem[] = [
 
     price: 90007,
     fullPrice : 5500,
-    size: '60x100',
+    sizes: ['600x2000', '700x2000', '800x2000', '900x2000'],
     color: 'black',
   },
   {
@@ -104,7 +104,7 @@ export const DB : TItem[] = [
 
     price: 90008,
     fullPrice : 5500,
-    size: '60x100',
+    sizes: ['600x2000', '700x2000', '800x2000', '900x2000'],
     color: 'black',
   },
   {
@@ -117,7 +117,7 @@ export const DB : TItem[] = [
 
     price: 90009,
     fullPrice : 5500,
-    size: '60x100',
+    sizes: ['600x2000', '700x2000', '800x2000', '900x2000'],
     color: 'black',
   },
 
@@ -133,7 +133,7 @@ export const DB : TItem[] = [
 
     price: 90007,
     fullPrice : 5500,
-    size: '60x100',
+    sizes: ['860x2050', '960x2050'],
     color: 'black',
   },
   {
@@ -146,7 +146,7 @@ export const DB : TItem[] = [
 
     price: 90007,
     fullPrice : 5500,
-    size: '60x100',
+    sizes: ['860x2050', '960x2050'],
     color: 'black',
   },
   {
@@ -159,7 +159,7 @@ export const DB : TItem[] = [
 
     price: 90007,
     fullPrice : 5500,
-    size: '60x100',
+    sizes: ['860x2050', '960x2050'],
     color: 'black',
   },
   {
@@ -172,7 +172,7 @@ export const DB : TItem[] = [
 
     price: 90007,
     fullPrice : 5500,
-    size: '60x100',
+    sizes: ['860x2050', '960x2050'],
     color: 'black',
   },
   {
@@ -185,7 +185,7 @@ export const DB : TItem[] = [
 
     price: 90007,
     fullPrice : 5500,
-    size: '60x100',
+    sizes: ['860x2050', '960x2050'],
     color: 'black',
   },
   {
@@ -198,7 +198,7 @@ export const DB : TItem[] = [
 
     price: 90007,
     fullPrice : 5500,
-    size: '60x100',
+    sizes: ['860x2050', '960x2050'],
     color: 'black',
   },
   {
@@ -211,7 +211,7 @@ export const DB : TItem[] = [
 
     price: 90007,
     fullPrice : 5500,
-    size: '60x100',
+    sizes: ['860x2050', '960x2050'],
     color: 'black',
   },
   {
@@ -224,7 +224,7 @@ export const DB : TItem[] = [
 
     price: 90007,
     fullPrice : 5500,
-    size: '60x100',
+    sizes: ['860x2050', '960x2050'],
     color: 'black',
   },
 ]
