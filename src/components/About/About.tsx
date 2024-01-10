@@ -39,7 +39,7 @@ const About: FC<AboutProps> = () => {
            <p>Постоянным покупателям предоставляются скидки, в день рождения при предъявлении паспорта на любую покупку 10 процентов скидка</p>
         </div>
         <div className={styles.img}>
-            <img src={`/images/about.jpg` }></img>
+            <img src={"/images/main/about.jpg"}  alt=""></img>
         </div>
       </div>
     </div>  
