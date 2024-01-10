@@ -32,7 +32,15 @@ const About: FC<AboutProps> = () => {
         <h2>О нас</h2>
       </div>
       <div className={styles.content}>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat itaque magnam beatae ea velit dignissimos iste fugit corporis accusantium eius provident exercitationem suscipit qui, ex sequi quidem sed at aspernatur?</p>
+        <div className={styles.info}>
+           <h3>Добро пожаловать в наш магазин Мир Дверей</h3>
+           <p>Который находится по адресу г. Александров Красный переулок д.16, дом со львами</p>
+           <p>У нас вы подберёте на свой вкус и любой кошелёк входную и межкомнатные двери, а также у нас в продаже линолиум и ламинат</p>
+           <p>Постоянным покупателям предоставляются скидки, в день рождения при предъявлении паспорта на любую покупку 10 процентов скидка</p>
+        </div>
+        <div className={styles.img}>
+            <img src={`/images/about.jpg` }></img>
+        </div>
       </div>
     </div>  
   );

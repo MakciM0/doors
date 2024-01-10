@@ -8,8 +8,13 @@ interface FooterProps {
  
 const Footer: FC<FooterProps> = () => {
   return (
-    <footer className={styles}>
-      footer
+    <footer className={styles.footer}>
+      <div className={styles.title}>
+        <h2>Мир дверей</h2>
+      </div>
+      <div className={styles.info}>
+
+      </div>
     </footer>  
   );
 }

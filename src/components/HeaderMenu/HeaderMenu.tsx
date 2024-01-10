@@ -39,6 +39,8 @@ const HeaderMenu: FC<HeaderMenuProps> = () => {
             <a href="/#contact">Контакты</a>
           </li>
           <li>Услуги</li>
+          <li>Наши работы</li>
+          <li>Акции</li>
         </ul>
         
       </menu>

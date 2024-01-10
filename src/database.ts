@@ -129,7 +129,7 @@ export const DB : TItem[] = [
     id: '008',
     type: 'doors',
     style: 'metal',
-    material: 'метал',
+    material: 'эконом', //Изменить (тип?)
 
     price: 90007,
     fullPrice : 5500,

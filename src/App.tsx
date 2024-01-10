@@ -9,6 +9,7 @@ import ShopItem from "./components/ShopItem/ShopItem";
 import Main from "./page/Main/Main";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
+import Arch from "./page/Arch/Arch";
 
 
 function App() {
@@ -29,6 +30,10 @@ function App() {
             <Route
               path={"/Catalog/:id"}
               element={<ShopItem></ShopItem>}>
+            </Route>
+            <Route
+              path={"/Arch"}
+              element={<Arch></Arch>}>
             </Route>
         </Routes>
         <Footer></Footer>

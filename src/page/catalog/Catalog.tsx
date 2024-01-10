@@ -88,11 +88,58 @@ const Catalog: FC<CatalogProps> = () => {
           <li onClick={() => dispatch(SetCurrentFilterMaterial('эмаль'))}
             className={currentFilterMaterial === 'эмаль' ? styles.filter_active_material : ''}
           >Эмаль</li>
+          {/* do this \/ */}
+          <li  className={currentFilterMaterial === 'эмалит' ? styles.filter_active_material : ''}
+              onClick={() => dispatch(SetCurrentFilterMaterial('эмалит'))}
+          >Эмалит</li>
+          <li  className={currentFilterMaterial === 'натур' ? styles.filter_active_material : ''}
+              onClick={() => dispatch(SetCurrentFilterMaterial('натур'))}
+          >Натуральный шпон</li>
+
+          {/* Доп свойства */}
+          {/* <li  className={currentFilterMaterial === 'экошпон' ? styles.filter_active_material : ''}
+              onClick={() => dispatch(SetCurrentFilterMaterial('экошпон'))}
+          >Со стеклом</li>
+          <li  className={currentFilterMaterial === 'экошпон' ? styles.filter_active_material : ''}
+              onClick={() => dispatch(SetCurrentFilterMaterial('экошпон'))}
+          >С зеркалом</li> */}
+          
+
         </ul>
+        
       </li>
      
       <li  className={currentFilter === 'metal' ? styles.filter_active : ''} onClick={() => dispatch(SetCurrentFilter('metal'))}>
         <span>Железные двери</span>
+        <ul>
+          <li className={currentFilterMaterial === 'эконом' ? styles.filter_active_material : ''}
+              onClick={() => dispatch(SetCurrentFilterMaterial('эконом'))}>
+            Эконом вариант
+          </li>
+          <li className={currentFilterMaterial === 'бюджет' ? styles.filter_active_material : ''}
+              onClick={() => dispatch(SetCurrentFilterMaterial('бюджет'))}>
+            Бюджетный вариант
+          </li>
+          <li >
+            Под заказ
+          </li>
+          <li>
+            Квартирный вариант
+          </li>
+          <li className={currentFilterMaterial === 'премиум' ? styles.filter_active_material : ''}
+              onClick={() => dispatch(SetCurrentFilterMaterial('премиум'))}>
+            Премиум  класса
+          </li>
+          <li>
+            С зеркалом
+          </li>
+          <li>
+            Хорошая шумоизоляция
+          </li>
+          <li>
+            Терморазрыв
+          </li>
+        </ul>
       </li>
     </ul>
     <button onClick={() => {resetFilters()}}>Сбросить фильтры</button>
