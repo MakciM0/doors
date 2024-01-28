@@ -30,7 +30,8 @@ const Header: FC<HeaderProps> = () => {
       <header>
         {/* <Catalog></Catalog> */}
         {/* <HeaderMenu></HeaderMenu> */}
-        <img className={styles.webpack} src={metal} alt=""/>
+        {/* Папка images/?/metal.jpg */}
+        <img className={styles.webpack} src={metal} alt=""/> 
         <img className={styles.webpack} src={wood} alt=""/>
         <img className={styles.webpack} src={portal} alt=""/>
         <img className={styles.webpack} src={laminate} alt=""/>

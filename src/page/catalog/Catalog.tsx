@@ -30,6 +30,11 @@ const Catalog: FC<CatalogProps> = () => {
   const firstIndex = lastIndex - recordsPerPage;
   let numbers = Array.from(Array(nPage), (_, index) => index + 1);
 
+  const [checkAppar, setCheckAppar] = useState<boolean>(false);
+  const [checkMirror, setCheckMirror] = useState<boolean>(false);
+  const [checkNoise, setCheckNoise] = useState<boolean>(false);
+  const [checkThermal, setCheckThermal] = useState<boolean>(false);
+
   useEffect(() =>{//Главный фильтр (железная или межкомнатная)
       setRecords((DB.filter((item) => item.style === currentFilter )).slice(firstIndex, lastIndex))
       setNPage(Math.ceil((DB.filter((item) => item.style === currentFilter ).length / recordsPerPage)))
@@ -80,8 +85,8 @@ const Catalog: FC<CatalogProps> = () => {
     <ul>
       <li className={currentFilter === 'wood' ? styles.filter_active : ''} onClick={() => dispatch(SetCurrentFilter('wood'))}>
         <span>Межкомнатные двери</span>
-        <ul>
-          <li> Материал:</li>
+        <ul className={styles.article}>
+          <li className={styles.title}> Материал:</li>
           <li  className={currentFilterMaterial === 'экошпон' ? styles.filter_active_material : ''}
               onClick={() => dispatch(SetCurrentFilterMaterial('экошпон'))}
           >Экошпон</li>
@@ -112,35 +117,48 @@ const Catalog: FC<CatalogProps> = () => {
       <li  className={currentFilter === 'metal' ? styles.filter_active : ''} onClick={() => dispatch(SetCurrentFilter('metal'))}>
         <span>Железные двери</span>
         <ul>
-          <li className={currentFilterMaterial === 'эконом' ? styles.filter_active_material : ''}
-              onClick={() => dispatch(SetCurrentFilterMaterial('эконом'))}>
-            Эконом вариант
+          <li>
+            <ul className={styles.article}>
+              <li className={styles.title}>--s---</li>
+              <li className={currentFilterMaterial === 'эконом' ? styles.filter_active_material : ''}
+                onClick={() => dispatch(SetCurrentFilterMaterial('эконом'))}>
+              Эконом вариант
+            </li>
+            <li className={currentFilterMaterial === 'бюджет' ? styles.filter_active_material : ''}
+                onClick={() => dispatch(SetCurrentFilterMaterial('бюджет'))}>
+              Бюджетный вариант
+            </li>
+            <li className={currentFilterMaterial === 'премиум' ? styles.filter_active_material : ''}
+                onClick={() => dispatch(SetCurrentFilterMaterial('премиум'))}>
+              Премиум  класса
+            </li>
+            </ul>
           </li>
-          <li className={currentFilterMaterial === 'бюджет' ? styles.filter_active_material : ''}
-              onClick={() => dispatch(SetCurrentFilterMaterial('бюджет'))}>
-            Бюджетный вариант
-          </li>
+          
           <li >
             Под заказ
           </li>
           <li>
-            Квартирный вариант
-          </li>
-          <li className={currentFilterMaterial === 'премиум' ? styles.filter_active_material : ''}
-              onClick={() => dispatch(SetCurrentFilterMaterial('премиум'))}>
-            Премиум  класса
+            <input onChange={() => setCheckAppar(!checkAppar)} type="checkbox" id="appar" />
+            <label htmlFor="appar">Квартирный вариант</label>
           </li>
           <li>
-            С зеркалом
+            <input onChange={() => setCheckMirror(!checkMirror)} type="checkbox" id="mirror" />
+            <label htmlFor="mirror">С зеркалом</label>
           </li>
           <li>
-            Хорошая шумоизоляция
+            <input onChange={() => setCheckNoise(!checkNoise)} type="checkbox" id="noise" />
+            <label htmlFor="noise">Хорошая шумоизоляция</label>
           </li>
           <li>
-            Терморазрыв
+            <input onChange={() => setCheckThermal(!checkThermal)} type="checkbox" id="thermal" />
+            <label htmlFor="thermal">Терморазрыв</label>
           </li>
         </ul>
       </li>
+      <li>Арки и Порталы</li>
+      <li>Ламинат</li>
+      <li>Натяжные потолки</li>
     </ul>
     <button onClick={() => {resetFilters()}}>Сбросить фильтры</button>
     </div>

@@ -131,6 +131,8 @@ export const DB : TItem[] = [
     style: 'metal',
     material: 'эконом', //Изменить (тип?)
 
+    
+
     price: 90007,
     fullPrice : 5500,
     sizes: ['860x2050', '960x2050'],

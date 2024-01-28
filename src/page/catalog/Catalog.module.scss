@@ -28,6 +28,18 @@
           color: var(--red-color);
         }
       }
+      .article{
+        border: 2px solid black;
+        border-radius: 10px;
+        .title{
+          font-size: 18px;
+          text-align: center;
+        }
+        li{
+          padding-left: 10px;
+          margin-bottom: 5px;
+        }
+      }
     }
   }
   .shop{
