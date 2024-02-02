@@ -21,6 +21,12 @@
   .content{
     max-width: var(--main-size);
     margin: 0 auto;
-
+    .map{
+      display: flex;
+      justify-content: center;
+      iframe{
+        max-width: 1240px;
+      }
+    }
   }
 }

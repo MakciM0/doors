@@ -28,7 +28,11 @@ const Contact: FC<ContactProps> = () => {
           <h2>Контакты</h2>
         </div>
         <div className={styles.content}>
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat itaque magnam beatae ea velit dignissimos iste fugit corporis accusantium eius provident exercitationem suscipit qui, ex sequi quidem sed at aspernatur?</p>
+          <div className={styles.map}>
+            <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A5a15e4b1dc7c4008e7820d6a2b1577a9d478d3f60afb014e51dcf6b527b33460&amp;source=constructor" width="1240" height="720" frameBorder="0"></iframe>
+          </div>
+          
+          {/* <img src="" alt="" /> */}
         </div>
     </div>  
   );
