@@ -1,20 +1,29 @@
 
 
+
 export type TItem = 
   {
     name: string,
     id: string,
     type: string,
-    style: string,
+    style: 'metal' | 'wood',
+    additional: {
+      appar: boolean,
+      mirror: boolean,
+      noise: boolean,
+      thermal: boolean,
+    },
     material: string,
 
-    // appar: boolean,
-    // mirror: boolean,
-    // noise: boolean,
-    // thermal: boolean,
+   
 
     price: number,
     fullPrice : number,
     sizes: string[],
     color: string,
   }
+
+export type TItemMetal ={
+    
+}
+

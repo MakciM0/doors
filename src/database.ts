@@ -1,6 +1,6 @@
 // import { TDoor } from "./types/types"
 
-import { TItem } from "./const/types";
+import { TItem, TItemMetal } from "./const/types";
 
 export const DB : TItem[] = [
   {
@@ -10,6 +10,12 @@ export const DB : TItem[] = [
     type: 'doors',
     style: 'wood',
     material: 'экошпон',
+    additional : {
+      appar: false,
+      mirror: false,
+      noise: false,
+      thermal: false,
+    },
 
     price: 90001,
     fullPrice : 5500,
@@ -23,6 +29,12 @@ export const DB : TItem[] = [
     type: 'doors',
     style: 'wood',
     material: 'эмаль',
+    additional : {
+      appar: false,
+      mirror: false,
+      noise: false,
+      thermal: false,
+    },
 
     price: 90002,
     fullPrice : 5500,
@@ -36,6 +48,12 @@ export const DB : TItem[] = [
     type: 'doors',
     style: 'wood',
     material: 'эмаль',
+    additional : {
+      appar: false,
+      mirror: false,
+      noise: false,
+      thermal: false,
+    },
 
     price: 90003,
     fullPrice : 5500,
@@ -49,6 +67,12 @@ export const DB : TItem[] = [
     type: 'doors',
     style: 'wood',
     material: 'эмаль',
+    additional : {
+      appar: false,
+      mirror: false,
+      noise: false,
+      thermal: false,
+    },
 
     price: 90004,
     fullPrice : 5500,
@@ -62,6 +86,12 @@ export const DB : TItem[] = [
     type: 'doors',
     style: 'wood',
     material: 'эмаль',
+    additional : {
+      appar: false,
+      mirror: false,
+      noise: false,
+      thermal: false,
+    },
 
     price: 90005,
     fullPrice : 5500,
@@ -75,7 +105,13 @@ export const DB : TItem[] = [
     type: 'doors',
     style: 'wood',
     material: 'эмаль',
-
+    additional : {
+      appar: false,
+      mirror: false,
+      noise: false,
+      thermal: false,
+    },
+    
     price: 90006,
     fullPrice : 5500,
     sizes: ['600x2000', '700x2000', '800x2000', '900x2000'],
@@ -88,6 +124,12 @@ export const DB : TItem[] = [
     type: 'doors',
     style: 'wood',
     material: 'эмаль',
+    additional : {
+      appar: false,
+      mirror: false,
+      noise: false,
+      thermal: false,
+    },
 
     price: 90007,
     fullPrice : 5500,
@@ -101,6 +143,12 @@ export const DB : TItem[] = [
     type: 'doors',
     style: 'wood',
     material: 'экошпон',
+    additional : {
+      appar: false,
+      mirror: false,
+      noise: false,
+      thermal: false,
+    },
 
     price: 90008,
     fullPrice : 5500,
@@ -114,6 +162,12 @@ export const DB : TItem[] = [
     type: 'doors',
     style: 'wood',
     material: 'экошпон',
+    additional : {
+      appar: false,
+      mirror: false,
+      noise: false,
+      thermal: false,
+    },
 
     price: 90009,
     fullPrice : 5500,
@@ -126,11 +180,149 @@ export const DB : TItem[] = [
   {
     name: 'Металлическая дверь',
 
-    id: '008',
+    id: '101',
     type: 'doors',
     style: 'metal',
-    material: 'эконом', //Изменить (тип?)
+    material: 'метал', //Изменить (тип?)
+    additional : {
+      appar: true,
+      mirror: true,
+      noise: true,
+      thermal: true,
+    },
 
+    price: 90007,
+    fullPrice : 5500,
+    sizes: ['860x2050', '960x2050'],
+    color: 'black',
+  },
+  {
+    name: 'Металлическая дверь',
+
+    id: '102',
+    type: 'doors',
+    style: 'metal',
+    material: 'метал',
+    additional : {
+      appar: true,
+      mirror: true,
+      noise: true,
+      thermal: true,
+    },
+
+    price: 90007,
+    fullPrice : 5500,
+    sizes: ['860x2050', '960x2050'],
+    color: 'black',
+  },
+  {
+    name: 'Металлическая дверь',
+
+    id: '103',
+    type: 'doors',
+    style: 'metal',
+    material: 'метал',
+    additional : {
+      appar: true,
+      mirror: true,
+      noise: true,
+      thermal: true,
+    },
+
+    price: 90007,
+    fullPrice : 5500,
+    sizes: ['860x2050', '960x2050'],
+    color: 'black',
+  },
+  {
+    name: 'Металлическая дверь',
+
+    id: '104',
+    type: 'doors',
+    style: 'metal',
+    material: 'метал',
+    additional : {
+      appar: true,
+      mirror: true,
+      noise: true,
+      thermal: true,
+    },
+
+    price: 90007,
+    fullPrice : 5500,
+    sizes: ['860x2050', '960x2050'],
+    color: 'black',
+  },
+  {
+    name: 'Металлическая дверь',
+
+    id: '105',
+    type: 'doors',
+    style: 'metal',
+    material: 'метал',
+    additional : {
+      appar: false,
+      mirror: true,
+      noise: false,
+      thermal: false,
+    },
+
+    price: 90007,
+    fullPrice : 5500,
+    sizes: ['860x2050', '960x2050'],
+    color: 'black',
+  },
+  {
+    name: 'Металлическая дверь',
+
+    id: '106',
+    type: 'doors',
+    style: 'metal',
+    material: 'метал',
+    additional : {
+      appar: false,
+      mirror: false,
+      noise: false,
+      thermal: false,
+    },
+
+    price: 90007,
+    fullPrice : 5500,
+    sizes: ['860x2050', '960x2050'],
+    color: 'black',
+  },
+  {
+    name: 'Металлическая дверь',
+
+    id: '107',
+    type: 'doors',
+    style: 'metal',
+    material: 'метал',
+    additional : {
+      appar: false,
+      mirror: false,
+      noise: false,
+      thermal: false,
+    },
+
+    price: 90007,
+    fullPrice : 5500,
+    sizes: ['860x2050', '960x2050'],
+    color: 'black',
+  },
+  {
+    name: 'Металлическая дверь',
+
+    id: '108',
+    type: 'doors',
+    style: 'metal',
+    material: 'метал',
+    additional : {
+      appar: false,
+      mirror: false,
+      noise: false,
+      thermal: false,
+    },
     
 
     price: 90007,
@@ -141,88 +333,17 @@ export const DB : TItem[] = [
   {
     name: 'Металлическая дверь',
 
-    id: '008',
+    id: '109',
     type: 'doors',
     style: 'metal',
     material: 'метал',
-
-    price: 90007,
-    fullPrice : 5500,
-    sizes: ['860x2050', '960x2050'],
-    color: 'black',
-  },
-  {
-    name: 'Металлическая дверь',
-
-    id: '008',
-    type: 'doors',
-    style: 'metal',
-    material: 'метал',
-
-    price: 90007,
-    fullPrice : 5500,
-    sizes: ['860x2050', '960x2050'],
-    color: 'black',
-  },
-  {
-    name: 'Металлическая дверь',
-
-    id: '008',
-    type: 'doors',
-    style: 'metal',
-    material: 'метал',
-
-    price: 90007,
-    fullPrice : 5500,
-    sizes: ['860x2050', '960x2050'],
-    color: 'black',
-  },
-  {
-    name: 'Металлическая дверь',
-
-    id: '008',
-    type: 'doors',
-    style: 'metal',
-    material: 'метал',
-
-    price: 90007,
-    fullPrice : 5500,
-    sizes: ['860x2050', '960x2050'],
-    color: 'black',
-  },
-  {
-    name: 'Металлическая дверь',
-
-    id: '008',
-    type: 'doors',
-    style: 'metal',
-    material: 'метал',
-
-    price: 90007,
-    fullPrice : 5500,
-    sizes: ['860x2050', '960x2050'],
-    color: 'black',
-  },
-  {
-    name: 'Металлическая дверь',
-
-    id: '008',
-    type: 'doors',
-    style: 'metal',
-    material: 'метал',
-
-    price: 90007,
-    fullPrice : 5500,
-    sizes: ['860x2050', '960x2050'],
-    color: 'black',
-  },
-  {
-    name: 'Металлическая дверь',
-
-    id: '008',
-    type: 'doors',
-    style: 'metal',
-    material: 'метал',
+    additional : {
+      appar: false,
+      mirror: false,
+      noise: true,
+      thermal: false,
+    },
+    
 
     price: 90007,
     fullPrice : 5500,

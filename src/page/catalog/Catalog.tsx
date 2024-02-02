@@ -43,15 +43,45 @@ const Catalog: FC<CatalogProps> = () => {
       dispatch(SetCurrentFilterMaterial(''))
     }, [currentFilter, currentPage])
 
-    useEffect(() =>{
+    useEffect(() =>{//Материал межком двери
       
-      if(currentFilterMaterial){
+      if(currentFilterMaterial){  
         dispatch(ChangeCurrentPage(1))
-        setRecords((DB.filter((item) => item.material === currentFilterMaterial)).slice(firstIndex, lastIndex))
+        setRecords((DB.filter((item) => item.material === currentFilterMaterial ))
+        .slice(firstIndex, lastIndex))
         setNPage(Math.ceil((records.filter((item) => item.material === currentFilter ).length / recordsPerPage)))
         numbers = Array.from(Array(nPage), (_, index) => index + 1);
       }
     }, [currentFilterMaterial, currentPage])
+
+    useEffect(() =>{ //фильтры желез двери
+      if(currentFilter === 'metal'){
+        dispatch(ChangeCurrentPage(1))
+        let filtered :TItem[]
+        if(checkAppar){
+          filtered = [].concat(DB.filter((item) => item.additional.appar === true, filtered))
+        }
+        if(checkMirror){
+          filtered = [].concat(DB.filter((item) => item.additional.mirror === true, filtered))
+        }
+        if(checkNoise){
+          filtered = [].concat(DB.filter((item) => item.additional.noise === true, filtered))
+        }
+        if(checkThermal){
+          filtered = [].concat(DB.filter((item) => item.additional.thermal === true, filtered))
+        }
+        if(filtered){
+          setRecords(filtered)
+          console.log(filtered)
+          // console.log(records)
+        }
+        // setRecords(filtered)
+        records.slice(firstIndex, lastIndex)
+        setNPage(Math.ceil((records.filter((item) => item.material === currentFilter ).length / recordsPerPage)))
+        numbers = Array.from(Array(nPage), (_, index) => index + 1);
+      }
+      console.log(checkAppar)
+    }, [checkAppar, checkMirror, checkNoise, checkThermal])
 
 
 
