@@ -1,0 +1,21 @@
+.OurWorks{
+    padding-bottom: 100px;
+    // background-color: #EFEFEF;
+    .title{
+      max-width: var(--main-size);
+      margin: 0 auto;
+      margin-bottom: 30px;
+      border-bottom: 3px solid var(--red-color);
+      h2{
+        font-size: 30px;
+        display: inline-block;
+        position: relative;
+        top: 19px;
+        left: 100px;
+        padding: 0 10px;
+        color: var( --yellow-color);
+        background-color: #fff;
+        text-transform: uppercase; 
+      }
+    }
+  }

@@ -7,6 +7,9 @@ import Contact from "../../components/Contact/Contact";
 import { animateScroll as scroll } from "react-scroll";
 
 import styles from './Main.module.scss'
+import Services from "../../components/Services/Services";
+import OurWorks from "../../components/OurWorks/OurWorks";
+import Promotion from "../../components/Promotion/Promotion";
 
 
 
@@ -45,7 +48,9 @@ useEffect(() => {
     : ''}
     <About></About>
     <Contact></Contact>
-    
+    <Services></Services>
+    <OurWorks></OurWorks>
+    <Promotion></Promotion>
   </div>  
   );
 }
