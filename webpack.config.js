@@ -3,6 +3,7 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CopyPlugin = require('copy-webpack-plugin');
 
+
 module.exports = {
     entry: { 
       filename: path.resolve(__dirname, "src/index.tsx") 
@@ -31,7 +32,7 @@ module.exports = {
               exclude: '/node_modules/'
             },
             {
-              test: /\.(module.scss|scss)$/,
+              test: /\.(module.scss|scss)|(.css)$/,
               use: [
                 { 
                   loader: "style-loader",
@@ -78,7 +79,7 @@ module.exports = {
               to:   path.resolve(__dirname, 'dist/images')
             }
           ]
-        })
+        }),
         
     ],
     devServer: {

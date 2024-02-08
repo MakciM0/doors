@@ -1,15 +1,73 @@
-import React, {FC, useEffect} from "react";
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+import React, {FC, useEffect, useState} from "react";
 
 import styles from './OurWorks.module.scss'
 import { useLocation } from "react-router-dom";
+import { SliderItems } from "../../const/const";
+
+import Slider from 'react-slick';
+
 
 interface OurWorksProps {
   
 }
+
+
  
 const OurWorks: FC<OurWorksProps> = () => {
+  
+  const settings = {
+    dots: true,
+    // adaptiveHeight: true,
+    variableWidth: true,
+    centerMode: true,
+    infinite: true,
+    autoplay: true,
+    autoplaySpeed: 6000,
+    cssEase: "linear",
+    speed: 1200,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    nextArrow: <SampleNextArrow />,
+    prevArrow: <SamplePrevArrow />,
+    responsive: [
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          initialSlide: 1
+        }
+      },
+
+    ]
+  };
+
+  function SampleNextArrow(props : any) {
+    const { className, style, onClick } = props;
+    return (
+      <div
+        className={className}
+        style={{ ...style, display: "block", background: "red" }}
+        onClick={onClick}
+      />
+    );
+  }
+  function SamplePrevArrow(props: any) {
+    const { className, style, onClick } = props;
+    return (
+      <div
+        className={className}
+        style={{ ...style, display: "block", background: "red",  }}
+        onClick={onClick}
+      />
+    );
+  }
 
   const location = useLocation()
+
+ 
 
   useEffect(()=> {
     if (location.hash) {
@@ -26,9 +84,21 @@ const OurWorks: FC<OurWorksProps> = () => {
     <div className={styles.OurWorks}>
       <div id='ourworks' className={styles.title}>
         <h2>Наши работы</h2>
+        
       </div>
       <div className={styles.content}>
-        
+
+        <div className={styles.slider}>
+        <Slider {...settings}>
+        {SliderItems.map((photo, index) =>(
+          <div key={photo.id}>
+             <img alt={photo.title} src={photo.url} />
+          </div>
+        ))}
+        </Slider>
+        </div>
+
+
       </div>
     </div>  
   );
