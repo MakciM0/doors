@@ -3,11 +3,40 @@ import React, {FC, useEffect} from "react";
 import styles from './Promotion.module.scss'
 import { useLocation } from "react-router-dom";
 
+import Slider from 'react-slick';
+
 interface PromotionProps {
   
 }
  
 const Promotion: FC<PromotionProps> = () => {
+
+  const settings = {
+    dots: true,
+    // adaptiveHeight: true,
+    // variableWidth: true,
+    // centerMode: true,
+    infinite: true,
+    autoplay: true,
+    autoplaySpeed: 2500,
+    pauseOnHover: true,
+    cssEase: "linear",
+    speed: 750,
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    vertical: true,
+    verticalSwiping: true,
+    responsive: [
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          initialSlide: 1
+        }
+      },
+    ]
+  };
 
   const location = useLocation()
 
@@ -28,7 +57,36 @@ const Promotion: FC<PromotionProps> = () => {
         <h2>Акции</h2>
       </div>
       <div className={styles.content}>
-        
+        <Slider {...settings}>
+          <div className={styles.item}>
+            <div className={styles.item_content}>
+              <img src="/images/icons/promotion.png" alt=""></img>
+              <p>При покупке от пяти межкомнатных дверей ручки в подарок</p>
+              <img src="/images/icons/promotion.png" alt=""></img>
+            </div>
+          </div>
+          <div className={styles.item}>
+            <div className={styles.item_content}>
+              <img src="/images/icons/promotion.png" alt=""></img>
+              <p>Пенсионерам скидка 5%</p>
+              <img src="/images/icons/promotion.png" alt=""></img>
+            </div>
+          </div>
+          <div className={styles.item}>
+            <div className={styles.item_content}>
+              <img src="/images/icons/promotion.png" alt=""></img>
+              <p>Именниникам в день рождения 10% скидка</p>
+              <img src="/images/icons/promotion.png" alt=""></img>
+            </div>
+          </div>
+          <div className={styles.item}>
+            <div className={styles.item_content}>
+              <img src="/images/icons/promotion.png" alt=""></img>
+              <p>Постоянным покупателям предоставляются скидки</p>
+              <img src="/images/icons/promotion.png" alt=""></img>
+            </div>
+          </div>
+        </Slider>
       </div>
     </div>  
   );

@@ -1,4 +1,35 @@
 footer{
-  height: 500px;
-  background-color: #fff;
+  background-color: var(--black-color);
+  .footer{
+    max-width: var(--main-size);
+    margin: 0 auto;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    a{
+      color: #000;
+      transition: .3s;
+    }
+    a:hover{
+      color:var(--red-color);
+    }
+    .title{
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      h2{
+        font-size: 20px;
+      }
+      span{
+        font-size: 18px;
+      }
+    }
+    .main_ul{
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      li{
+        padding: 5px;
+      }
+    }
+  }
 }

@@ -28,11 +28,15 @@ const Contact: FC<ContactProps> = () => {
           <h2>Контакты</h2>
     </div>
     <div className={styles.content}>
-      {/* <div className={styles.map}> */}
+      <div className={styles.map}>
         <img src={"/images/main/card.jpg"}  alt="Мир дверей г. Александров ул. Красный переулок д.16" />
         <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A5a15e4b1dc7c4008e7820d6a2b1577a9d478d3f60afb014e51dcf6b527b33460&amp;source=constructor" width="620" height="460" frameBorder="0"></iframe>
-      {/* </div> */}
-      {/* <img src="" alt="" /> */}
+      </div>
+      <div className={styles.social}>
+        <ul>
+          <li><a href="https://vk.com/club131800606" target="_blank">Мы в контакте <img src="/images/icons/vkontakte.png" alt="VK" /></a></li>
+        </ul>
+      </div>
     </div>
     </div>  
   );

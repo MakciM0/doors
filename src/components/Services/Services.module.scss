@@ -21,14 +21,17 @@
   .content{
     max-width: var(--main-size);
     margin: 0 auto;
+    // padding-top: 20px;
     display: flex;
     justify-content: space-around;
     .item{
+      width: 33%;
       text-align: center;
       margin: 10px;
       img{
         max-width: 100%;
-        height: 600px;
+        height: 560px;
+        border: 1px solid black;
         border-radius: 10px;
       }
       h3{
@@ -37,6 +40,7 @@
       }
       p{
         font-size: 17px;
+        line-height: 22px;
       }
     }
   }
