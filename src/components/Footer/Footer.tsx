@@ -27,11 +27,11 @@ const Footer: FC<FooterProps> = () => {
             <li>
               <ul>
                 <li><NavLink to="/Catalog">Каталог</NavLink></li>
-                <li><NavLink to="/Arch">Межкомнатные двери</NavLink></li>
+                <li><NavLink to="/Catalog">Межкомнатные двери</NavLink></li>
                 <li><NavLink to="/Catalog" onClick={() => dispatch(SetCurrentFilter('metal'))}>Металлические двери</NavLink></li>
                 <li><NavLink to="/Arch"> Арки и порталы</NavLink></li>
-                <li><NavLink to="/Arch">Ламинат</NavLink></li>
-                <li><NavLink to="/Arch">Натяжные потолки</NavLink></li>
+                <li><NavLink to="/">Ламинат</NavLink></li>
+                <li><NavLink to="/">Натяжные потолки</NavLink></li>
               </ul>
             </li>
 

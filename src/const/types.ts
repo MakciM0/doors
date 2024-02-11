@@ -7,6 +7,7 @@ export type TItem =
     id: string,
     type: string,
     style: 'metal' | 'wood',
+    priceCategory : '' | 'eco' | 'budget' | 'premium',
     additional: {
       appar: boolean,
       mirror: boolean,

@@ -34,7 +34,7 @@ const Contact: FC<ContactProps> = () => {
       </div>
       <div className={styles.social}>
         <ul>
-          <li><a href="https://vk.com/club131800606" target="_blank">Мы в контакте <img src="/images/icons/vkontakte.png" alt="VK" /></a></li>
+          <li><a href="https://vk.com/club131800606" target="_blank">Мы Вконтакте <img src="/images/icons/vkontakte.png" alt="VK" /></a></li>
         </ul>
       </div>
     </div>

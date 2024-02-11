@@ -5,6 +5,7 @@ export const nullItem : TItem = {
   id: "",
   type: "",
   style: "wood",
+  priceCategory : '',
   additional : {
     appar: false,
     mirror: false,

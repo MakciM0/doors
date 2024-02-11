@@ -22,6 +22,8 @@ const Catalog: FC<CatalogProps> = () => {
   const currentFilterMaterial = useAppSelector((state) => state.products.CurrentFilterMaterial);
   const currentFilter = useAppSelector((state) => state.products.CurrentFilter);
 
+  const [currentPriceCategory, setCurrentPriceCategory] = useState<'' | 'eco' | 'budget' | 'premium'>('')
+
   const [records, setRecords] = useState<TItem[]>([])
   const [nPage, setNPage] = useState<number>(1)
 
@@ -54,31 +56,74 @@ const Catalog: FC<CatalogProps> = () => {
       }
     }, [currentFilterMaterial, currentPage])
 
+    useEffect(() =>{ //Ценовая категория желез дверей
+      if(currentPriceCategory){
+        dispatch(ChangeCurrentPage(1))
+        setRecords((DB.filter((item) => item.priceCategory === currentPriceCategory ))
+        .slice(firstIndex, lastIndex))
+        setNPage(Math.ceil((records.filter((item) => item.priceCategory === currentPriceCategory ).length / recordsPerPage)))
+        numbers = Array.from(Array(nPage), (_, index) => index + 1);
+      }
+    }, [currentPriceCategory, currentPage])
+
     useEffect(() =>{ //фильтры желез двери
       if(currentFilter === 'metal'){
         dispatch(ChangeCurrentPage(1))
-        let filtered :TItem[]
+        let filtered : TItem[] = []
+
+
+
         if(checkAppar){
-          filtered = [].concat(DB.filter((item) => item.additional.appar === true, filtered))
+          let NewItems :TItem[] = []
+          NewItems = DB.filter((item) => item.priceCategory === currentPriceCategory).filter((item) => item.additional.appar === true)
+          filtered = [...filtered, ...NewItems]
         }
         if(checkMirror){
-          filtered = [].concat(DB.filter((item) => item.additional.mirror === true, filtered))
+          let NewItems :TItem[] = []
+          NewItems = DB.filter((item) => item.additional.mirror === true)
+          filtered = [...filtered, ...NewItems]
         }
         if(checkNoise){
-          filtered = [].concat(DB.filter((item) => item.additional.noise === true, filtered))
+          let NewItems :TItem[] = []
+          NewItems = DB.filter((item) => item.additional.noise === true)
+          filtered = [...filtered, ...NewItems]
         }
         if(checkThermal){
-          filtered = [].concat(DB.filter((item) => item.additional.thermal === true, filtered))
+          let NewItems :TItem[] = []
+          NewItems = DB.filter((item) => item.additional.thermal === true)
+          filtered = [...filtered, ...NewItems]
         }
-        if(filtered){
-          setRecords(filtered)
-          console.log(filtered)
-          // console.log(records)
+
+        if(filtered.length > 1){
+          
+          const newSet = new Set(filtered);
+          let filteredDuplicates : TItem[] = Array.from(newSet)
+          console.log(filteredDuplicates)
+          if(currentPriceCategory){
+            filteredDuplicates.filter((item) => item.priceCategory === currentPriceCategory)
+          }
+          // console.log(filteredDuplicates)
+          
+          setRecords(filteredDuplicates)
+          // console.log(filteredDuplicates)
+
+          setNPage(Math.ceil((records.filter((item) => item.style === currentFilter ).length / recordsPerPage)))
+          numbers = Array.from(Array(nPage), (_, index) => index + 1);
+          
+          dispatch(SetCurrentFilterMaterial(''))
+        }  else{
+          setRecords((DB.filter((item) => item.style === currentFilter )).slice(firstIndex, lastIndex))
+            setNPage(Math.ceil((DB.filter((item) => item.style === currentFilter ).length / recordsPerPage)))
+            console.log(123)
+            // console.log(filtered)
+            numbers = Array.from(Array(nPage), (_, index) => index + 1);
+            dispatch(SetCurrentFilterMaterial(''))
         }
+        
         // setRecords(filtered)
-        records.slice(firstIndex, lastIndex)
-        setNPage(Math.ceil((records.filter((item) => item.material === currentFilter ).length / recordsPerPage)))
-        numbers = Array.from(Array(nPage), (_, index) => index + 1);
+        // records.slice(firstIndex, lastIndex)
+        // setNPage(Math.ceil((records.filter((item) => item.material === currentFilter ).length / recordsPerPage)))
+        // numbers = Array.from(Array(nPage), (_, index) => index + 1);
       }
       console.log(checkAppar)
     }, [checkAppar, checkMirror, checkNoise, checkThermal])
@@ -100,11 +145,16 @@ const Catalog: FC<CatalogProps> = () => {
   };
 
   const resetFilters = () =>{
+    setCurrentPriceCategory('')
+    dispatch(SetCurrentFilterMaterial(''))
     setRecords((DB.filter((item) => item.style === currentFilter )).slice(firstIndex, lastIndex)) // все товары
     setNPage(Math.ceil((DB.filter((item) => item.style === currentFilter ).length / recordsPerPage)))
     numbers = Array.from(Array(nPage), (_, index) => index + 1);
-    dispatch(SetCurrentFilterMaterial(''))
     
+    setCheckAppar(false)
+    setCheckMirror(false)
+    setCheckNoise(false)
+    setCheckThermal(false)
   }
 
   return (
@@ -149,17 +199,16 @@ const Catalog: FC<CatalogProps> = () => {
         <ul>
           <li>
             <ul className={styles.article}>
-              <li className={styles.title}>--s---</li>
-              <li className={currentFilterMaterial === 'эконом' ? styles.filter_active_material : ''}
-                onClick={() => dispatch(SetCurrentFilterMaterial('эконом'))}>
+              <li className={currentPriceCategory === 'eco' ? styles.filter_active_material : ''}
+                onClick={() => setCurrentPriceCategory('eco')}>
               Эконом вариант
             </li>
-            <li className={currentFilterMaterial === 'бюджет' ? styles.filter_active_material : ''}
-                onClick={() => dispatch(SetCurrentFilterMaterial('бюджет'))}>
+            <li className={currentPriceCategory === 'budget' ? styles.filter_active_material : ''}
+                onClick={() => setCurrentPriceCategory('budget')}>
               Бюджетный вариант
             </li>
-            <li className={currentFilterMaterial === 'премиум' ? styles.filter_active_material : ''}
-                onClick={() => dispatch(SetCurrentFilterMaterial('премиум'))}>
+            <li className={currentPriceCategory === 'premium' ? styles.filter_active_material : ''}
+                onClick={() => setCurrentPriceCategory('premium')}>
               Премиум  класса
             </li>
             </ul>
@@ -169,26 +218,26 @@ const Catalog: FC<CatalogProps> = () => {
             Под заказ
           </li>
           <li>
-            <input onChange={() => setCheckAppar(!checkAppar)} type="checkbox" id="appar" />
+            <input onChange={() => setCheckAppar(!checkAppar) } type="checkbox" id="appar" checked={checkAppar}/>
             <label htmlFor="appar">Квартирный вариант</label>
           </li>
           <li>
-            <input onChange={() => setCheckMirror(!checkMirror)} type="checkbox" id="mirror" />
+            <input onChange={() => setCheckMirror(!checkMirror)} type="checkbox" id="mirror" checked={checkMirror}/>
             <label htmlFor="mirror">С зеркалом</label>
           </li>
           <li>
-            <input onChange={() => setCheckNoise(!checkNoise)} type="checkbox" id="noise" />
+            <input onChange={() => setCheckNoise(!checkNoise)} type="checkbox" id="noise" checked={checkNoise}/>
             <label htmlFor="noise">Хорошая шумоизоляция</label>
           </li>
           <li>
-            <input onChange={() => setCheckThermal(!checkThermal)} type="checkbox" id="thermal" />
+            <input onChange={() => setCheckThermal(!checkThermal)} type="checkbox" id="thermal" checked={checkThermal}/>
             <label htmlFor="thermal">Терморазрыв</label>
           </li>
         </ul>
       </li>
-      <li>Арки и Порталы</li>
-      <li>Ламинат</li>
-      <li>Натяжные потолки</li>
+      <li> <NavLink to="/Arch">Арки и Порталы</NavLink></li>
+      <li><NavLink to="/Laminate">Ламинат</NavLink></li>
+      <li><NavLink to="/Ceiling">Натяжные потолки</NavLink></li>
     </ul>
     <button onClick={() => {resetFilters()}}>Сбросить фильтры</button>
     </div>

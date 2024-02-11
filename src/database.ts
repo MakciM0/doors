@@ -9,6 +9,7 @@ export const DB : TItem[] = [
     id: '001',
     type: 'doors',
     style: 'wood',
+    priceCategory : '',
     material: 'экошпон',
     additional : {
       appar: false,
@@ -28,6 +29,7 @@ export const DB : TItem[] = [
     id: '002',
     type: 'doors',
     style: 'wood',
+    priceCategory : '',
     material: 'эмаль',
     additional : {
       appar: false,
@@ -47,6 +49,7 @@ export const DB : TItem[] = [
     id: '003',
     type: 'doors',
     style: 'wood',
+    priceCategory : '',
     material: 'эмаль',
     additional : {
       appar: false,
@@ -66,6 +69,7 @@ export const DB : TItem[] = [
     id: '004',
     type: 'doors',
     style: 'wood',
+    priceCategory : '',
     material: 'эмаль',
     additional : {
       appar: false,
@@ -85,6 +89,7 @@ export const DB : TItem[] = [
     id: '005',
     type: 'doors',
     style: 'wood',
+    priceCategory : '',
     material: 'эмаль',
     additional : {
       appar: false,
@@ -104,6 +109,7 @@ export const DB : TItem[] = [
     id: '006',
     type: 'doors',
     style: 'wood',
+    priceCategory : '',
     material: 'эмаль',
     additional : {
       appar: false,
@@ -123,6 +129,7 @@ export const DB : TItem[] = [
     id: '007',
     type: 'doors',
     style: 'wood',
+    priceCategory : '',
     material: 'эмаль',
     additional : {
       appar: false,
@@ -142,6 +149,7 @@ export const DB : TItem[] = [
     id: '008',
     type: 'doors',
     style: 'wood',
+    priceCategory : '',
     material: 'экошпон',
     additional : {
       appar: false,
@@ -161,6 +169,7 @@ export const DB : TItem[] = [
     id: '009',
     type: 'doors',
     style: 'wood',
+    priceCategory : '',
     material: 'экошпон',
     additional : {
       appar: false,
@@ -183,6 +192,7 @@ export const DB : TItem[] = [
     id: '101',
     type: 'doors',
     style: 'metal',
+    priceCategory : 'eco',
     material: 'метал', //Изменить (тип?)
     additional : {
       appar: true,
@@ -191,7 +201,7 @@ export const DB : TItem[] = [
       thermal: true,
     },
 
-    price: 90007,
+    price: 91111,
     fullPrice : 5500,
     sizes: ['860x2050', '960x2050'],
     color: 'black',
@@ -202,6 +212,7 @@ export const DB : TItem[] = [
     id: '102',
     type: 'doors',
     style: 'metal',
+    priceCategory : 'eco',
     material: 'метал',
     additional : {
       appar: true,
@@ -210,7 +221,7 @@ export const DB : TItem[] = [
       thermal: true,
     },
 
-    price: 90007,
+    price: 91111,
     fullPrice : 5500,
     sizes: ['860x2050', '960x2050'],
     color: 'black',
@@ -221,6 +232,7 @@ export const DB : TItem[] = [
     id: '103',
     type: 'doors',
     style: 'metal',
+    priceCategory : 'eco',
     material: 'метал',
     additional : {
       appar: true,
@@ -229,7 +241,7 @@ export const DB : TItem[] = [
       thermal: true,
     },
 
-    price: 90007,
+    price: 91111,
     fullPrice : 5500,
     sizes: ['860x2050', '960x2050'],
     color: 'black',
@@ -240,6 +252,7 @@ export const DB : TItem[] = [
     id: '104',
     type: 'doors',
     style: 'metal',
+    priceCategory : 'budget',
     material: 'метал',
     additional : {
       appar: true,
@@ -248,7 +261,7 @@ export const DB : TItem[] = [
       thermal: true,
     },
 
-    price: 90007,
+    price: 91111,
     fullPrice : 5500,
     sizes: ['860x2050', '960x2050'],
     color: 'black',
@@ -259,6 +272,7 @@ export const DB : TItem[] = [
     id: '105',
     type: 'doors',
     style: 'metal',
+    priceCategory : 'budget',
     material: 'метал',
     additional : {
       appar: false,
@@ -267,7 +281,7 @@ export const DB : TItem[] = [
       thermal: false,
     },
 
-    price: 90007,
+    price: 90100,
     fullPrice : 5500,
     sizes: ['860x2050', '960x2050'],
     color: 'black',
@@ -278,6 +292,7 @@ export const DB : TItem[] = [
     id: '106',
     type: 'doors',
     style: 'metal',
+    priceCategory : 'budget',
     material: 'метал',
     additional : {
       appar: false,
@@ -286,7 +301,7 @@ export const DB : TItem[] = [
       thermal: false,
     },
 
-    price: 90007,
+    price: 90000,
     fullPrice : 5500,
     sizes: ['860x2050', '960x2050'],
     color: 'black',
@@ -297,6 +312,7 @@ export const DB : TItem[] = [
     id: '107',
     type: 'doors',
     style: 'metal',
+    priceCategory : 'premium',
     material: 'метал',
     additional : {
       appar: false,
@@ -305,7 +321,7 @@ export const DB : TItem[] = [
       thermal: false,
     },
 
-    price: 90007,
+    price: 90000,
     fullPrice : 5500,
     sizes: ['860x2050', '960x2050'],
     color: 'black',
@@ -316,6 +332,7 @@ export const DB : TItem[] = [
     id: '108',
     type: 'doors',
     style: 'metal',
+    priceCategory : 'premium',
     material: 'метал',
     additional : {
       appar: false,
@@ -325,7 +342,7 @@ export const DB : TItem[] = [
     },
     
 
-    price: 90007,
+    price: 90000,
     fullPrice : 5500,
     sizes: ['860x2050', '960x2050'],
     color: 'black',
@@ -336,6 +353,7 @@ export const DB : TItem[] = [
     id: '109',
     type: 'doors',
     style: 'metal',
+    priceCategory : 'premium',
     material: 'метал',
     additional : {
       appar: false,
@@ -345,7 +363,7 @@ export const DB : TItem[] = [
     },
     
 
-    price: 90007,
+    price: 90010,
     fullPrice : 5500,
     sizes: ['860x2050', '960x2050'],
     color: 'black',

@@ -65,16 +65,16 @@ const Header: FC<HeaderProps> = () => {
                   <p>Арки и порталы</p>
                 </div>
               </NavLink>
-              <a href="">
+              <NavLink to="/Laminate">
                 <div className={styles.item} id={styles.laminat}>
                   <p>Ламинат</p>
                 </div>
-              </a>
-              <a href="">
+              </NavLink>
+              <NavLink to="/Ceiling">
                 <div className={styles.item} id={styles.ceiling}>
                   <p>Натяжные потолки</p>
                 </div>
-              </a>
+              </NavLink>
             </div>
           </div>
         </div>

@@ -10,6 +10,8 @@ import Main from "./page/Main/Main";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import Arch from "./page/Arch/Arch";
+import Laminate from "./page/Laminate/Laminate";
+import Ceiling from "./page/Ceiling/Ceiling";
 
 
 function App() {
@@ -34,6 +36,14 @@ function App() {
             <Route
               path={"/Arch"}
               element={<Arch></Arch>}>
+            </Route>
+            <Route
+              path={"/Laminate"}
+              element={<Laminate></Laminate>}>
+            </Route>
+            <Route
+              path={"/Ceiling"}
+              element={<Ceiling></Ceiling>}>
             </Route>
         </Routes>
         <Footer></Footer>

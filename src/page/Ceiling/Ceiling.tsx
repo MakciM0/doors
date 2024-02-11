@@ -1,20 +1,20 @@
 import React, {FC} from "react";
 
-import styles from './Arch.module.scss'
+import styles from './Ceiling.module.scss'
 
-interface ArchProps {
+interface CeilingProps {
   
 }
  
-const Arch: FC<ArchProps> = () => {
+const Ceiling: FC<CeilingProps> = () => {
   return (
-    <div className={styles.arch}>
+    <div className={styles.ceiling}>
       <div className={styles.content}>
         <div className={styles.info}>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A obcaecati corporis totam accusamus, placeat nisi deleniti officiis alias aspernatur perferendis. Eaque ipsum deserunt sit fugit maxime sint aut ducimus hic?</p>
         </div>
         <div className={styles.img}>
-          <img src="images/portal.jpg" alt="Арки и порталы" />
+          <img src="images/Ceiling.jpg" alt="Потолки" />
         </div>
       </div>
       <div className={styles.order}>
@@ -24,4 +24,4 @@ const Arch: FC<ArchProps> = () => {
   );
 }
  
-export default Arch;
+export default Ceiling;
