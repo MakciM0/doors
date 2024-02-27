@@ -2,6 +2,8 @@ import React, {FC} from "react";
 import { useAppDispatch } from "../../store/appHooks";
 import { SetCurrentFilter} from "../../store/productsSlice";
 
+import { animateScroll as scroll } from "react-scroll";
+
 import styles from './Footer.module.scss'
 import { NavLink } from "react-router-dom";
 
@@ -12,6 +14,10 @@ interface FooterProps {
 const Footer: FC<FooterProps> = () => {
 
   const dispatch = useAppDispatch()
+
+  const scrollToTop = () => {
+    scroll.scrollToTop();
+  };
 
   return (
     <footer>
@@ -26,12 +32,12 @@ const Footer: FC<FooterProps> = () => {
           <ul className={styles.main_ul}>
             <li>
               <ul>
-                <li><NavLink to="/Catalog">Каталог</NavLink></li>
-                <li><NavLink to="/Catalog">Межкомнатные двери</NavLink></li>
-                <li><NavLink to="/Catalog" onClick={() => dispatch(SetCurrentFilter('metal'))}>Металлические двери</NavLink></li>
-                <li><NavLink to="/Arch"> Арки и порталы</NavLink></li>
-                <li><NavLink to="/">Ламинат</NavLink></li>
-                <li><NavLink to="/">Натяжные потолки</NavLink></li>
+                <li><NavLink onClick={() => scrollToTop()} to="/Catalog">Каталог</NavLink></li>
+                <li><NavLink onClick={() => scrollToTop()} to="/Catalog">Межкомнатные двери</NavLink></li>
+                <li><NavLink  to="/Catalog" onClick={() => {dispatch(SetCurrentFilter('metal'));scrollToTop()}}>Металлические двери</NavLink></li>
+                <li><NavLink onClick={() => scrollToTop()} to="/Arch"> Арки и порталы</NavLink></li>
+                <li><NavLink onClick={() => scrollToTop()} to="/Laminate">Ламинат</NavLink></li>
+                <li><NavLink onClick={() => scrollToTop()} to="/Ceiling">Натяжные потолки</NavLink></li>
               </ul>
             </li>
 
