@@ -104,3 +104,54 @@
     
   }
 }
+
+@media screen and (max-width: 862px){
+  .header_wrapper{
+    header{
+      .items_wrapper{
+        .items{
+          .items_top, .items_bottom{
+            a{
+              .item{
+                p{
+                  font-size: 20px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 719px){
+  .header_wrapper{
+    header{
+      .items_wrapper{
+        .items{
+          .items_top, .items_bottom{
+            flex-wrap: wrap;
+            a{
+              .item{
+                  width: 100vw;
+                  min-height:  220px;
+                  max-height: 220px;
+                  p{
+                    font-size: 28px;
+                  }  
+              }
+            }
+            #wood{
+              width: 100vw;
+              
+            } 
+            #metal{
+              width: 100vw;
+            } 
+          }
+        }
+      }
+    }
+  }
+}

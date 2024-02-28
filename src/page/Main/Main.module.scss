@@ -5,6 +5,7 @@
     position: fixed;
     bottom: 50px;
     right:  50px;
+    z-index: 100;
     img{
       width: 100px;
       height: 100px;
@@ -15,5 +16,11 @@
     img:hover{
       opacity: 1;
     }
+  }
+}
+
+@media screen and (max-width: 730px){
+  .onTop{
+    display: none;
   }
 }

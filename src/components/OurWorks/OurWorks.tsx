@@ -33,14 +33,22 @@ const OurWorks: FC<OurWorksProps> = () => {
     prevArrow: <SamplePrevArrow />,
     responsive: [
       {
-        breakpoint: 600,
+        breakpoint: 1290,
         settings: {
+          centerMode: false,
+          // variableWidth: true,
           slidesToShow: 1,
           slidesToScroll: 1,
           initialSlide: 1
         }
       },
-
+      {
+        breakpoint: 530,
+        settings: {
+          nextArrow: <NoneNextArrow />,
+          prevArrow: <NonePrevArrow />,
+        }
+      },
     ]
   };
 
@@ -60,6 +68,27 @@ const OurWorks: FC<OurWorksProps> = () => {
       <div
         className={className}
         style={{ ...style, display: "block", background: "red",  }}
+        onClick={onClick}
+      />
+    );
+  }
+
+  function NoneNextArrow(props : any) {
+    const { className, style, onClick } = props;
+    return (
+      <div
+        className={className}
+        style={{ ...style, display: "none"}}
+        onClick={onClick}
+      />
+    );
+  }
+  function NonePrevArrow(props: any) {
+    const { className, style, onClick } = props;
+    return (
+      <div
+        className={className}
+        style={{ ...style, display: "none",}}
         onClick={onClick}
       />
     );

@@ -45,3 +45,19 @@
     }
   }
 }
+
+@media screen and (max-width: 990px){
+  .Services{
+    .content{
+      flex-wrap: wrap;
+      justify-content: center;
+      .item{
+        width: 90%;
+        padding-bottom: 20px;
+        img{
+          height: 400px;
+        }
+      }
+    }
+  }
+}

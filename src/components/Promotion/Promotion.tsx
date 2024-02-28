@@ -26,17 +26,42 @@ const Promotion: FC<PromotionProps> = () => {
     slidesToScroll: 1,
     vertical: true,
     verticalSwiping: true,
+    nextArrow: <NoneNextArrow />,
+    prevArrow: <NonePrevArrow />,
     responsive: [
       {
-        breakpoint: 600,
+        breakpoint: 730,
         settings: {
           slidesToShow: 1,
+          // variableWidth: true,
+          // centerMode: true,
           slidesToScroll: 1,
           initialSlide: 1
         }
       },
     ]
   };
+
+  function NoneNextArrow(props : any) {
+    const { className, style, onClick } = props;
+    return (
+      <div
+        className={className}
+        style={{ ...style, display: "none"}}
+        onClick={onClick}
+      />
+    );
+  }
+  function NonePrevArrow(props: any) {
+    const { className, style, onClick } = props;
+    return (
+      <div
+        className={className}
+        style={{ ...style, display: "none",}}
+        onClick={onClick}
+      />
+    );
+  }
 
   const location = useLocation()
 
@@ -57,6 +82,7 @@ const Promotion: FC<PromotionProps> = () => {
         <h2>Акции</h2>
       </div>
       <div className={styles.content}>
+        <div className={styles.slider_wrapper}>
         <Slider {...settings}>
           <div className={styles.item}>
             <div className={styles.item_content}>
@@ -87,6 +113,37 @@ const Promotion: FC<PromotionProps> = () => {
             </div>
           </div>
         </Slider>
+        </div>
+        <div className={styles.not_slider}>
+          <div className={styles.item}>
+            <div className={styles.item_content}>
+              <img src="/images/icons/promotion.png" alt=""></img>
+              <p>При покупке от пяти межкомнатных дверей ручки в подарок</p>
+              <img src="/images/icons/promotion.png" alt=""></img>
+            </div>
+          </div>
+          <div className={styles.item}>
+            <div className={styles.item_content}>
+              <img src="/images/icons/promotion.png" alt=""></img>
+              <p>Пенсионерам скидка 5%</p>
+              <img src="/images/icons/promotion.png" alt=""></img>
+            </div>
+          </div>
+          <div className={styles.item}>
+            <div className={styles.item_content}>
+              <img src="/images/icons/promotion.png" alt=""></img>
+              <p>Именниникам в день рождения 10% скидка</p>
+              <img src="/images/icons/promotion.png" alt=""></img>
+            </div>
+          </div>
+          <div className={styles.item}>
+            <div className={styles.item_content}>
+              <img src="/images/icons/promotion.png" alt=""></img>
+              <p>Постоянным покупателям предоставляются скидки</p>
+              <img src="/images/icons/promotion.png" alt=""></img>
+            </div>
+          </div>
+        </div>
       </div>
     </div>  
   );
