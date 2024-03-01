@@ -29,7 +29,7 @@ const productsSlice = createSlice({
     NextPage: (state) => {
       state.CurrentPage += 1;
     },
-    SetCurrentFilterMaterial:(state, action: PayloadAction<string>) =>{ //Главный Фильтр(железная или дерев или ламинат...)
+    SetCurrentFilterMaterial:(state, action: PayloadAction<string>) =>{ //???Главный Фильтр(железная или дерев или ламинат...???)
       state.CurrentFilterMaterial = action.payload
     },
     SetCurrentFilter:(state, action: PayloadAction<string>) =>{

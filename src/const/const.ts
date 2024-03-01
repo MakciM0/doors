@@ -1,4 +1,4 @@
-import { TItem, TPhotoSlides } from "./types";
+import { TItem, TItemWood, TPhotoSlides } from "./types";
 
 export const nullItem : TItem = {
   name: "",
@@ -17,6 +17,19 @@ export const nullItem : TItem = {
   fullPrice: 0,
   sizes: ['', ''],
   color: ""
+}
+
+export const nullItemWood : TItemWood = {
+  kind: 'TItemWood',
+  name: "",
+  id: "",
+  material: "",
+  price: 0,
+  fullPrice: 0,
+  sizes: ['', ''],
+  colors: [''],
+  colors_translate:[''
+  ],
 }
 
 export const SliderItems : TPhotoSlides[] = [
@@ -51,4 +64,12 @@ export const SliderItems : TPhotoSlides[] = [
     url: '/images/ourWorks/ourWorks06.jpeg'
   },
 ]
-  
+
+export const ColorsTranslate : string[] =[
+  'bleachedOak',
+  'cappuccino',
+  'darkNut',
+  'gray',
+  'naplesOak',
+  'wenge',
+]

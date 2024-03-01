@@ -2,13 +2,16 @@ import React, {FC, useEffect, useState} from "react";
 
 import styles from './Catalog.module.scss'
 
-import { DB } from "../../database";
+// import { DB } from "../../database";
+
 import { NavLink } from "react-router-dom";
 import Filters from "../../components/Filters/Filters";
-import { TItem } from "../../const/types";
-import { nullItem } from "../../const/const";
+import { TItem, TItemWood, TItemMetal } from "../../const/types";
+import { nullItem, nullItemWood } from "../../const/const";
 import { useAppDispatch, useAppSelector } from "../../store/appHooks";
 import { ChangeCurrentPage, NextPage, PrevPage, SetCurrentFilter, SetCurrentFilterMaterial } from "../../store/productsSlice";
+import { DB_Doors_Wood } from "../../DataBase/DB_Doors_Wood";
+import { DB_Doors_Metal } from "../../DataBase/DB_Doors_Metal";
 
 
 interface CatalogProps {
@@ -24,7 +27,7 @@ const Catalog: FC<CatalogProps> = () => {
 
   const [currentPriceCategory, setCurrentPriceCategory] = useState<'' | 'eco' | 'budget' | 'premium'>('')
 
-  const [records, setRecords] = useState<TItem[]>([])
+  const [records, setRecords] = useState<TItemWood[] | TItemMetal[]>([nullItemWood])
   const [nPage, setNPage] = useState<number>(1)
 
   const recordsPerPage = 6;
@@ -37,97 +40,168 @@ const Catalog: FC<CatalogProps> = () => {
   const [checkNoise, setCheckNoise] = useState<boolean>(false);
   const [checkThermal, setCheckThermal] = useState<boolean>(false);
 
-  useEffect(() =>{//Главный фильтр (железная или межкомнатная)
-      setRecords((DB.filter((item) => item.style === currentFilter )).slice(firstIndex, lastIndex))
-      setNPage(Math.ceil((DB.filter((item) => item.style === currentFilter ).length / recordsPerPage)))
-      
-      numbers = Array.from(Array(nPage), (_, index) => index + 1);
-      dispatch(SetCurrentFilterMaterial(''))
-    }, [currentFilter, currentPage])
-
-    useEffect(() =>{//Материал межком двери
-      
-      if(currentFilterMaterial){  
-        dispatch(ChangeCurrentPage(1))
-        setRecords((DB.filter((item) => item.material === currentFilterMaterial ))
-        .slice(firstIndex, lastIndex))
-        setNPage(Math.ceil((records.filter((item) => item.material === currentFilter ).length / recordsPerPage)))
-        numbers = Array.from(Array(nPage), (_, index) => index + 1);
-      }
-    }, [currentFilterMaterial, currentPage])
-
-    useEffect(() =>{ //Ценовая категория желез дверей
-      if(currentPriceCategory){
-        dispatch(ChangeCurrentPage(1))
-        setRecords((DB.filter((item) => item.priceCategory === currentPriceCategory ))
-        .slice(firstIndex, lastIndex))
-        setNPage(Math.ceil((records.filter((item) => item.priceCategory === currentPriceCategory ).length / recordsPerPage)))
-        numbers = Array.from(Array(nPage), (_, index) => index + 1);
-      }
-    }, [currentPriceCategory, currentPage])
-
-    useEffect(() =>{ //фильтры желез двери
+  useEffect(() =>{//Главный фильтр (железная или межкомнатная) + категории
       if(currentFilter === 'metal'){
-        dispatch(ChangeCurrentPage(1))
-        let filtered : TItem[] = []
 
-
-
-        if(checkAppar){
-          let NewItems :TItem[] = []
-          NewItems = DB.filter((item) => item.priceCategory === currentPriceCategory).filter((item) => item.additional.appar === true)
-          filtered = [...filtered, ...NewItems]
-        }
-        if(checkMirror){
-          let NewItems :TItem[] = []
-          NewItems = DB.filter((item) => item.additional.mirror === true)
-          filtered = [...filtered, ...NewItems]
-        }
-        if(checkNoise){
-          let NewItems :TItem[] = []
-          NewItems = DB.filter((item) => item.additional.noise === true)
-          filtered = [...filtered, ...NewItems]
-        }
-        if(checkThermal){
-          let NewItems :TItem[] = []
-          NewItems = DB.filter((item) => item.additional.thermal === true)
-          filtered = [...filtered, ...NewItems]
-        }
-
-        if(filtered.length > 1){
-          
-          const newSet = new Set(filtered);
-          let filteredDuplicates : TItem[] = Array.from(newSet)
-          console.log(filteredDuplicates)
-          if(currentPriceCategory){
-            filteredDuplicates.filter((item) => item.priceCategory === currentPriceCategory)
+        if(currentPriceCategory){
+          let lastRecordId : string
+          if(records.length > 0){
+            lastRecordId = records[0].id;
           }
-          // console.log(filteredDuplicates)
-          
-          setRecords(filteredDuplicates)
-          // console.log(filteredDuplicates)
-
-          setNPage(Math.ceil((records.filter((item) => item.style === currentFilter ).length / recordsPerPage)))
+          setRecords((DB_Doors_Metal.filter((item) => item.priceCategory === currentPriceCategory ))
+          .slice(firstIndex, lastIndex))
+          let newRecordId : string
+          if((DB_Doors_Metal.filter((item) => item.priceCategory === currentPriceCategory))[0]){
+            newRecordId = DB_Doors_Metal.filter((item) => item.priceCategory === currentPriceCategory)[0].id
+          }
+          if(lastRecordId && newRecordId){
+            if(lastRecordId !== newRecordId) dispatch(ChangeCurrentPage(1))
+          }
+          setNPage(Math.ceil((DB_Doors_Metal.filter((item) => item.priceCategory === currentPriceCategory ).length / recordsPerPage)))
           numbers = Array.from(Array(nPage), (_, index) => index + 1);
-          
-          dispatch(SetCurrentFilterMaterial(''))
-        }  else{
-          setRecords((DB.filter((item) => item.style === currentFilter )).slice(firstIndex, lastIndex))
-            setNPage(Math.ceil((DB.filter((item) => item.style === currentFilter ).length / recordsPerPage)))
-            console.log(123)
-            // console.log(filtered)
-            numbers = Array.from(Array(nPage), (_, index) => index + 1);
-            dispatch(SetCurrentFilterMaterial(''))
-        }
-        
-        // setRecords(filtered)
-        // records.slice(firstIndex, lastIndex)
-        // setNPage(Math.ceil((records.filter((item) => item.material === currentFilter ).length / recordsPerPage)))
-        // numbers = Array.from(Array(nPage), (_, index) => index + 1);
-      }
-      console.log(checkAppar)
-    }, [checkAppar, checkMirror, checkNoise, checkThermal])
 
+          //Доп.Свойства железных дверей \/ ---------------------------
+          
+          let filtered : (TItemMetal | TItemWood)[] = []
+          if(checkAppar){
+            let NewItems = []
+            NewItems = DB_Doors_Metal
+            .filter((item :TItemMetal) => item.additional.appar === true)
+            filtered = [...filtered, ...NewItems]
+          }
+          if(checkMirror){
+            let NewItems = []
+            NewItems = DB_Doors_Metal
+            .filter((item :TItemMetal) => item.additional.mirror === true) 
+            filtered = [...filtered, ...NewItems]
+          }
+          if(checkNoise){
+            let NewItems = []
+            NewItems = DB_Doors_Metal
+            .filter((item :TItemMetal) => item.additional.noise === true) 
+            filtered = [...filtered, ...NewItems]
+          }
+          if(checkThermal){
+            let NewItems = []
+            NewItems = DB_Doors_Metal
+            .filter((item :TItemMetal) => item.additional.thermal === true) 
+            filtered = [...filtered, ...NewItems]
+          }
+          if(filtered.length > 1){  
+            const newSet = new Set(filtered);
+            let filteredDuplicates : any[] = Array.from(newSet)
+            filteredDuplicates = filteredDuplicates.filter((item) => item.priceCategory === currentPriceCategory)    
+            setRecords(filteredDuplicates.slice(firstIndex, lastIndex))
+            setNPage(Math.ceil((filteredDuplicates.length / recordsPerPage)))
+            numbers = Array.from(Array(nPage), (_, index) => index + 1);
+          } 
+
+        } else{ // если нет currentPriceCategory
+          setRecords(DB_Doors_Metal.slice(firstIndex, lastIndex))
+          setNPage(Math.ceil((DB_Doors_Metal.length / recordsPerPage)))
+          //Доп.Свойства железных дверей \/ ---------------------------
+          let filtered : (TItemMetal | TItemWood)[] = []
+          if(checkAppar){
+            let NewItems = []
+            NewItems = DB_Doors_Metal
+            .filter((item :TItemMetal) => item.additional.appar === true)
+            filtered = [...filtered, ...NewItems]
+            // console.log(filtered)
+          }
+          if(checkMirror){
+            let NewItems = []
+            NewItems = DB_Doors_Metal
+            .filter((item :TItemMetal) => item.additional.mirror === true) 
+            filtered = [...filtered, ...NewItems]
+          }
+          if(checkNoise){
+            let NewItems = []
+            NewItems = DB_Doors_Metal
+            .filter((item :TItemMetal) => item.additional.noise === true) 
+            filtered = [...filtered, ...NewItems]
+          }
+          if(checkThermal){
+            let NewItems = []
+            NewItems = DB_Doors_Metal
+            .filter((item :TItemMetal) => item.additional.thermal === true) 
+            filtered = [...filtered, ...NewItems]
+          }
+          if(filtered.length > 1){  
+            const newSet = new Set(filtered);
+            let filteredDuplicates : any[] = Array.from(newSet)    
+            setRecords(filteredDuplicates.slice(firstIndex, lastIndex))
+            console.log('итого')
+            console.log( filteredDuplicates)
+            setNPage(Math.ceil((filteredDuplicates.length / recordsPerPage)))
+            numbers = Array.from(Array(nPage), (_, index) => index + 1);
+          } 
+
+        }
+      } else if(currentFilter === 'wood'){
+        if(currentFilterMaterial){  //Материал межком двери 
+          let lastRecordId : string
+          if(records.length > 0){
+            lastRecordId = records[0].id;
+          }
+          setRecords((DB_Doors_Wood.filter((item) => item.material === currentFilterMaterial ))
+          .slice(firstIndex, lastIndex))
+          let newRecordId : string
+          if((DB_Doors_Wood.filter((item) => item.material === currentFilterMaterial))[0]){
+            newRecordId = DB_Doors_Wood.filter((item) => item.material === currentFilterMaterial)[0].id
+          }
+          if(lastRecordId && newRecordId){
+            if(lastRecordId !== newRecordId) dispatch(ChangeCurrentPage(1))
+          }
+          setNPage(Math.ceil((DB_Doors_Wood.filter((item) => item.material === currentFilterMaterial )).length / recordsPerPage))
+          numbers = Array.from(Array(nPage), (_, index) => index + 1); 
+        } else {// если нет currentFilterMaterial
+          // dispatch(ChangeCurrentPage(1))  // протестить?
+          setRecords(DB_Doors_Wood.slice(firstIndex, lastIndex))
+          setNPage(Math.ceil((DB_Doors_Wood.length / recordsPerPage)))   
+        }
+      }
+
+
+
+    }, [currentFilter, currentPage, currentFilterMaterial, currentPriceCategory, checkAppar, checkMirror, checkNoise, checkThermal])
+
+    const displayItems = (type : string) =>{
+      if(records.length> 0 && records[0].kind === 'TItemWood'){
+        return records.filter((item) => item.kind === 'TItemWood').map((el: TItemWood) =>( 
+          <div className={styles.item}>
+            <span className={styles.name}>{el.name}</span>
+  
+            
+            <span>{el.material}</span> 
+            <img src={`images/doors/wood/preview/door${el.id}.jpg`} alt="" />
+            {/* <span className={styles.color}>{el.colors[0]}</span> */}
+            <span className={styles.price}>
+              Цена за полотно:{el.price} ₽<br></br>
+              <span className={styles.set}>Цена за комплект: {el.fullPrice} ₽</span>
+            </span>
+            <NavLink to={`/Catalog/` + el.id}>Подробнее</NavLink>
+          </div>))
+      } else
+      if(records.length > 0 &&  records[0].kind === 'TItemMetal'  ){
+        return records.filter((item) => item.kind === 'TItemMetal').map((el: TItemMetal) =>( 
+          <div className={styles.item}>
+            <span className={styles.name}>{el.name}</span>
+            <span>{el.priceCategory}</span>
+            <span>{`${el.additional.appar ? 'appar' : ''} `}</span>
+            <span>{`${el.additional.mirror ? 'mirror' : ''} `}</span>
+            <span>{`${el.additional.noise ? 'noise' : ''} `}</span>
+            <span>{`${el.additional.thermal ? 'thermal' : ''} `}</span>
+
+            <img src={`images/doors/metal/door${el.id}.jpg`} alt="" />
+            <span className={styles.color}>{el.color}</span>
+            <span className={styles.price}>
+              Цена: {el.price} ₽<br></br>
+            </span>
+            <NavLink to={`/Catalog/` + el.id}>Подробнее</NavLink>
+          </div>))
+      } else return(<p>Ничего нет</p>)
+    }
+      
 
 
   const handlePrevPage = () => {
@@ -147,10 +221,19 @@ const Catalog: FC<CatalogProps> = () => {
   const resetFilters = () =>{
     setCurrentPriceCategory('')
     dispatch(SetCurrentFilterMaterial(''))
-    setRecords((DB.filter((item) => item.style === currentFilter )).slice(firstIndex, lastIndex)) // все товары
-    setNPage(Math.ceil((DB.filter((item) => item.style === currentFilter ).length / recordsPerPage)))
+    dispatch(ChangeCurrentPage(1))
+
+    if(currentFilter === 'wood'){
+      setRecords(DB_Doors_Wood.slice(firstIndex, lastIndex))
+      setNPage(Math.ceil((DB_Doors_Wood.length / recordsPerPage))) 
+    } else if(currentFilter === 'metal'){
+      setRecords(DB_Doors_Metal.slice(firstIndex, lastIndex))
+      setNPage(Math.ceil((DB_Doors_Metal.length / recordsPerPage))) 
+    } else{
+      setRecords(DB_Doors_Wood.slice(firstIndex, lastIndex))
+      setNPage(Math.ceil((DB_Doors_Wood.length / recordsPerPage))) 
+    }
     numbers = Array.from(Array(nPage), (_, index) => index + 1);
-    
     setCheckAppar(false)
     setCheckMirror(false)
     setCheckNoise(false)
@@ -214,9 +297,9 @@ const Catalog: FC<CatalogProps> = () => {
             </ul>
           </li>
           
-          <li >
+          {/* <li >
             Под заказ
-          </li>
+          </li> */}
           <li>
             <input onChange={() => setCheckAppar(!checkAppar) } type="checkbox" id="appar" checked={checkAppar}/>
             <label htmlFor="appar">Квартирный вариант</label>
@@ -239,22 +322,11 @@ const Catalog: FC<CatalogProps> = () => {
       <li><NavLink to="/Laminate">Ламинат</NavLink></li>
       <li><NavLink to="/Ceiling">Натяжные потолки</NavLink></li>
     </ul>
-    <button onClick={() => {resetFilters()}}>Сбросить фильтры</button>
+     <button onClick={() => {resetFilters()}}>Сбросить фильтры</button> 
     </div>
     <div className={styles.shop}>
       <div className={styles.pagination_items}>
-        {records.map((el) =>(
-          <div className={styles.item}>
-            <span className={styles.name}>{el.name}</span>
-            <img src={`/images/${el.type}/${el.style}/door${el.id}.jpg` }></img>
-            <span className={styles.color}>{el.color}</span>
-            <span className={styles.price}>
-              Цена за полотно:{el.price} ₽<br></br>
-              <span className={styles.set}>Цена за комплект: {el.fullPrice} ₽</span>
-            </span>
-            <NavLink to={`/Catalog/` + el.id}>Подробнее</NavLink>
-          </div>
-        ))}
+        {currentFilter === 'wood' ? displayItems('wood') : currentFilter === 'metal' ? displayItems('metal') : ''}
       </div>
       <nav className={styles.pagination_nav}>
         <button
@@ -265,6 +337,7 @@ const Catalog: FC<CatalogProps> = () => {
           Предыдущая страница
         </button>
         {numbers.map((n) => (
+          
           <p key={n}
             className={`${currentPage === n ? styles.nav_active : ""}`} //style----
             onClick={() => {

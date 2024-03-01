@@ -25,7 +25,39 @@ export type TItem =
   }
 
 export type TItemMetal ={
-    
+  kind: 'TItemMetal', // Literal type 
+  name: string,
+  id: string,
+  priceCategory : '' | 'eco' | 'budget' | 'premium',
+  additional: {
+    appar: boolean,
+    mirror: boolean,
+    noise: boolean,
+    thermal: boolean,
+  },
+  // material: string,
+  price: number,
+  sizes: string[],
+  color: string,
+}
+
+export type TItemWood ={
+  kind: 'TItemWood', // Literal type 
+  name: string,
+  id: string,
+  // additional: {
+  //   appar: boolean,
+  //   mirror: boolean,
+  //   noise: boolean,
+  //   thermal: boolean,
+  // },
+  material: string,
+  price: number,
+  fullPrice : number,
+  sizes: string[],
+  colors: string[],  
+  colors_translate: string[],
+
 }
 
  export type TPhotoSlides = {
