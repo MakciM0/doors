@@ -66,10 +66,24 @@ export type TItemWood ={
 
 }
 
- export type TPhotoSlides = {
+ export type TPhotoSlides = { //???
   // albumId: number;
   id: number;
   title: string;
   url: string;
   // thumbnailUrl: string;
 };
+
+export interface TCartItemMetal extends TItemMetal{
+  currentInsidePanel: {
+    name: string,
+    img: string,
+  } 
+  amount : number,
+}
+
+export interface TCartItemWood extends TItemWood{
+  currentColor_translate: string,
+  currentColor: string,
+  amount : number,
+}

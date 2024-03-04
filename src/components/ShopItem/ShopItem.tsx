@@ -7,13 +7,16 @@ import { TItem, TItemMetal, TItemWood } from "../../const/types";
 import { nullItem, nullItemWood } from "../../const/const";
 import { DB_Doors_Wood } from "../../DataBase/DB_Doors_Wood";
 import { DB_Doors_Metal } from "../../DataBase/DB_Doors_Metal";
-import { useAppSelector } from "../../store/appHooks";
+import { useAppDispatch, useAppSelector } from "../../store/appHooks";
 import Slider from "react-slick";
 import { settingsShopItem } from "../../slider/sliderConfig";
+import { AddToCart } from "../../store/productsSlice";
 
 interface ShopItemProps {}
 
 const ShopItem: FC<ShopItemProps> = () => {
+  const dispatch = useAppDispatch();
+
   const match = useMatch("/Catalog/:id");
   const idMatch = match?.params.id;
   // const [item, setItem] = useState<TItemMetal | TItemWood>();
@@ -40,6 +43,7 @@ const ShopItem: FC<ShopItemProps> = () => {
   const [currentPrice, setCurrentPrice] = useState<number>(CurrentItem.price);
   const [currentSize, setCurrentSize] = useState<string>(CurrentItem.sizes[0]);
   const [currentInsidePanel, SetCurrentInsidePanel] = useState<{name:string, img:string}>(CurrentItem.kind === "TItemMetal" ? CurrentItem.insidePanels[0] : {name: '0', img: '01'});
+
 
   // useEffect(() => {
   //   // setItem(DB.find((item) => item.id === idMatch))
@@ -80,7 +84,7 @@ const ShopItem: FC<ShopItemProps> = () => {
             </div>
             <div className={styles.colors}>
               
-              {CurrentItem.colors.map((el, index) =>( //----------------class Active
+              {CurrentItem.colors.map((el, index) =>( 
                 <button className={`${
                   currentColor === CurrentItem.colors[index] ? styles.color_active : ""
                 }`} onClick={() => setCurrentColor(el)}>
@@ -126,7 +130,7 @@ const ShopItem: FC<ShopItemProps> = () => {
           </div>
         </div>
         <div className={styles.buttons}>
-          <button>Добавить в корзину</button>
+          <button onClick={() => dispatch(AddToCart(currentColor))}>Добавить в корзину</button>
           <div className={styles.line}></div>
           <p>
             Заказать замер и проконсультироваться можно по телефону : +7 (910)
@@ -144,7 +148,7 @@ const ShopItem: FC<ShopItemProps> = () => {
         {/* LOADING------------------------------ */}
           <div className={styles.images}>{/*--------другой класс--- */}
             <img src={`/images/doors/metal/items/${CurrentItem.id}/door${CurrentItem.id}.webp` } alt="" /> 
-            <img src={`/images/doors/metal/items/${CurrentItem.id}/door${CurrentItem.id}_inside${currentInsidePanel.img}.webp` } alt="" /> {/*--------панель внутри--- */}
+            <img src={`/images/doors/metal/items/${CurrentItem.id}/door${CurrentItem.id}_inside${currentInsidePanel.img}.webp` } alt="" />
           </div>
           <div className={styles.info}>
             <div className={styles.name}>
@@ -214,7 +218,7 @@ const ShopItem: FC<ShopItemProps> = () => {
           </div>
         </div>
         <div className={styles.buttons}>
-          <button>Добавить в корзину</button>
+          <button onClick={() => dispatch(AddToCart(currentInsidePanel))}>Добавить в корзину</button>
           <div className={styles.line}></div>
           <p>
             Заказать замер и проконсультироваться можно по телефону : +7 (910)

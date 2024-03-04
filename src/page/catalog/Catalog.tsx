@@ -24,6 +24,7 @@ const Catalog: FC<CatalogProps> = () => {
   const currentPage = useAppSelector((state) => state.products.CurrentPage);
   const currentFilterMaterial = useAppSelector((state) => state.products.CurrentFilterMaterial);
   const currentFilter = useAppSelector((state) => state.products.CurrentFilter);
+  const CurrentItem = useAppSelector((state) => state.products.CurrentItem) 
 
   const [currentPriceCategory, setCurrentPriceCategory] = useState<'' | 'eco' | 'budget' | 'premium'>('')
 

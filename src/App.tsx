@@ -1,7 +1,7 @@
 import React from "react";
 
 import styles from "./App.module.scss";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, HashRouter, Route, Routes } from "react-router-dom";
 // import Catalog from "./page/Catalog/Catalog";
 import HeaderMenu from "./components/HeaderMenu/HeaderMenu";
 import Catalog from "./page/Catalog/Catalog";
@@ -12,12 +12,13 @@ import Footer from "./components/Footer/Footer";
 import Arch from "./page/Arch/Arch";
 import Laminate from "./page/Laminate/Laminate";
 import Ceiling from "./page/Ceiling/Ceiling";
+import Cart from "./components/Cart/Cart";
 
 
 function App() {
   return (
     <div className={styles.App}>
-      <BrowserRouter>
+      <BrowserRouter >
       {/* <Header></Header> */}
       <HeaderMenu></HeaderMenu>
         <Routes>
@@ -32,9 +33,9 @@ function App() {
             <Route
               path={"/Catalog/:id"}
               element={<ShopItem></ShopItem>}>
-            </Route>
+            </Route>   
             <Route
-              path={"/Arch"}
+              path={"/Arch"} 
               element={<Arch></Arch>}>
             </Route>
             <Route
@@ -44,6 +45,10 @@ function App() {
             <Route
               path={"/Ceiling"}
               element={<Ceiling></Ceiling>}>
+            </Route>
+            <Route
+              path={"/Cart"}
+              element={<Cart></Cart>}>
             </Route>
         </Routes>
         <Footer></Footer>

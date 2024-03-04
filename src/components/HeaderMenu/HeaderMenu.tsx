@@ -46,6 +46,9 @@ const HeaderMenu: FC<HeaderMenuProps> = () => {
         <li>
           <a href="/#promotion">Акции</a>
         </li>
+        <li>
+          <NavLink to="/Cart">Корзина</NavLink>
+        </li>
       </ul>
     </menu>
     </>

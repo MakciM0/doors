@@ -83,9 +83,9 @@ module.exports = {
         
     ],
     devServer: {
+        historyApiFallback: true,
         port: 3002,
         hot: true,
-        historyApiFallback: true,
         static:{
           directory: path.join(__dirname, 'dist')
         }
