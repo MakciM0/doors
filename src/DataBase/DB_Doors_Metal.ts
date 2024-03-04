@@ -3,18 +3,31 @@ import { TItemMetal } from "../const/types";
 export const DB_Doors_Metal: TItemMetal[] = [
   {
     kind: "TItemMetal",
-    name: "Металлическая дверь",
+    name: "Квадро СБ-1",
     id: "1001",
-    priceCategory: "eco",
+    priceCategory: "premium",
     additional: {
       appar: true,
       mirror: true,
       noise: true,
       thermal: true,
     },
-
+    insidePanels:[
+      {
+        name: '16мм, беленый дуб',
+        img: '01'
+      },
+      {
+        name: '16мм, венге',
+        img: '02'
+      },
+      {
+        name: '10мм, белый софт',
+        img: '03'
+      }
+    ],
     price: 91111,
-    sizes: ["860x2050", "960x2050"],
+    sizes: ["960x2050"],
     color: "black",
   },
   {
@@ -30,7 +43,12 @@ export const DB_Doors_Metal: TItemMetal[] = [
       noise: true,
       thermal: true,
     },
-
+    insidePanels:[
+      {
+        name: '16мм, беленый дуб',
+        img: '01'
+      },
+    ],
     price: 91111,
     sizes: ["860x2050", "960x2050"],
     color: "black",
@@ -49,7 +67,12 @@ export const DB_Doors_Metal: TItemMetal[] = [
       noise: true,
       thermal: true,
     },
-
+    insidePanels:[
+      {
+        name: '16мм, беленый дуб',
+        img: '01'
+      },
+    ],
     price: 91111,
 
     sizes: ["860x2050", "960x2050"],
@@ -69,7 +92,12 @@ export const DB_Doors_Metal: TItemMetal[] = [
       noise: true,
       thermal: true,
     },
-
+    insidePanels:[
+      {
+        name: '16мм, беленый дуб',
+        img: '01'
+      },
+    ],
     price: 91111,
 
     sizes: ["860x2050", "960x2050"],
@@ -89,7 +117,12 @@ export const DB_Doors_Metal: TItemMetal[] = [
       noise: false,
       thermal: false,
     },
-
+    insidePanels:[
+      {
+        name: '16мм, беленый дуб',
+        img: '01'
+      },
+    ],
     price: 90100,
 
     sizes: ["860x2050", "960x2050"],
@@ -109,7 +142,12 @@ export const DB_Doors_Metal: TItemMetal[] = [
       noise: false,
       thermal: false,
     },
-
+    insidePanels:[
+      {
+        name: '16мм, беленый дуб',
+        img: '01'
+      },
+    ],
     price: 90000,
 
     sizes: ["860x2050", "960x2050"],
@@ -129,7 +167,12 @@ export const DB_Doors_Metal: TItemMetal[] = [
       noise: false,
       thermal: false,
     },
-
+    insidePanels:[
+      {
+        name: '16мм, беленый дуб',
+        img: '01'
+      },
+    ],
     price: 90000,
 
     sizes: ["860x2050", "960x2050"],
@@ -149,7 +192,12 @@ export const DB_Doors_Metal: TItemMetal[] = [
       noise: false,
       thermal: false,
     },
-
+    insidePanels:[
+      {
+        name: '16мм, беленый дуб',
+        img: '01'
+      },
+    ],
     price: 90000,
 
     sizes: ["860x2050", "960x2050"],
@@ -169,7 +217,11 @@ export const DB_Doors_Metal: TItemMetal[] = [
       noise: true,
       thermal: false,
     },
-
+    insidePanels:[{
+      name: '16мм, беленый дуб',
+      img: '01'
+    },
+  ],
     price: 90010,
 
     sizes: ["860x2050", "960x2050"],
@@ -187,7 +239,12 @@ export const DB_Doors_Metal: TItemMetal[] = [
       noise: true,
       thermal: true,
     },
-
+    insidePanels:[
+      {
+        name: '16мм, беленый дуб',
+        img: '01'
+      },
+    ],
     price: 91111,
     sizes: ["860x2050", "960x2050"],
     color: "black",
@@ -203,7 +260,12 @@ export const DB_Doors_Metal: TItemMetal[] = [
       noise: true,
       thermal: true,
     },
-
+    insidePanels:[
+      {
+        name: '16мм, беленый дуб',
+        img: '01'
+      },
+    ],
     price: 91111,
     sizes: ["860x2050", "960x2050"],
     color: "black",
@@ -219,7 +281,12 @@ export const DB_Doors_Metal: TItemMetal[] = [
       noise: true,
       thermal: true,
     },
-
+    insidePanels:[
+      {
+        name: '16мм, беленый дуб',
+        img: '01'
+      },
+    ],
     price: 91111,
     sizes: ["860x2050", "960x2050"],
     color: "black",
@@ -235,7 +302,12 @@ export const DB_Doors_Metal: TItemMetal[] = [
       noise: true,
       thermal: true,
     },
-
+    insidePanels:[
+      {
+        name: '16мм, беленый дуб',
+        img: '01'
+      },
+    ],
     price: 91111,
     sizes: ["860x2050", "960x2050"],
     color: "black",

@@ -35,6 +35,12 @@ export type TItemMetal ={
     noise: boolean,
     thermal: boolean,
   },
+  insidePanels: 
+    {
+      name: string,
+      img: string
+    }[]
+  
   // material: string,
   price: number,
   sizes: string[],

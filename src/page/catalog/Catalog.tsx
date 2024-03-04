@@ -9,7 +9,7 @@ import Filters from "../../components/Filters/Filters";
 import { TItem, TItemWood, TItemMetal } from "../../const/types";
 import { nullItem, nullItemWood } from "../../const/const";
 import { useAppDispatch, useAppSelector } from "../../store/appHooks";
-import { ChangeCurrentPage, NextPage, PrevPage, SetCurrentFilter, SetCurrentFilterMaterial } from "../../store/productsSlice";
+import { ChangeCurrentPage, NextPage, PrevPage, SetCurrentFilter, SetCurrentFilterMaterial, SetCurrentItem } from "../../store/productsSlice";
 import { DB_Doors_Wood } from "../../DataBase/DB_Doors_Wood";
 import { DB_Doors_Metal } from "../../DataBase/DB_Doors_Metal";
 
@@ -172,32 +172,32 @@ const Catalog: FC<CatalogProps> = () => {
             <span className={styles.name}>{el.name}</span>
   
             
-            <span>{el.material}</span> 
+            {/* <span>{el.material}</span>  */}
             <img src={`images/doors/wood/preview/door${el.id}.jpg`} alt="" />
             {/* <span className={styles.color}>{el.colors[0]}</span> */}
             <span className={styles.price}>
               Цена за полотно:{el.price} ₽<br></br>
               <span className={styles.set}>Цена за комплект: {el.fullPrice} ₽</span>
             </span>
-            <NavLink to={`/Catalog/` + el.id}>Подробнее</NavLink>
+            <NavLink to={`/Catalog/` + el.id} onClick={() => dispatch(SetCurrentItem(el))}>Подробнее</NavLink>
           </div>))
       } else
       if(records.length > 0 &&  records[0].kind === 'TItemMetal'  ){
         return records.filter((item) => item.kind === 'TItemMetal').map((el: TItemMetal) =>( 
           <div className={styles.item}>
             <span className={styles.name}>{el.name}</span>
-            <span>{el.priceCategory}</span>
+            {/* <span>{el.priceCategory}</span>
             <span>{`${el.additional.appar ? 'appar' : ''} `}</span>
             <span>{`${el.additional.mirror ? 'mirror' : ''} `}</span>
             <span>{`${el.additional.noise ? 'noise' : ''} `}</span>
-            <span>{`${el.additional.thermal ? 'thermal' : ''} `}</span>
+            <span>{`${el.additional.thermal ? 'thermal' : ''} `}</span> */}
 
-            <img src={`images/doors/metal/door${el.id}.jpg`} alt="" />
+            <img src={`images/doors/metal/preview/door${el.id}.jpg`} alt="" />
             <span className={styles.color}>{el.color}</span>
             <span className={styles.price}>
               Цена: {el.price} ₽<br></br>
             </span>
-            <NavLink to={`/Catalog/` + el.id}>Подробнее</NavLink>
+            <NavLink to={`/Catalog/` + el.id} onClick={() => dispatch(SetCurrentItem(el))}>Подробнее</NavLink>
           </div>))
       } else return(<p>Ничего нет</p>)
     }

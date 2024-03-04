@@ -36,10 +36,10 @@ export const DB_Doors_Wood: TItemWood[] = [
   },
   {
     kind: "TItemWood",
-    name: "door",
+    name: "ЛУ-22",
 
     id: "0002",
-    material: "эмаль",
+    material: "экошпон",
     // additional : {
     //   appar: false,
     //   mirror: false,
@@ -69,7 +69,7 @@ export const DB_Doors_Wood: TItemWood[] = [
   },
   {
     kind: "TItemWood",
-    name: "door",
+    name: "A-1",
     id: "0003",
     material: "эмаль",
     // additional : {
@@ -83,20 +83,10 @@ export const DB_Doors_Wood: TItemWood[] = [
     fullPrice: 5500,
     sizes: ["600x2000", "700x2000", "800x2000", "900x2000"],
     colors: [
-      "bleachedOak",
-      "cappuccino",
-      "darkNut",
-      "gray",
-      "naplesOak",
-      "wenge",
+      'emal'
     ],
     colors_translate: [
-      "Беленый дуб",
-      "Капучино",
-      "Темный орех",
-      "Серый",
-      "Дуб неаполь",
-      "Венге",
+      'Эмаль'
     ],
   },
   {

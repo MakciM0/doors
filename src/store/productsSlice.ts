@@ -1,6 +1,7 @@
 // import { TProducts, TProductsCount } from "./../types/types";
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import store, { RootState } from "./store";
+import { TItemMetal, TItemWood } from "../const/types";
 
 const productsSlice = createSlice({
   name: "products",
@@ -8,6 +9,8 @@ const productsSlice = createSlice({
     CurrentPage: 1 as number,
     CurrentFilterMaterial: '' as string,
     CurrentFilter: 'wood' as string,
+    CurrentItem: null as TItemWood | TItemMetal,
+
 
     // CurrentCategory: null as string | null,
     
@@ -18,6 +21,9 @@ const productsSlice = createSlice({
     // GoToWood: (state, action: PayloadAction<number>) =>{
     
     // },
+    SetCurrentItem :(state, action: PayloadAction<TItemWood | TItemMetal>) =>{
+      state.CurrentItem = action.payload
+    },
 
     // Pagination
     ChangeCurrentPage: (state, action: PayloadAction<number>) => {
@@ -46,6 +52,8 @@ export const {
   PrevPage,
   SetCurrentFilterMaterial,
   SetCurrentFilter,
+  SetCurrentItem,
+  
 
 } = productsSlice.actions;
 export const selectCount = (state: RootState) => state.products;
