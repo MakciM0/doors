@@ -63,6 +63,16 @@ export const SliderItems : TPhotoSlides[] = [
     title: 'Пример нашей работы №6',
     url: '/images/ourWorks/ourWorks06.jpeg'
   },
+  {
+    id: 7,
+    title: 'Пример нашей работы №7',
+    url: '/images/ourWorks/ourWorks07.jpeg'
+  },
+  {
+    id: 8,
+    title: 'Пример нашей работы №8',
+    url: '/images/ourWorks/ourWorks08.jpeg'
+  },
 ]
 
 export const ColorsTranslate : string[] =[
