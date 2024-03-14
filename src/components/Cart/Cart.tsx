@@ -1,9 +1,10 @@
 import React, {FC, useEffect, useState} from "react";
 
-import { useAppSelector } from "../../store/appHooks";
+import { useAppDispatch, useAppSelector } from "../../store/appHooks";
 import { animateScroll as scroll } from "react-scroll";
 
 import styles from './Cart.module.scss'
+import {DecrementItemMetal, DecrementItemWood, DeleteItemMetal, DeleteItemWood, IncrementItemMetal, IncrementItemWood } from "../../store/productsSlice";
 
 
 
@@ -13,7 +14,9 @@ interface CartProps {
  
 const Cart: FC<CartProps> = () => {
 
-    const cart = useAppSelector((state) => state.products.Cart)
+  const dispatch = useAppDispatch()
+  const cart = useAppSelector((state) => state.products.Cart)
+  const totalPrice = useAppSelector((state) => state.products.TotalPrice)
 
   const [scrollPosition, setScrollPosition] = useState<number>(0);
   const handleScroll = () => {
@@ -49,63 +52,67 @@ useEffect(() => {
       <span>
         Цена
       </span>
-      
     </div>
     <div className={styles.items}>
         {cart.map((item) =>(item.kind === "TItemWood" 
         ?  
           <div className={styles.item}>
-            <div className={styles.imgs}>
-              <img src={`/images/doors/wood/items/${item.id}/door${item.id}_${item.currentColor}.webp` } alt="" />
-            </div>
             <div className={styles.info}>
-              <p>Дверь межкомнатная {item.name}</p>
-              <span>{item.currentColor_translate}</span> 
+              <div className={styles.imgs}>
+                <img src={`/images/doors/wood/items/${item.id}/door${item.id}_${item.currentColor}.webp` } alt="" />
+              </div>
+              <div className={styles.name}>
+                <p>Дверь межкомнатная {item.name}</p>
+                <span>{item.currentColor_translate}</span> 
+              </div>
             </div>
+            
             <div className={styles.numbers}>
-              <button>-</button>
+              <button onClick={() => dispatch(DecrementItemWood(item))}>-</button>
               <span>{item.amount}</span>
-              <button>+</button>
+              <button onClick={() => dispatch(IncrementItemWood(item))}>+</button>
             </div>
             <div className={styles.size}>
-              {/* <span>{item.sizes}</span> выбранный размер */}
+              <span>{item.currentSize}</span> 
             </div>
             <div className={styles.sum}>
-              <span>{item.fullPrice}</span> {/*выбранная цена умножить на количество*/}
+              <span>{item.currentPrice}</span> {/*??выбранная цена умножить на количество??*/}
+              <button className={styles.delete} onClick={() => dispatch(DeleteItemWood(item))}>X</button>
             </div>
-            <div className={styles.delete}>
-              <button>X</button>
-            </div>  
           </div>
         
         : item.kind === "TItemMetal" ?
         <div className={styles.item}>
-            <div className={styles.imgs}>
-            <img src={`/images/doors/metal/items/${item.id}/door${item.id}.webp` } alt="" /> 
-            <img src={`/images/doors/metal/items/${item.id}/door${item.id}_inside${item.currentInsidePanel.img}.webp` } alt="" />
-            </div>
             <div className={styles.info}>
-              <p>{item.name}</p>
+              <div className={styles.imgs}>
+                <img src={`/images/doors/metal/items/${item.id}/door${item.id}.webp` } alt="" /> 
+                <img src={`/images/doors/metal/items/${item.id}/door${item.id}_inside${item.currentInsidePanel.img}.webp` } alt="" />
+              </div>
+                <div className={styles.name}>
+                <p>{item.name}</p>
+              </div>
             </div>
             <div className={styles.numbers}>
-              <button>-</button>
+              <button onClick={() => dispatch(DecrementItemMetal(item))}>-</button>
               <span>{item.amount}</span>
-              <button>+</button>
+              <button onClick={() => dispatch(IncrementItemMetal(item))}>+</button>
+            </div>
+            <div className={styles.size}>
+              <span>{item.currentSize}</span> 
             </div>
             <div className={styles.sum}>
               <span>{item.price}</span> {/*выбранная цена умножить на количество*/}
+              <button className={styles.delete} onClick={() => dispatch(DeleteItemMetal(item))}>X</button>
             </div>
-            <div className={styles.delete}>
-              <button>X</button>
-            </div>  
           </div>
+              
         : ''))}
           
 
 
    
     <div className={styles.result}>
-      Итоговая цена....
+      Итоговая цена {totalPrice}
     </div>
   </div>
  </div>

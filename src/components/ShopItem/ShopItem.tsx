@@ -10,7 +10,7 @@ import { DB_Doors_Metal } from "../../DataBase/DB_Doors_Metal";
 import { useAppDispatch, useAppSelector } from "../../store/appHooks";
 import Slider from "react-slick";
 import { settingsShopItem } from "../../slider/sliderConfig";
-import { AddToCart } from "../../store/productsSlice";
+import { AddToCartMetal, AddToCartWood } from "../../store/productsSlice";
 
 interface ShopItemProps {}
 
@@ -130,7 +130,7 @@ const ShopItem: FC<ShopItemProps> = () => {
           </div>
         </div>
         <div className={styles.buttons}>
-          <button onClick={() => dispatch(AddToCart(currentColor))}>Добавить в корзину</button>
+          <button onClick={() => dispatch(AddToCartWood({currentColor: currentColor, currentSize: currentSize, currentPrice: currentPrice}))}>Добавить в корзину</button>
           <div className={styles.line}></div>
           <p>
             Заказать замер и проконсультироваться можно по телефону : +7 (910)
@@ -218,7 +218,7 @@ const ShopItem: FC<ShopItemProps> = () => {
           </div>
         </div>
         <div className={styles.buttons}>
-          <button onClick={() => dispatch(AddToCart(currentInsidePanel))}>Добавить в корзину</button>
+          <button onClick={() => dispatch(AddToCartMetal({name: currentInsidePanel.name, img: currentInsidePanel.img, currentSize: currentSize}))}>Добавить в корзину</button>
           <div className={styles.line}></div>
           <p>
             Заказать замер и проконсультироваться можно по телефону : +7 (910)

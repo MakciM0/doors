@@ -80,10 +80,14 @@ export interface TCartItemMetal extends TItemMetal{
     img: string,
   } 
   amount : number,
+  currentSize: string,
 }
 
 export interface TCartItemWood extends TItemWood{
   currentColor_translate: string,
   currentColor: string,
   amount : number,
+  currentSize: string,
+  currentPrice: number,
+  
 }
