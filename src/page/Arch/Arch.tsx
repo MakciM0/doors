@@ -1,4 +1,4 @@
-import React, {FC} from "react";
+import React, {FC, useEffect} from "react";
 
 import styles from './Arch.module.scss'
 import Slider from "react-slick";
@@ -8,6 +8,10 @@ interface ArchProps {
 }
  
 const Arch: FC<ArchProps> = () => {
+
+  useEffect(() => { // Заголовок страницы
+    document.title = "Мир Дверей - Арки";
+  }, []);
 
   return (
     <div className={styles.arch}>

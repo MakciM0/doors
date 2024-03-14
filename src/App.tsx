@@ -12,7 +12,7 @@ import Footer from "./components/Footer/Footer";
 import Arch from "./page/Arch/Arch";
 import Laminate from "./page/Laminate/Laminate";
 import Ceiling from "./page/Ceiling/Ceiling";
-import Cart from "./components/Cart/Cart";
+import Cart from "./page/Cart/Cart";
 
 
 function App() {

@@ -26,6 +26,10 @@ const Catalog: FC<CatalogProps> = () => {
   const currentFilter = useAppSelector((state) => state.products.CurrentFilter);
   const CurrentItem = useAppSelector((state) => state.products.CurrentItem) 
 
+  useEffect(() => { // Заголовок страницы
+    document.title = "Мир Дверей - Католог";
+  }, []);
+
   const [currentPriceCategory, setCurrentPriceCategory] = useState<'' | 'eco' | 'budget' | 'premium'>('')
 
   const [records, setRecords] = useState<TItemWood[] | TItemMetal[]>([nullItemWood])

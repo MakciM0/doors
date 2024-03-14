@@ -1,10 +1,12 @@
-import React, {FC, useEffect, useState} from "react";
+import React, {FC, useEffect, useState, useRef} from "react";
+import emailjs from '@emailjs/browser';
 
 import { useAppDispatch, useAppSelector } from "../../store/appHooks";
 import { animateScroll as scroll } from "react-scroll";
 
 import styles from './Cart.module.scss'
 import {DecrementItemMetal, DecrementItemWood, DeleteItemMetal, DeleteItemWood, IncrementItemMetal, IncrementItemWood } from "../../store/productsSlice";
+import { NavLink } from "react-router-dom";
 
 
 
@@ -13,6 +15,30 @@ interface CartProps {
 }
  
 const Cart: FC<CartProps> = () => {
+
+  
+    const form = useRef();
+  
+    const sendEmail = (e : any) => {
+      e.preventDefault();
+      emailjs
+        .sendForm('service_eqebxuf', 'template_lk5d4yo', form.current, {
+          publicKey: 'SPc-lfJOCs1fz7svo',
+        })
+        .then(
+          () => {
+            console.log('SUCCESS!');
+          },
+          (error) => {
+            console.log('FAILED...', error.text);
+          },
+        );
+    };
+
+  useEffect(() => { // Заголовок страницы
+    document.title = "Мир Дверей - Корзина";
+  }, []);
+
 
   const dispatch = useAppDispatch()
   const cart = useAppSelector((state) => state.products.Cart)
@@ -36,9 +62,11 @@ useEffect(() => {
     scroll.scrollToTop();
   };
 
-  return ( //Если корзина не пуста
+  return ( 
   <div className={styles.Cart}>
-    <h2>Корзина</h2>
+    {cart.length > 0 ? //Если корзина не пуста
+    <div>
+      <h2>Корзина</h2>
     <div className={styles.tab_title}>
       <span>
         Название товара
@@ -62,7 +90,7 @@ useEffect(() => {
                 <img src={`/images/doors/wood/items/${item.id}/door${item.id}_${item.currentColor}.webp` } alt="" />
               </div>
               <div className={styles.name}>
-                <p>Дверь межкомнатная {item.name}</p>
+                <NavLink to={`/Catalog/${item.id}`}>Дверь межкомнатная {item.name}</NavLink>
                 <span>{item.currentColor_translate}</span> 
               </div>
             </div>
@@ -89,7 +117,7 @@ useEffect(() => {
                 <img src={`/images/doors/metal/items/${item.id}/door${item.id}_inside${item.currentInsidePanel.img}.webp` } alt="" />
               </div>
                 <div className={styles.name}>
-                <p>{item.name}</p>
+                  <NavLink to={`/Catalog/${item.id}`}>{item.name}</NavLink>
               </div>
             </div>
             <div className={styles.numbers}>
@@ -107,16 +135,49 @@ useEffect(() => {
           </div>
               
         : ''))}
-          
+        <div className={styles.result}>
+          {/* Итоговая цена {totalPrice} */}
+          <div className={styles.info}>
+            <p>Итоговая цена : {totalPrice}</p>
+            <span>*доставка и установка рассчитывается отдельно</span>
+          </div>
+          <div className={styles.pre_order}>
+            <button>Перейти к оформлению заказа</button>
+          </div>    
+        </div>
+        <div className={styles.order_form}>
 
-
-   
-    <div className={styles.result}>
-      Итоговая цена {totalPrice}
+        </div>
     </div>
-  </div>
+    </div>
+  : 
+
+    //Если корзина  пуста
+    <div className={styles.empty_cart}> 
+      <h2>Корзина пуста</h2>
+      <NavLink to="/Catalog">Перейти в каталог</NavLink>
+    </div>
+  }
+    
+    
+    
+        
+    
  </div>
   );
 }
  
 export default Cart;
+
+
+      {/* <div>
+        <form ref={form} onSubmit={sendEmail}>
+          <label>Name</label>
+          <input type="text" name="user_name" />
+          <label>Email</label>
+          <input type="email" name="user_email" />
+          <label>Message</label>
+          <textarea name="message" />
+          <input type="submit" value="Send" />
+        </form>
+      </div> */}

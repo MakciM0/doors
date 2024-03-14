@@ -26,6 +26,10 @@ const Main: FC<MainProps> = () => {
     setScrollPosition(position);
 };
 
+  useEffect(() => { // Заголовок страницы
+    document.title = "Мир Дверей";
+  }, []);
+
 useEffect(() => {
   window.addEventListener('scroll', handleScroll, { passive: true });
   

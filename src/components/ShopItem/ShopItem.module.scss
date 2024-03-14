@@ -148,6 +148,15 @@
       margin: 0 auto;
       font-size: 20px;
       margin-bottom: 20px;
+      padding: 5px;
+      cursor: pointer;
+      transition: .3s;
+      border-radius: 10px;
+      border: 2px solid inherit;
+    }
+    button:hover{
+      background-color: var(--red-color);
+      color: var(--yellow-color);
     }
     p{
       font-size: 22px;

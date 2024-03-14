@@ -1,4 +1,4 @@
-import React, {FC} from "react";
+import React, {FC, useEffect} from "react";
 
 import styles from './Ceiling.module.scss'
 
@@ -7,6 +7,11 @@ interface CeilingProps {
 }
  
 const Ceiling: FC<CeilingProps> = () => {
+
+  useEffect(() => { // Заголовок страницы
+    document.title = "Мир Дверей - Потолки";
+  }, []);
+
   return (
     <div className={styles.ceiling}>
       <div className={styles.content}>

@@ -1,4 +1,4 @@
-import React, {FC} from "react";
+import React, {FC, useEffect} from "react";
 
 import styles from './Laminate.module.scss'
 
@@ -7,6 +7,11 @@ interface LaminateProps {
 }
  
 const Laminate: FC<LaminateProps> = () => {
+
+  useEffect(() => { // Заголовок страницы
+    document.title = "Мир Дверей - Ламинат";
+  }, []);
+
   return (
     
     <div className={styles.laminate}> 

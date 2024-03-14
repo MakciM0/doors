@@ -14,8 +14,8 @@ export const DB_Doors_Wood: TItemWood[] = [
     //   thermal: false,
     // },
 
-    price: 90001,
-    fullPrice: 5500,
+    price: 5500,
+    fullPrice: 10500,
     sizes: ["600x2000", "700x2000", "800x2000", "900x2000"],
     colors: [
       "bleachedOak",
@@ -47,8 +47,8 @@ export const DB_Doors_Wood: TItemWood[] = [
     //   thermal: false,
     // },
 
-    price: 90002,
-    fullPrice: 5500,
+    price: 6000, //Цена за потолно
+    fullPrice: 11500,//Цена за комплект
     sizes: ["600x2000", "700x2000", "800x2000", "900x2000"],
     colors: [
       "bleachedOak",
@@ -79,8 +79,8 @@ export const DB_Doors_Wood: TItemWood[] = [
     //   thermal: false,
     // },
 
-    price: 90003,
-    fullPrice: 5500,
+    price: 9000,
+    fullPrice: 14000,
     sizes: ["600x2000", "700x2000", "800x2000", "900x2000"],
     colors: [
       'emal'

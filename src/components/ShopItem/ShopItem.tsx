@@ -125,7 +125,12 @@ const ShopItem: FC<ShopItemProps> = () => {
               </button>
             </div>
             <div className={styles.price_info}>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, optio labore, dolorum enim digniss</p>
+              {currentPrice === CurrentItem.price ? 
+                <p>Цена за ---------------</p>
+                : 
+                <p>Цена за ----------------</p> 
+              }
+              
             </div>
           </div>
         </div>
@@ -212,8 +217,8 @@ const ShopItem: FC<ShopItemProps> = () => {
                 Цена за комплект {CurrentItem.fullPrice} ₽
               </button> */}
             </div>
-            <div className={styles.price_info}>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, optio labore, dolorum enim digniss</p>
+            <div className={styles.price_info}>              
+              <p>Цена---------------</p>
             </div>
           </div>
         </div>
