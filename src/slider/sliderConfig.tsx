@@ -94,13 +94,16 @@ export  const settingsShopItem = {
     prevArrow: <SamplePrevArrow />,
     responsive: [
       {
-        breakpoint: 1290,
+        breakpoint: 560,
         settings: {
           centerMode: false,
           // variableWidth: true,
           slidesToShow: 1,
           slidesToScroll: 1,
-          initialSlide: 1
+          initialSlide: 1,
+          nextArrow: <NoneNextArrow />,
+          prevArrow: <NonePrevArrow />,
+          // dots:true,
         }
       },
     ]

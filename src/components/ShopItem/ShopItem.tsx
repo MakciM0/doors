@@ -173,7 +173,7 @@ const ShopItem: FC<ShopItemProps> = () => {
                 </button>))}
             </div> */}
             <div className={styles.sizes}>
-              Размеры
+              <span>Размеры</span>
               {CurrentItem.sizes.map((size, index) => (
                 <button
                   key={index}
