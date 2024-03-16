@@ -2,6 +2,7 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CopyPlugin = require('copy-webpack-plugin');
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
 
 
 module.exports = {
@@ -66,6 +67,7 @@ module.exports = {
     resolve: {
       extensions: [".*", ".js", ".jsx", '.ts', '.tsx',],
     },
+    
     plugins: [
         new HtmlWebpackPlugin({
             title: "Мир дверей",
@@ -80,6 +82,7 @@ module.exports = {
             }
           ]
         }),
+        new FaviconsWebpackPlugin('./src/imgs/icons/favicon.png'),
         
     ],
     devServer: {

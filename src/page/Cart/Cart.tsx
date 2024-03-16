@@ -16,24 +16,31 @@ interface CartProps {
  
 const Cart: FC<CartProps> = () => {
 
-  
+    const [openOrder, setOpenOrder] = useState<boolean>(false)
+
+    const [orderText, setOrderText] = useState<string>('');
     const form = useRef();
+  
+   let text : string[]
   
     const sendEmail = (e : any) => {
       e.preventDefault();
-      emailjs
-        .sendForm('service_eqebxuf', 'template_lk5d4yo', form.current, {
-          publicKey: 'SPc-lfJOCs1fz7svo',
-        })
-        .then(
-          () => {
-            console.log('SUCCESS!');
-          },
-          (error) => {
-            console.log('FAILED...', error.text);
-          },
-        );
+      // emailjs
+      //   .sendForm('service_eqebxuf', 'template_lk5d4yo', form.current, {
+      //     publicKey: 'SPc-lfJOCs1fz7svo',
+      //   })
+      //   .then(
+      //     () => {
+      //       console.log('SUCCESS!');
+      //     },
+      //     (error) => {
+      //       console.log('FAILED...', error.text);
+      //     },
+      //   );
+        console.log(form.current)
     };
+
+
 
   useEffect(() => { // Заголовок страницы
     document.title = "Мир Дверей - Корзина";
@@ -43,6 +50,8 @@ const Cart: FC<CartProps> = () => {
   const dispatch = useAppDispatch()
   const cart = useAppSelector((state) => state.products.Cart)
   const totalPrice = useAppSelector((state) => state.products.TotalPrice)
+
+  
 
   const [scrollPosition, setScrollPosition] = useState<number>(0);
   const handleScroll = () => {
@@ -61,6 +70,14 @@ useEffect(() => {
   const scrollToTop = () => {
     scroll.scrollToTop();
   };
+
+  useEffect(() =>{
+    text = (cart.map((el, index) => 
+        el.kind === 'TItemWood'
+          ? index + ' Название товара ' + el.name + ' Количество:' + el.amount + ' Цена:' + el.currentPrice + ' Цвет:' + el.currentColor_translate
+          : index + ' Название товара ' + el.name + ' Количество:' + el.amount + ' Цена:' + el.price + 'Панель: ' + el.currentInsidePanel.name))
+      setOrderText(text.join(' ')) //TotalPrice
+  },[cart])
 
   return ( 
   <div className={styles.Cart}>
@@ -89,7 +106,7 @@ useEffect(() => {
               <div className={styles.imgs}>
                 <img src={`/images/doors/wood/items/${item.id}/door${item.id}_${item.currentColor}.webp` } alt="" />
               </div>
-              <div className={styles.name}>
+              <div className={styles.name} >
                 <NavLink to={`/Catalog/${item.id}`}>Дверь межкомнатная {item.name}</NavLink>
                 <span>{item.currentColor_translate}</span> 
               </div>
@@ -136,33 +153,39 @@ useEffect(() => {
               
         : ''))}
         <div className={styles.result}>
-          {/* Итоговая цена {totalPrice} */}
           <div className={styles.info}>
             <p>Итоговая цена : {totalPrice}</p>
             <span>*доставка и установка рассчитывается отдельно</span>
           </div>
           <div className={styles.pre_order}>
-            <button>Перейти к оформлению заказа</button>
+            <button onClick={() => setOpenOrder(true)}>Перейти к оформлению заказа</button>
           </div>    
         </div>
+        {openOrder ?
         <div className={styles.order_form}>
-
-        </div>
+          <form ref={form} onSubmit={sendEmail}>
+            <label>Ваше имя</label>
+            <input type="text" name="user_name" required />
+            <label>Ваш Email</label>
+            <input type="email" name="user_email" required />
+            <label>Ваш Телефон</label> {/*Добавить на сайт*/}
+            <input type="tel" name="user_phone" required />
+            <label>Комментарий к заказу</label>
+            <textarea name="message" />{/*Добавить стили*/}
+            <textarea name="order" className={styles.orderTextArea} value={orderText}/>
+            <input type="submit" value="Сделать заказ" /> 
+          </form>
+        </div> 
+        :''}
     </div>
     </div>
-  : 
-
+    : 
     //Если корзина  пуста
     <div className={styles.empty_cart}> 
       <h2>Корзина пуста</h2>
       <NavLink to="/Catalog">Перейти в каталог</NavLink>
     </div>
   }
-    
-    
-    
-        
-    
  </div>
   );
 }

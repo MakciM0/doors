@@ -27,7 +27,7 @@ const Catalog: FC<CatalogProps> = () => {
   const CurrentItem = useAppSelector((state) => state.products.CurrentItem) 
 
   useEffect(() => { // Заголовок страницы
-    document.title = "Мир Дверей - Католог";
+    document.title = "Мир Дверей - Каталог";
   }, []);
 
   const [currentPriceCategory, setCurrentPriceCategory] = useState<'' | 'eco' | 'budget' | 'premium'>('')

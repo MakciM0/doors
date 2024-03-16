@@ -12,7 +12,7 @@ const productsSlice = createSlice({
 
     CurrentItem: null as TItemWood | TItemMetal,
 
-    Cart : []  as unknown as [TCartItemMetal | TCartItemWood],
+    Cart : []  as unknown as [TCartItemMetal | TCartItemWood], //cookie 
     TotalPrice : 0 as number,
 
 
