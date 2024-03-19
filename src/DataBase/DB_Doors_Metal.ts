@@ -8,7 +8,7 @@ export const DB_Doors_Metal: TItemMetal[] = [
     priceCategory: "premium",
     additional: {
       appar: true,
-      mirror: true,
+      mirror: false,
       noise: true,
       thermal: true,
     },
@@ -26,30 +26,33 @@ export const DB_Doors_Metal: TItemMetal[] = [
         img: '03'
       }
     ],
-    price: 91111,
+    price: 56000,
     sizes: ["960x2050"],
     color: "black",
   },
   {
     kind: "TItemMetal",
-    name: "Металлическая дверь",
-
+    name: "Стройгост",
     id: "1002",
 
     priceCategory: "eco",
     additional: {
       appar: true,
-      mirror: true,
-      noise: true,
-      thermal: true,
+      mirror: false,
+      noise: false,
+      thermal: false,
     },
     insidePanels:[
       {
-        name: '16мм, беленый дуб',
+        name: '3 мм, Дуб рустикальный',
         img: '01'
       },
+      {
+        name: 'Металл',
+        img: '02'
+      },
     ],
-    price: 91111,
+    price: 11000,
     sizes: ["860x2050", "960x2050"],
     color: "black",
   },

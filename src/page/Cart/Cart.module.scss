@@ -54,6 +54,9 @@
           img{
             width: 100px;
           }
+          img:nth-child(2){
+            margin-left: 10px;
+          }
         }
         .name{
           margin-left: 20px;

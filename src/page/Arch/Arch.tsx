@@ -2,6 +2,7 @@ import React, {FC, useEffect} from "react";
 
 import styles from './Arch.module.scss'
 import Slider from "react-slick";
+import { Palermo, Roman } from "../../DataBase/DB_Arch";
 
 interface ArchProps {
   
@@ -37,8 +38,8 @@ const Arch: FC<ArchProps> = () => {
           <h2>Арки Палермо</h2>
           <span>Цена</span>
           <div className={styles.images}>
-            <div className={styles.item}>
-              <h4>Название</h4>
+            {/* <div className={styles.item}>
+              <h4>Цвет</h4>
               <div className={styles.img_transform}>
                 <div className={styles.front}>
                   <img src="images/arch/example01.1.jpg" alt="" />
@@ -54,45 +55,24 @@ const Arch: FC<ArchProps> = () => {
                   </div>
                 </div>
               </div>
-            </div>
-
-            <div className={styles.item}>
-              <h4>Название</h4>
-              <div className={styles.img_transform}>
-                <div className={styles.front}>
-                  <img src="images/arch/example01.1.jpg" alt="" />
-                </div>
-                <div className={styles.back}>
-                  <div className={styles.back_content}>
-                    <p>
-                      ширина обналички — 70 мм
-                      высота обналички — 2150 мм
-                      толщина стены — 80, 100, 120, 150 мм
-                      ширина проема — 1000 мм
-                    </p>
+            </div> */}
+            {Palermo.map((item) =>(
+              <div key={item.id} className={styles.item}>
+                <h4>{item.color}</h4>
+                <div className={styles.img_transform}>
+                  <div className={styles.front}>
+                    <img src={item.img} alt='Арка Палермо' />
+                  </div>
+                  <div className={styles.back}>
+                    <div className={styles.back_content}>
+                      <p>
+                        {item.back_text}
+                      </p>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </div>
-
-            <div className={styles.item}>
-              <h4>Название</h4>
-              <div className={styles.img_transform}>
-                <div className={styles.front}>
-                  <img src="images/arch/example01.1.jpg" alt="" />
-                </div>
-                <div className={styles.back}>
-                  <div className={styles.back_content}>
-                    <p>
-                      ширина обналички — 70 мм
-                      высота обналички — 2150 мм
-                      толщина стены — 80, 100, 120, 150 мм
-                      ширина проема — 1000 мм
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
+              </div> 
+            ))}
           </div>
           <div className={styles.info}>
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis, aperiam. Praesentium nostrum iure assumenda illo aliquid tempora porro consequatur tempore in, eius, enim fugiat! Quas ex totam ratione quaerat porro.
@@ -103,7 +83,7 @@ const Arch: FC<ArchProps> = () => {
           <h2>Арки Романские</h2>
           <span>Цена</span>
           <div className={styles.images}>
-            <div className={styles.item}>
+            {/* <div className={styles.item}>
               <h4>Название</h4>
               <div className={styles.img_transform}>
                 <div className={styles.front}>
@@ -120,46 +100,26 @@ const Arch: FC<ArchProps> = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </div> */}
+            {Roman.map((item) =>(
+              <div key={item.id} className={styles.item}>
+                <h4>{item.color}</h4>
+                <div className={styles.img_transform}>
+                  <div className={styles.front}>
+                    <img src={item.img} alt='Арка Романская' />
+                  </div>
+                  <div className={styles.back}>
+                    <div className={styles.back_content}>
+                      <p>
+                        {item.back_text}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div> 
+            ))}
 
-            <div className={styles.item}>
-              <h4>Название</h4>
-              <div className={styles.img_transform}>
-                <div className={styles.front}>
-                  <img src="images/arch/example01.1.jpg" alt="" />
-                </div>
-                <div className={styles.back}>
-                  <div className={styles.back_content}>
-                    <p>
-                      ширина обналички — 70 мм
-                      высота обналички — 2150 мм
-                      толщина стены — 80, 100, 120, 150 мм
-                      ширина проема — 1000 мм
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
 
-            <div className={styles.item}>
-              <h4>Название</h4>
-              <div className={styles.img_transform}>
-                <div className={styles.front}>
-                  <img src="images/arch/example01.1.jpg" alt="" />
-                </div>
-                <div className={styles.back}>
-                  <div className={styles.back_content}>
-                    <p>
-                      ширина обналички — 70 мм
-                      высота обналички — 2150 мм
-                      толщина стены — 80, 100, 120, 150 мм
-                      ширина проема — 1000 мм
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <span>Цена</span>
-            </div>
           </div>
           <div className={styles.info}>
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis, aperiam. Praesentium nostrum iure assumenda illo aliquid tempora porro consequatur tempore in, eius, enim fugiat! Quas ex totam ratione quaerat porro.

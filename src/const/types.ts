@@ -1,6 +1,3 @@
-
-
-
 export type TItem = 
   {
     name: string,
@@ -90,4 +87,12 @@ export interface TCartItemWood extends TItemWood{
   currentSize: string,
   currentPrice: number,
   
+}
+
+export type TAcrhItem ={
+  id: number,
+  color: string,
+  img: string,
+  back_text: string,
+
 }

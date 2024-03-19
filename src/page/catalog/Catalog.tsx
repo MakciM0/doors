@@ -249,7 +249,6 @@ const Catalog: FC<CatalogProps> = () => {
   <div className={styles.catalog}>
     <div className={styles.filters}>
       {/* <Filters></Filters> */}
-
     <ul>
       <li className={currentFilter === 'wood' ? styles.filter_active : ''} onClick={() => dispatch(SetCurrentFilter('wood'))}>
         <span>Межкомнатные двери</span>

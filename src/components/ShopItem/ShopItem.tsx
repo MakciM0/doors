@@ -23,8 +23,13 @@ const ShopItem: FC<ShopItemProps> = () => {
 
   console.log(idMatch.charAt(0));
 
-  
-  
+  const [addToCartAnimationState, setAddToCartAnimationState] = useState<boolean>(false)
+  const AddToCartAnimation = () =>{//Анимация добавления в корзину
+    setAddToCartAnimationState(true)
+    setTimeout(() =>{
+      setAddToCartAnimationState(false)
+    }, 3000)
+  }
 
   const Translate = (color: string) => {
     // switch(color) {
@@ -135,7 +140,8 @@ const ShopItem: FC<ShopItemProps> = () => {
           </div>
         </div>
         <div className={styles.buttons}>
-          <button onClick={() => dispatch(AddToCartWood({currentColor: currentColor, currentSize: currentSize, currentPrice: currentPrice}))}>Добавить в корзину</button>
+          <button onClick={() => {dispatch(AddToCartWood({currentColor: currentColor, currentSize: currentSize, currentPrice: currentPrice}));AddToCartAnimation()}}>Добавить в корзину</button>
+          {addToCartAnimationState ? <span>Товар добавлен в корзину</span> : ''}
           <div className={styles.line}></div>
           <p>
             Заказать замер и проконсультироваться можно по телефону : +7 (910)
@@ -223,7 +229,8 @@ const ShopItem: FC<ShopItemProps> = () => {
           </div>
         </div>
         <div className={styles.buttons}>
-          <button onClick={() => dispatch(AddToCartMetal({name: currentInsidePanel.name, img: currentInsidePanel.img, currentSize: currentSize}))}>Добавить в корзину</button>
+          <button onClick={() => {dispatch(AddToCartMetal({name: currentInsidePanel.name, img: currentInsidePanel.img, currentSize: currentSize})); AddToCartAnimation()}}>Добавить в корзину</button>
+          {addToCartAnimationState ? <span>Товар добавлен в корзину</span> : ''}
           <div className={styles.line}></div>
           <p>
             Заказать замер и проконсультироваться можно по телефону : +7 (910)

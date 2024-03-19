@@ -28,6 +28,9 @@
       img{
         height: 520px;
       }
+      img:nth-child(2){
+        margin-left: 10px;
+      }
     }
     .info{
       width: 60%;
@@ -141,6 +144,7 @@
   .buttons{
     display: flex;
     flex-direction: column;
+    text-align: center;
     margin-top: 30px;
     padding-top: 20px;
     border-top: 2px solid var(--red-color);
@@ -159,12 +163,31 @@
       background-color: var(--red-color);
       color: var(--yellow-color);
     }
+    span{
+      font-size: 20px;
+      animation-duration: 3s;
+      animation-name: AddToCart;
+      position: relative;
+    }
     p{
       font-size: 22px;
       text-align: center;
     }
   }
 }
+
+@keyframes AddToCart {
+  0%{
+    left: 100px;
+  }
+  50%{
+    left: 0;
+  }
+  100%{
+    left: 70px;
+  }
+} 
+
 
 @media screen and (max-width: 1400px){
   .ShopItem_wrapper{
