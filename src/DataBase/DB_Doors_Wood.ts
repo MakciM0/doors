@@ -91,39 +91,27 @@ export const DB_Doors_Wood: TItemWood[] = [
   },
   {
     kind: "TItemWood",
-    name: "door",
+    name: "Багет 3 Патина золото остекленная",
     id: "0004",
     material: "эмаль",
     // additional : {
-    //   appar: false,
+    //   glass: true,
     //   mirror: false,
-    //   noise: false,
-    //   thermal: false,
     // },
 
-    price: 90004,
-    fullPrice: 5500,
+    price: 15000,
+    fullPrice: 21000,
     sizes: ["600x2000", "700x2000", "800x2000", "900x2000"],
     colors: [
-      "bleachedOak",
-      "cappuccino",
-      "darkNut",
-      "gray",
-      "naplesOak",
-      "wenge",
+      "emal"
     ],
     colors_translate: [
-      "Беленый дуб",
-      "Капучино",
-      "Темный орех",
-      "Серый",
-      "Дуб неаполь",
-      "Венге",
+      "Эмаль"
     ],
   },
   {
     kind: "TItemWood",
-    name: "door",
+    name: "Багет 3 Патина золото",
     id: "0005",
     material: "эмаль",
     // additional : {
@@ -133,29 +121,19 @@ export const DB_Doors_Wood: TItemWood[] = [
     //   thermal: false,
     // },
 
-    price: 90005,
-    fullPrice: 5500,
+    price: 14000,
+    fullPrice: 20000,
     sizes: ["600x2000", "700x2000", "800x2000", "900x2000"],
     colors: [
-      "bleachedOak",
-      "cappuccino",
-      "darkNut",
-      "gray",
-      "naplesOak",
-      "wenge",
+      "emal"
     ],
     colors_translate: [
-      "Беленый дуб",
-      "Капучино",
-      "Темный орех",
-      "Серый",
-      "Дуб неаполь",
-      "Венге",
+      "Эмаль"
     ],
   },
   {
     kind: "TItemWood",
-    name: "door",
+    name: "Алина Патина золото остекленная",
     id: "0006",
     material: "эмаль",
     // additional : {
@@ -165,30 +143,19 @@ export const DB_Doors_Wood: TItemWood[] = [
     //   thermal: false,
     // },
 
-    price: 90006,
-    fullPrice: 5500,
+    price: 18000,
+    fullPrice: 25000,
     sizes: ["600x2000", "700x2000", "800x2000", "900x2000"],
     colors: [
-      "bleachedOak",
-      "cappuccino",
-      "darkNut",
-      "gray",
-      "naplesOak",
-      "wenge",
+      "emal"
     ],
     colors_translate: [
-      "Беленый дуб",
-      "Капучино",
-      "Темный орех",
-      "Серый",
-      "Дуб неаполь",
-      "Венге",
+      "Эмаль"
     ],
   },
   {
     kind: "TItemWood",
-    name: "door",
-
+    name: "Алина Патина золото",
     id: "0007",
     material: "эмаль",
     // additional : {
@@ -198,29 +165,19 @@ export const DB_Doors_Wood: TItemWood[] = [
     //   thermal: false,
     // },
 
-    price: 90007,
-    fullPrice: 5500,
+    price: 17000,
+    fullPrice: 24000,
     sizes: ["600x2000", "700x2000", "800x2000", "900x2000"],
     colors: [
-      "bleachedOak",
-      "cappuccino",
-      "darkNut",
-      "gray",
-      "naplesOak",
-      "wenge",
+      "emal"
     ],
     colors_translate: [
-      "Беленый дуб",
-      "Капучино",
-      "Темный орех",
-      "Серый",
-      "Дуб неаполь",
-      "Венге",
+      "Эмаль"
     ],
   },
   {
     kind: "TItemWood",
-    name: "door",
+    name: "Богемия эмаль",
 
     id: "0008",
     material: "экошпон",
@@ -231,29 +188,19 @@ export const DB_Doors_Wood: TItemWood[] = [
     //   thermal: false,
     // },
 
-    price: 90008,
-    fullPrice: 5500,
+    price: 9000,
+    fullPrice: 15000,
     sizes: ["600x2000", "700x2000", "800x2000", "900x2000"],
     colors: [
-      "bleachedOak",
-      "cappuccino",
-      "darkNut",
-      "gray",
-      "naplesOak",
-      "wenge",
+      "emal"
     ],
     colors_translate: [
-      "Беленый дуб",
-      "Капучино",
-      "Темный орех",
-      "Серый",
-      "Дуб неаполь",
-      "Венге",
+      "Эмаль"
     ],
   },
   {
     kind: "TItemWood",
-    name: "door",
+    name: "Богемия эмаль остекленная",
 
     id: "0009",
     material: "экошпон",
@@ -264,24 +211,14 @@ export const DB_Doors_Wood: TItemWood[] = [
     //   thermal: false,
     // },
 
-    price: 90009,
-    fullPrice: 5500,
+    price: 11000,
+    fullPrice: 16000,
     sizes: ["600x2000", "700x2000", "800x2000", "900x2000"],
     colors: [
-      "bleachedOak",
-      "cappuccino",
-      "darkNut",
-      "gray",
-      "naplesOak",
-      "wenge",
+      "emal"
     ],
     colors_translate: [
-      "Беленый дуб",
-      "Капучино",
-      "Темный орех",
-      "Серый",
-      "Дуб неаполь",
-      "Венге",
+      "Эмаль"
     ],
   },
   {
