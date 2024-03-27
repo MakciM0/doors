@@ -198,6 +198,11 @@
           margin: 0 auto;
         }
       }
+      .images{
+        img{
+          height: 440px;
+        }
+      }
     }
   }
 }
@@ -207,7 +212,7 @@
     .ShopItem{
       .images{
         img{
-          height: 400px;
+          height: 380px;
         }
       }
     }

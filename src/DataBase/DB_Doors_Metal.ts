@@ -58,125 +58,142 @@ export const DB_Doors_Metal: TItemMetal[] = [
   },
   {
     kind: "TItemMetal",
-    name: "Металлическая дверь",
-
+    name: "Прогресс",
     id: "1003",
-
-    priceCategory: "eco",
-
+    priceCategory: "premium",
     additional: {
       appar: true,
-      mirror: true,
+      mirror: false,
       noise: true,
-      thermal: true,
-    },
-    insidePanels:[
-      {
-        name: '16мм, беленый дуб',
-        img: '01'
-      },
-    ],
-    price: 91111,
-
-    sizes: ["860x2050", "960x2050"],
-    color: "black",
-  },
-  {
-    kind: "TItemMetal",
-    name: "Металлическая дверь",
-
-    id: "1004",
-
-    priceCategory: "budget",
-
-    additional: {
-      appar: true,
-      mirror: true,
-      noise: true,
-      thermal: true,
-    },
-    insidePanels:[
-      {
-        name: '16мм, беленый дуб',
-        img: '01'
-      },
-    ],
-    price: 91111,
-
-    sizes: ["860x2050", "960x2050"],
-    color: "black",
-  },
-  {
-    kind: "TItemMetal",
-    name: "Металлическая дверь",
-
-    id: "1005",
-
-    priceCategory: "budget",
-
-    additional: {
-      appar: false,
-      mirror: true,
-      noise: false,
       thermal: false,
     },
     insidePanels:[
       {
-        name: '16мм, беленый дуб',
+        name: 'Светлый бетон',
         img: '01'
       },
     ],
-    price: 90100,
+    price: 40000,
 
     sizes: ["860x2050", "960x2050"],
     color: "black",
   },
   {
     kind: "TItemMetal",
-    name: "Металлическая дверь",
-
-    id: "1006",
-
-    priceCategory: "budget",
-
+    name: "Nord New (Норд Нью)",
+    id: "1004",
+    priceCategory: "premium",
     additional: {
       appar: false,
       mirror: false,
-      noise: false,
-      thermal: false,
+      noise: true,
+      thermal: true,
     },
     insidePanels:[
       {
-        name: '16мм, беленый дуб',
+        name: 'Меламин белый',
         img: '01'
       },
     ],
-    price: 90000,
+    price: 70000,
+    sizes: ["860x2050", "960x2050"],
+    color: "black",
+  },
+  {
+    kind: "TItemMetal",
+    name: "Винтер",
+    id: "1005",
+    priceCategory: "premium",
+    additional: {
+      appar: false,
+      mirror: false,
+      noise: true,
+      thermal: true,
+    },
+    insidePanels:[
+      {
+        name: 'пвх, цвет аляска белый',
+        img: '01'
+      },
+    ],
+    price: 45000,
+    sizes: ["860x2050", "960x2050"],
+    color: "black",
+  },
+  {
+    kind: "TItemMetal",
+    name: "Панцирь",
+    id: "1006",
+    priceCategory: "premium",
+    additional: {
+      appar: true,
+      mirror: true,
+      noise: true,
+      thermal: true,
+    },
+    insidePanels:[
+      {
+        name: 'Белый снег Soft',
+        img: '01'
+      },
+      {
+        name: 'Шоко велюр',
+        img: '02'
+      },
+      {
+        name: 'Белый, зеркало',
+        img: '03'
+      },
+      {
+        name: 'Эмаль белая/Патина золото, Рисунок: Алина',
+        img: '04'
+      },
+      {
+        name: 'Дуб Patina Antico',
+        img: '05'
+      },
+    ],
+    price: 45000,
 
     sizes: ["860x2050", "960x2050"],
     color: "black",
   },
   {
     kind: "TItemMetal",
-    name: "Металлическая дверь",
+    name: "Liberty (Либерти)",
 
     id: "1007",
-
-    priceCategory: "premium",
+    priceCategory: "budget",
 
     additional: {
-      appar: false,
-      mirror: false,
+      appar: true,
+      mirror: true,
       noise: false,
       thermal: false,
     },
     insidePanels:[
       {
-        name: '16мм, беленый дуб',
+        name: 'Белый снег Soft',
         img: '01'
       },
+      {
+        name: 'Шоко велюр',
+        img: '02'
+      },
+      {
+        name: 'Белый, зеркало',
+        img: '03'
+      },
+      {
+        name: 'Эмаль белая/Патина золото, Рисунок: Алина',
+        img: '04'
+      },
+      {
+        name: 'Дуб Patina Antico',
+        img: '05'
+      },
     ],
-    price: 90000,
+    price: 30000,
 
     sizes: ["860x2050", "960x2050"],
     color: "black",
