@@ -41,7 +41,7 @@ export type TItemMetal ={
   // material: string,
   price: number,
   sizes: string[],
-  color: string,
+  // color: string,
 }
 
 export type TItemWood ={

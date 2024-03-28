@@ -21,7 +21,7 @@ const Ceiling: FC<CeilingProps> = () => {
           <p>Выезд мастера на замер с каталогом по городу бесплатно. От большого объёма скидка. Стоимость от 500 руб. за м2.</p>
         </div>
         <div className={styles.img}>
-          <img src="images/Ceiling.jpg" alt="Потолки" />
+          <img src="images/ceiling.jpg" alt="Потолки" />
         </div>
       </div>
       <div className={styles.order}>

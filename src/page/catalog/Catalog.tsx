@@ -198,7 +198,6 @@ const Catalog: FC<CatalogProps> = () => {
             <span>{`${el.additional.thermal ? 'thermal' : ''} `}</span> */}
 
             <img src={`images/doors/metal/preview/door${el.id}.jpg`} alt="" />
-            <span className={styles.color}>{el.color}</span>
             <span className={styles.price}>
               Цена: {el.price} ₽<br></br>
             </span>

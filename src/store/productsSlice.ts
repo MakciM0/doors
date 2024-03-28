@@ -123,7 +123,6 @@ const productsSlice = createSlice({
             priceCategory: state.CurrentItem.priceCategory,
             additional: state.CurrentItem.additional,
             insidePanels: state.CurrentItem.insidePanels,
-            color: state.CurrentItem.color,
             amount: 1,// -------------------
           }
         )
