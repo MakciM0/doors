@@ -223,101 +223,168 @@ export const DB_Doors_Wood: TItemWood[] = [
   },
   {
     kind: "TItemWood",
-    name: "door",
-
+    name: "L-2 (стекло)",
     id: "0010",
     material: "эмаль",
-    // additional : {
-    //   appar: false,
-    //   mirror: false,
-    //   noise: false,
-    //   thermal: false,
-    // },
-
     price: 90010,
     fullPrice: 5500,
     sizes: ["600x2000", "700x2000", "800x2000", "900x2000"],
     colors: [
-      "bleachedOak",
-      "cappuccino",
-      "darkNut",
-      "gray",
-      "naplesOak",
-      "wenge",
+      "emal"
     ],
     colors_translate: [
-      "Беленый дуб",
-      "Капучино",
-      "Темный орех",
-      "Серый",
-      "Дуб неаполь",
-      "Венге",
+      "Эмаль"
     ],
   },
   {
     kind: "TItemWood",
-    name: "door",
-
+    name: "L-2",
     id: "0011",
-    material: "эмалит",
-    // additional : {
-    //   appar: false,
-    //   mirror: false,
-    //   noise: false,
-    //   thermal: false,
-    // },
-
+    material: "эмаль",
     price: 90011,
     fullPrice: 5500,
     sizes: ["600x2000", "700x2000", "800x2000", "900x2000"],
     colors: [
-      "bleachedOak",
-      "cappuccino",
-      "darkNut",
-      "gray",
-      "naplesOak",
-      "wenge",
+      "emal"
     ],
     colors_translate: [
-      "Беленый дуб",
-      "Капучино",
-      "Темный орех",
-      "Серый",
-      "Дуб неаполь",
-      "Венге",
+      "Эмаль"
     ],
   },
   {
     kind: "TItemWood",
-    name: "door",
-
+    name: "LINE",
     id: "0012",
-    material: "натур",
-    // additional : {
-    //   appar: false,
-    //   mirror: false,
-    //   noise: false,
-    //   thermal: false,
-    // },
-
+    material: "эмаль",
     price: 90012,
     fullPrice: 5500,
     sizes: ["600x2000", "700x2000", "800x2000", "900x2000"],
     colors: [
-      "bleachedOak",
-      "cappuccino",
-      "darkNut",
-      "gray",
-      "naplesOak",
-      "wenge",
+      "emal"
     ],
     colors_translate: [
-      "Беленый дуб",
-      "Капучино",
+      "Эмаль"
+    ],
+  },
+  {
+    kind: "TItemWood",
+    name: "ДП-46",
+    id: "0013",
+    material: "экошпон",
+    price: 90012,
+    fullPrice: 5500,
+    sizes: ["600x2000", "700x2000", "800x2000", "900x2000"],
+    colors: [
+      "whiteSilk"
+    ],
+    colors_translate: [
+      "Белый шёлк"
+    ],
+  },
+  {
+    kind: "TItemWood",
+    name: "ДП-61",
+    id: "0014",
+    material: "экошпон",
+    price: 90012,
+    fullPrice: 5500,
+    sizes: ["600x2000", "700x2000", "800x2000", "900x2000"],
+    colors: [
+      "silverGray",
+      "whitePearl"
+    ],
+    colors_translate: [
+      "Серебристо-серый",
+      "Белая жемчужина"
+    ],
+  },
+  {
+    kind: "TItemWood",
+    name: "ЛУ-45",
+    id: "0015",
+    material: "экошпон",
+    price: 90012,
+    fullPrice: 5500,
+    sizes: ["600x2000", "700x2000", "800x2000", "900x2000"],
+    colors: [
+      "arctic",
+      "olive"
+    ],
+    colors_translate: [
+      "Арктик",
+      "Олива"
+    ],
+  },
+  {
+    kind: "TItemWood",
+    name: "ЛУ-17",
+    id: "0016",
+    material: "экошпон",
+    price: 90012,
+    fullPrice: 5500,
+    sizes: ["600x2000", "700x2000", "800x2000", "900x2000"],
+    colors: [
+      "darkNut",
+      "bleachedOak",
+      "wenge",
+      "cappuccino",
+      "gray",
+    ],
+    colors_translate: [
       "Темный орех",
-      "Серый",
-      "Дуб неаполь",
+      "Беленый дуб",
       "Венге",
+      "Капучино",
+      "Серый",
+    ],
+  },
+  {
+    kind: "TItemWood",
+    name: "ЛУ-51",
+    id: "0017",
+    material: "эмалит",
+    price: 90012,
+    fullPrice: 5500,
+    sizes: ["600x2000", "700x2000", "800x2000", "900x2000"],
+    colors: [
+      "emalit",
+      "emalitGray"
+    ],
+    colors_translate: [
+      "Эмалит",
+      "Серый эмалит"
+    ],
+  },
+  {
+    kind: "TItemWood",
+    name: "ЛУ-52",
+    id: "0018",
+    material: "эмалит",
+    price: 90012,
+    fullPrice: 5500,
+    sizes: ["600x2000", "700x2000", "800x2000", "900x2000"],
+    colors: [
+      "emalit",
+      "emalitGray"
+    ],
+    colors_translate: [
+      "Эмалит",
+      "Серый эмалит"
+    ],
+  },
+  {
+    kind: "TItemWood",
+    name: "Скин-5",
+    id: "0019",
+    material: "эмаль",
+    price: 90012,
+    fullPrice: 5500,
+    sizes: ["600x2000", "700x2000", "800x2000", "900x2000"],
+    colors: [
+      "emal"
+    ],
+    colors_translate: [
+      "Эмаль"
     ],
   },
 ];

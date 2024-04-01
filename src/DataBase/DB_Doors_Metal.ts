@@ -654,4 +654,425 @@ export const DB_Doors_Metal: TItemMetal[] = [
     price: 48000,
     sizes: ["860x2050", "960x2050"],
   },
+  {
+    kind: "TItemMetal",
+    name: "Нова",
+    id: "1021",
+    priceCategory: "premium",
+    additional: {
+      appar: true,
+      mirror: true,
+      noise: true,
+      thermal: false,
+    },
+    insidePanels:[
+      {
+        name: 'Белый снег Soft',
+        img: '01'
+      },
+      {
+        name: 'Шоко велюр',
+        img: '02'
+      },
+      {
+        name: 'Белый, зеркало',
+        img: '03'
+      },
+      {
+        name: 'Эмаль белая/Патина золото, Рисунок: Алина',
+        img: '04'
+      },
+      {
+        name: 'Дуб Patina Antico',
+        img: '05'
+      },
+      {
+        name: 'Цемент светлый',
+        img: '06'
+      },
+      {
+        name: 'Аляска гладкая',
+        img: '07'
+      },
+      {
+        name: 'Кремовый Soft',
+        img: '08'
+      },
+    ],
+    price: 42000,
+    sizes: ["860x2050", "960x2050"],
+  },
+  {
+    kind: "TItemMetal",
+    name: "Тесла",
+    id: "1022",
+    priceCategory: "premium",
+    additional: {
+      appar: true,
+      mirror: true,
+      noise: true,
+      thermal: false,
+    },
+    insidePanels:[
+      {
+        name: 'Белый снег Soft',
+        img: '01'
+      },
+      {
+        name: 'Шоко велюр',
+        img: '02'
+      },
+      {
+        name: 'Белый, зеркало',
+        img: '03'
+      },
+      {
+        name: 'Эмаль белая/Патина золото, Рисунок: Алина',
+        img: '04'
+      },
+      {
+        name: 'Дуб Patina Antico',
+        img: '05'
+      },
+      {
+        name: 'Цемент светлый',
+        img: '06'
+      },
+      {
+        name: 'Аляска гладкая',
+        img: '07'
+      },
+      {
+        name: 'Кремовый Soft',
+        img: '08'
+      },
+    ],
+    price: 42000,
+    sizes: ["860x2050", "960x2050"],
+  },
+  {
+    kind: "TItemMetal",
+    name: "Квадро",
+    id: "1023",
+    priceCategory: "budget",
+    additional: {
+      appar: true,
+      mirror: true,
+      noise: true,
+      thermal: false,
+    },
+    insidePanels:[
+      {
+        name: 'Белый снег Soft',
+        img: '01'
+      },
+      {
+        name: 'Шоко велюр',
+        img: '02'
+      },
+      {
+        name: 'Белый, зеркало',
+        img: '03'
+      },
+      {
+        name: 'Эмаль белая/Патина золото, Рисунок: Алина',
+        img: '04'
+      },
+      {
+        name: 'Дуб Patina Antico',
+        img: '05'
+      },
+      {
+        name: 'Цемент светлый',
+        img: '06'
+      },
+      {
+        name: 'Аляска гладкая',
+        img: '07'
+      },
+      {
+        name: 'Кремовый Soft',
+        img: '08'
+      },
+    ],
+    price: 42000,
+    sizes: ["860x2050", "960x2050"],
+  },
+  {
+    kind: "TItemMetal",
+    name: "Термо-3",
+    id: "1024",
+    priceCategory: "budget",
+    additional: {
+      appar: true,
+      mirror: true,
+      noise: true,
+      thermal: true,
+    },
+    insidePanels:[
+      {
+        name: 'Белый снег Soft',
+        img: '01'
+      },
+      {
+        name: 'Шоко велюр',
+        img: '02'
+      },
+      {
+        name: 'Белый, зеркало',
+        img: '03'
+      },
+      {
+        name: 'Эмаль белая/Патина золото, Рисунок: Алина',
+        img: '04'
+      },
+      {
+        name: 'Дуб Patina Antico',
+        img: '05'
+      },
+      {
+        name: 'Цемент светлый',
+        img: '06'
+      },
+      {
+        name: 'Аляска гладкая',
+        img: '07'
+      },
+      {
+        name: 'Кремовый Soft',
+        img: '08'
+      },
+    ],
+    price: 42000,
+    sizes: ["860x2050", "960x2050"],
+  },
+  {
+    kind: "TItemMetal",
+    name: "L-45",
+    id: "1025",
+    priceCategory: "premium",
+    additional: {
+      appar: true,
+      mirror: true,
+      noise: true,
+      thermal: false,
+    },
+    insidePanels:[
+      {
+        name: '16мм, ПВХ софт грей, зеркало',
+        img: '01'
+      },
+      {
+        name: '10мм, бетон пепельный',
+        img: '02'
+      },
+      {
+        name: '10мм, белый матовый',
+        img: '03'
+      },
+      {
+        name: '10мм, ясень грей',
+        img: '04'
+      },
+      {
+        name: 'МДФ 10мм',
+        img: '05'
+      },
+      {
+        name: '10мм, ПВХ ясень белый',
+        img: '06'
+      },
+      {
+        name: '16мм, ПВХ ясень белый, зеркало',
+        img: '07'
+      },
+      {
+        name: '10мм, дуб с пилением',
+        img: '08'
+      },
+      {
+        name: '16мм, Грецкий орех + черная патина винорит',
+        img: '09'
+      },
+    ],
+    price: 42000,
+    sizes: ["860x2050", "960x2050"],
+  },
+  {
+    kind: "TItemMetal",
+    name: "L-46",
+    id: "1026",
+    priceCategory: "premium",
+    additional: {
+      appar: true,
+      mirror: true,
+      noise: true,
+      thermal: false,
+    },
+    insidePanels:[
+      {
+        name: '16мм, ПВХ софт грей, зеркало',
+        img: '01'
+      },
+      {
+        name: '10мм, бетон пепельный',
+        img: '02'
+      },
+      {
+        name: '10мм, белый матовый',
+        img: '03'
+      },
+      {
+        name: '10мм, ясень грей',
+        img: '04'
+      },
+      {
+        name: 'МДФ 10мм',
+        img: '05'
+      },
+      {
+        name: '10мм, ПВХ ясень белый',
+        img: '06'
+      },
+      {
+        name: '16мм, ПВХ ясень белый, зеркало',
+        img: '07'
+      },
+      {
+        name: '10мм, дуб с пилением',
+        img: '08'
+      },
+      {
+        name: '16мм, Грецкий орех + черная патина винорит',
+        img: '09'
+      },
+    ],
+    price: 42000,
+    sizes: ["860x2050", "960x2050"],
+  },
+  {
+    kind: "TItemMetal",
+    name: "L-63",
+    id: "1027",
+    priceCategory: "budget",
+    additional: {
+      appar: true,
+      mirror: true,
+      noise: true,
+      thermal: false,
+    },
+    insidePanels:[
+      {
+        name: 'Зеркало',
+        img: '01'
+      },
+    ],
+    price: 42000,
+    sizes: ["860x2050", "960x2050"],
+  },
+  {
+    kind: "TItemMetal",
+    name: "Берген",
+    id: "1028",
+    priceCategory: "premium",
+    additional: {
+      appar: true,
+      mirror: true,
+      noise: true,
+      thermal: true,
+    },
+    insidePanels:[
+      {
+        name: '16мм, ПВХ софт грей, зеркало',
+        img: '01'
+      },
+      {
+        name: '10мм, бетон пепельный',
+        img: '02'
+      },
+      {
+        name: '10мм, белый матовый',
+        img: '03'
+      },
+      {
+        name: '10мм, ясень грей',
+        img: '04'
+      },
+      {
+        name: 'МДФ 10мм',
+        img: '05'
+      },
+      {
+        name: '10мм, ПВХ ясень белый',
+        img: '06'
+      },
+      {
+        name: '16мм, ПВХ ясень белый, зеркало',
+        img: '07'
+      },
+      {
+        name: '10мм, дуб с пилением',
+        img: '08'
+      },
+      {
+        name: '16мм, Грецкий орех + черная патина винорит',
+        img: '09'
+      },
+    ],
+    price: 42000,
+    sizes: ["860x2050", "960x2050"],
+  },
+  {
+    kind: "TItemMetal",
+    name: "",
+    id: "1029",
+    priceCategory: "premium",
+    additional: {
+      appar: true,
+      mirror: true,
+      noise: true,
+      thermal: true,
+    },
+    insidePanels:[
+      {
+        name: '16мм, ПВХ софт грей, зеркало',
+        img: '01'
+      },
+      {
+        name: '10мм, бетон пепельный',
+        img: '02'
+      },
+      {
+        name: '10мм, белый матовый',
+        img: '03'
+      },
+      {
+        name: '10мм, ясень грей',
+        img: '04'
+      },
+      {
+        name: 'МДФ 10мм',
+        img: '05'
+      },
+      {
+        name: '10мм, ПВХ ясень белый',
+        img: '06'
+      },
+      {
+        name: '16мм, ПВХ ясень белый, зеркало',
+        img: '07'
+      },
+      {
+        name: '10мм, дуб с пилением',
+        img: '08'
+      },
+      {
+        name: '16мм, Грецкий орех + черная патина винорит',
+        img: '09'
+      },
+    ],
+    price: 42000,
+    sizes: ["860x2050", "960x2050"],
+  },
+  
 ];
