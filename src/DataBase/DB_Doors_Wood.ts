@@ -387,4 +387,25 @@ export const DB_Doors_Wood: TItemWood[] = [
       "Эмаль"
     ],
   },
+  {
+    kind: "TItemWood",
+    name: "Флоренс",
+    id: "0020",
+    material: "экошпон",
+    price: 9000,
+    fullPrice: 5500,
+    sizes: ["600x2000", "700x2000", "800x2000", "900x2000"],
+    colors: [
+      "lightGraySerena",
+      "ceramikSerena",
+      "stoneSerena",
+      "whiteSerena"
+    ],
+    colors_translate: [
+      "Светло-серый Серена",
+      "Керамик Серена",
+      "Каменный Серена",
+      "Белый Серена"
+    ],
+  },
 ];
