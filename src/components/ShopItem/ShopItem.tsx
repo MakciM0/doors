@@ -131,9 +131,9 @@ const ShopItem: FC<ShopItemProps> = () => {
             </div>
             <div className={styles.price_info}>
               {currentPrice === CurrentItem.price ? 
-                <p>Цена за ---------------</p>
+                <p>Цена только за полотно</p>
                 : 
-                <p>Цена за ----------------</p> 
+                <p>Цена за полотно + наличник с двух сторон + коробка</p> 
               }
               
             </div>

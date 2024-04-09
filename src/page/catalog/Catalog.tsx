@@ -175,8 +175,6 @@ const Catalog: FC<CatalogProps> = () => {
         return records.filter((item) => item.kind === 'TItemWood').map((el: TItemWood) =>( 
           <div className={styles.item}>
             <span className={styles.name}>{el.name}</span>
-  
-            
             {/* <span>{el.material}</span>  */}
             <img src={`images/doors/wood/preview/door${el.id}.jpg`} alt="" />
             {/* <span className={styles.color}>{el.colors[0]}</span> */}
@@ -263,9 +261,9 @@ const Catalog: FC<CatalogProps> = () => {
           <li  className={currentFilterMaterial === 'эмалит' ? styles.filter_active_material : ''}
               onClick={() => dispatch(SetCurrentFilterMaterial('эмалит'))}
           >Эмалит</li>
-          <li  className={currentFilterMaterial === 'натур' ? styles.filter_active_material : ''}
+          {/* <li  className={currentFilterMaterial === 'натур' ? styles.filter_active_material : ''}
               onClick={() => dispatch(SetCurrentFilterMaterial('натур'))}
-          >Натуральный шпон</li>
+          >Натуральный шпон</li> */}
 
           {/* Доп свойства */}
           {/* <li  className={currentFilterMaterial === 'экошпон' ? styles.filter_active_material : ''}
