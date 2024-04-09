@@ -224,7 +224,7 @@ const ShopItem: FC<ShopItemProps> = () => {
               </button> */}
             </div>
             <div className={styles.price_info}>              
-              <p>Цена---------------</p>
+              <p>Цена за полный комплект</p>
             </div>
           </div>
         </div>
