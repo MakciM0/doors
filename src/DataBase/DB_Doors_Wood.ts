@@ -180,7 +180,7 @@ export const DB_Doors_Wood: TItemWood[] = [
     name: "Богемия эмаль",
 
     id: "0008",
-    material: "экошпон",
+    material: "emal",
     // additional : {
     //   appar: false,
     //   mirror: false,
@@ -203,7 +203,7 @@ export const DB_Doors_Wood: TItemWood[] = [
     name: "Богемия эмаль остекленная",
 
     id: "0009",
-    material: "экошпон",
+    material: "emal",
     // additional : {
     //   appar: false,
     //   mirror: false,
