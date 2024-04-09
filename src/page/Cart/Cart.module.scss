@@ -4,7 +4,7 @@
   min-height: 50vh;
 
   h2{
-
+    margin: 15px;
   }
   .tab_title{
     position: sticky;
@@ -187,4 +187,56 @@
     }
   }
   
+}
+
+@media screen and (max-width: 800px){
+  .imgs{
+    img{
+      width: 100px;
+      height: 210px;
+    }
+  }
+  .name{
+    a{
+      font-size: 16px;
+    }
+    span{
+      font-size: 14px;
+    }
+  }
+  .result{
+    flex-direction: column;
+    .pre_order{
+      margin: 15px auto;
+    }
+  }
+  .Cart{
+    .order_form{
+      form{
+        input{
+          width: 60%;
+        }
+        textarea{
+          width: 60%;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 800px){
+  .Cart{
+    .items{
+      .item{
+        .info{
+          flex-direction: column-reverse;
+          text-align: center;
+          .name{
+            margin: 3px;
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
 }

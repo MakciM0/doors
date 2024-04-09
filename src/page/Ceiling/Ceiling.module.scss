@@ -50,3 +50,27 @@
         }
   }
 }
+
+@media screen and (max-width: 980px){
+  .ceiling{
+    .content{
+      flex-direction: column-reverse;
+      .info{
+        width: 80%;
+      }
+      .img{
+        width: 60%;
+      }
+    }
+  } 
+}
+
+@media screen and (max-width: 600px){
+  .ceiling{
+    .content{
+      .img{
+        width: 100%;
+      }
+    }
+  }
+}

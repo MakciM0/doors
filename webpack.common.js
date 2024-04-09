@@ -12,6 +12,7 @@ module.exports = {
         title: "Мир дверей",
         filename: 'index.html',
         template: "./src/index.html",
+        favicon: './src/imgs/icons/favicon.png'
     }),
     new CopyPlugin({
       patterns: [

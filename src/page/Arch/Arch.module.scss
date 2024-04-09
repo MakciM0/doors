@@ -139,3 +139,71 @@
     
   }
 }
+
+@media screen and (max-width: 1650px){
+  .arch{
+    .items{
+      .nav{
+        // flex-direction: row;
+        padding-top: 10px;
+        top: 100px;
+        left: 0;
+        background-color: #fff;
+      }
+    }
+  } 
+}
+
+@media screen and (max-width: 1300px){
+  .arch{
+    .items{
+      .nav{
+        display: block;
+        position: static;
+      }
+    }
+  } 
+}
+
+@media screen and (max-width: 980px){
+  .arch{
+    .content{
+      flex-direction: column-reverse;
+      .info{
+        width: 80%;
+      }
+      .img{
+        width: 60%;
+      }
+    }
+    .items{
+      section{
+        .images{
+          .item{
+            width: 45%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px){
+  .arch{
+    .content{
+      .img{
+        width: 100%;
+      }
+    }
+    .items{
+      section{
+        .images{
+          .item{
+            width: 80%;
+            margin: 20px auto;
+          }
+        }
+      }
+    }
+  }
+}

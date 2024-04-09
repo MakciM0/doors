@@ -105,6 +105,41 @@
       }
     }
   }
+}
 
-  
+@media screen and (max-width: 1550px){
+  .laminate{
+    .example{
+      .nav{
+        display: block;
+        position: static;
+        padding-top: 10px;
+        background-color: #fff;
+      }
+    } 
+  } 
+}
+
+@media screen and (max-width: 980px){
+  .laminate{
+    .content{
+      flex-direction: column-reverse;
+      .info{
+        width: 80%;
+      }
+      .img{
+        width: 60%;
+      }
+    }
+  } 
+}
+
+@media screen and (max-width: 600px){
+  .laminate{
+    .content{
+      .img{
+        width: 100%;
+      }
+    }
+  } 
 }
