@@ -26,7 +26,7 @@ export const DB_Doors_Metal: TItemMetal[] = [
         img: '03'
       }
     ],
-    price: 56000,
+    price: 57700,
     sizes: ["960x2050"],
   },
   {
@@ -50,7 +50,7 @@ export const DB_Doors_Metal: TItemMetal[] = [
         img: '02'
       },
     ],
-    price: 11000,
+    price: 12000,
     sizes: ["860x2050", "960x2050"],
   },
   {
@@ -90,7 +90,7 @@ export const DB_Doors_Metal: TItemMetal[] = [
         img: '01'
       },
     ],
-    price: 70000,
+    price: 72000,
     sizes: ["860x2050", "960x2050"],
   },
   {
@@ -110,7 +110,7 @@ export const DB_Doors_Metal: TItemMetal[] = [
         img: '01'
       },
     ],
-    price: 45000,
+    price: 80000,
     sizes: ["860x2050", "960x2050"],
   },
   {
@@ -146,7 +146,7 @@ export const DB_Doors_Metal: TItemMetal[] = [
         img: '05'
       },
     ],
-    price: 45000,
+    price: 39200,
 
     sizes: ["860x2050", "960x2050"],
   },
@@ -183,7 +183,7 @@ export const DB_Doors_Metal: TItemMetal[] = [
         img: '05'
       },
     ],
-    price: 30000,
+    price: 27700,
     sizes: ["860x2050", "960x2050"],
   },
   {
@@ -227,7 +227,7 @@ export const DB_Doors_Metal: TItemMetal[] = [
       img: '01'
     },
   ],
-    price: 24000,
+    price: 29200,
     sizes: ["860x2050", "960x2050"],
   },
   {
@@ -247,7 +247,7 @@ export const DB_Doors_Metal: TItemMetal[] = [
         img: '01'
       },
     ],
-    price: 30000,
+    price: 35200,
     sizes: ["860x2050", "960x2050"],
   },
   {
@@ -267,7 +267,7 @@ export const DB_Doors_Metal: TItemMetal[] = [
         img: '01'
       },
     ],
-    price: 32000,
+    price: 34700,
     sizes: ["860x2050", "960x2050"],
   },
   {
@@ -287,7 +287,7 @@ export const DB_Doors_Metal: TItemMetal[] = [
         img: '01'
       },
     ],
-    price: 30000,
+    price: 35200,
     sizes: ["860x2050", "960x2050"],
   },
   {
@@ -307,7 +307,7 @@ export const DB_Doors_Metal: TItemMetal[] = [
         img: '01'
       },
     ],
-    price: 40000,
+    price: 39200,
     sizes: ["860x2050", "960x2050"],
   },
   {
@@ -507,7 +507,7 @@ export const DB_Doors_Metal: TItemMetal[] = [
         img: '08'
       },
     ],
-    price: 40000,
+    price: 42200,
     sizes: ["860x2050", "960x2050"],
   },
   {
@@ -555,7 +555,7 @@ export const DB_Doors_Metal: TItemMetal[] = [
         img: '08'
       },
     ],
-    price: 40000,
+    price: 35200,
     sizes: ["860x2050", "960x2050"],
   },
   {
@@ -603,7 +603,7 @@ export const DB_Doors_Metal: TItemMetal[] = [
         img: '08'
       },
     ],
-    price: 48000,
+    price: 45200,
     sizes: ["860x2050", "960x2050"],
   },
   {
@@ -651,7 +651,7 @@ export const DB_Doors_Metal: TItemMetal[] = [
         img: '08'
       },
     ],
-    price: 48000,
+    price: 42200,
     sizes: ["860x2050", "960x2050"],
   },
   {
@@ -699,7 +699,7 @@ export const DB_Doors_Metal: TItemMetal[] = [
         img: '08'
       },
     ],
-    price: 42000,
+    price: 47200,
     sizes: ["860x2050", "960x2050"],
   },
   {
@@ -747,7 +747,7 @@ export const DB_Doors_Metal: TItemMetal[] = [
         img: '08'
       },
     ],
-    price: 42000,
+    price: 47200,
     sizes: ["860x2050", "960x2050"],
   },
   {
@@ -795,7 +795,7 @@ export const DB_Doors_Metal: TItemMetal[] = [
         img: '08'
       },
     ],
-    price: 42000,
+    price: 57200,
     sizes: ["860x2050", "960x2050"],
   },
   {
@@ -843,7 +843,7 @@ export const DB_Doors_Metal: TItemMetal[] = [
         img: '08'
       },
     ],
-    price: 42000,
+    price: 39200,
     sizes: ["860x2050", "960x2050"],
   },
   {
@@ -1019,60 +1019,60 @@ export const DB_Doors_Metal: TItemMetal[] = [
         img: '09'
       },
     ],
-    price: 42000,
+    price: 57200,
     sizes: ["860x2050", "960x2050"],
   },
-  {
-    kind: "TItemMetal",
-    name: "",
-    id: "1029",
-    priceCategory: "premium",
-    additional: {
-      appar: true,
-      mirror: true,
-      noise: true,
-      thermal: true,
-    },
-    insidePanels:[
-      {
-        name: '16мм, ПВХ софт грей, зеркало',
-        img: '01'
-      },
-      {
-        name: '10мм, бетон пепельный',
-        img: '02'
-      },
-      {
-        name: '10мм, белый матовый',
-        img: '03'
-      },
-      {
-        name: '10мм, ясень грей',
-        img: '04'
-      },
-      {
-        name: 'МДФ 10мм',
-        img: '05'
-      },
-      {
-        name: '10мм, ПВХ ясень белый',
-        img: '06'
-      },
-      {
-        name: '16мм, ПВХ ясень белый, зеркало',
-        img: '07'
-      },
-      {
-        name: '10мм, дуб с пилением',
-        img: '08'
-      },
-      {
-        name: '16мм, Грецкий орех + черная патина винорит',
-        img: '09'
-      },
-    ],
-    price: 42000,
-    sizes: ["860x2050", "960x2050"],
-  },
+  // {
+  //   kind: "TItemMetal",
+  //   name: "",
+  //   id: "1029",
+  //   priceCategory: "premium",
+  //   additional: {
+  //     appar: true,
+  //     mirror: true,
+  //     noise: true,
+  //     thermal: true,
+  //   },
+  //   insidePanels:[
+  //     {
+  //       name: '16мм, ПВХ софт грей, зеркало',
+  //       img: '01'
+  //     },
+  //     {
+  //       name: '10мм, бетон пепельный',
+  //       img: '02'
+  //     },
+  //     {
+  //       name: '10мм, белый матовый',
+  //       img: '03'
+  //     },
+  //     {
+  //       name: '10мм, ясень грей',
+  //       img: '04'
+  //     },
+  //     {
+  //       name: 'МДФ 10мм',
+  //       img: '05'
+  //     },
+  //     {
+  //       name: '10мм, ПВХ ясень белый',
+  //       img: '06'
+  //     },
+  //     {
+  //       name: '16мм, ПВХ ясень белый, зеркало',
+  //       img: '07'
+  //     },
+  //     {
+  //       name: '10мм, дуб с пилением',
+  //       img: '08'
+  //     },
+  //     {
+  //       name: '16мм, Грецкий орех + черная патина винорит',
+  //       img: '09'
+  //     },
+  //   ],
+  //   price: 42000,
+  //   sizes: ["860x2050", "960x2050"],
+  // },
   
 ];
