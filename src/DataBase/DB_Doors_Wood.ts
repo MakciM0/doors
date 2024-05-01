@@ -14,8 +14,8 @@ export const DB_Doors_Wood: TItemWood[] = [
     //   thermal: false,
     // },
 
-    price: 5500,
-    fullPrice: 10500,
+    price: 5000,
+    fullPrice: 9000,
     sizes: ["600x2000", "700x2000", "800x2000", "900x2000"],
     colors: [
       "bleachedOak",
@@ -47,8 +47,8 @@ export const DB_Doors_Wood: TItemWood[] = [
     //   thermal: false,
     // },
 
-    price: 6000, //Цена за потолно
-    fullPrice: 11500,//Цена за комплект
+    price: 5100, //Цена за потолно
+    fullPrice: 9100,//Цена за комплект
     sizes: ["600x2000", "700x2000", "800x2000", "900x2000"],
     colors: [
       "bleachedOak",
@@ -79,8 +79,8 @@ export const DB_Doors_Wood: TItemWood[] = [
     //   thermal: false,
     // },
 
-    price: 9000,
-    fullPrice: 14000,
+    price: 11900,
+    fullPrice: 16900,
     sizes: ["600x2000", "700x2000", "800x2000", "900x2000"],
     colors: [
       'emal'
@@ -99,8 +99,8 @@ export const DB_Doors_Wood: TItemWood[] = [
     //   mirror: false,
     // },
 
-    price: 15000,
-    fullPrice: 21000,
+    price: 16200,
+    fullPrice: 21700,
     sizes: ["600x2000", "700x2000", "800x2000", "900x2000"],
     colors: [
       "emal"
@@ -121,8 +121,8 @@ export const DB_Doors_Wood: TItemWood[] = [
     //   thermal: false,
     // },
 
-    price: 14000,
-    fullPrice: 20000,
+    price: 15200,
+    fullPrice: 20700,
     sizes: ["600x2000", "700x2000", "800x2000", "900x2000"],
     colors: [
       "emal"
@@ -143,8 +143,8 @@ export const DB_Doors_Wood: TItemWood[] = [
     //   thermal: false,
     // },
 
-    price: 18000,
-    fullPrice: 25000,
+    price: 16700,
+    fullPrice: 23200,
     sizes: ["600x2000", "700x2000", "800x2000", "900x2000"],
     colors: [
       "emal"
@@ -165,8 +165,8 @@ export const DB_Doors_Wood: TItemWood[] = [
     //   thermal: false,
     // },
 
-    price: 17000,
-    fullPrice: 24000,
+    price: 15700,
+    fullPrice: 22200,
     sizes: ["600x2000", "700x2000", "800x2000", "900x2000"],
     colors: [
       "emal"
@@ -189,7 +189,7 @@ export const DB_Doors_Wood: TItemWood[] = [
     // },
 
     price: 9000,
-    fullPrice: 15000,
+    fullPrice: 14000,
     sizes: ["600x2000", "700x2000", "800x2000", "900x2000"],
     colors: [
       "emal"
@@ -211,8 +211,8 @@ export const DB_Doors_Wood: TItemWood[] = [
     //   thermal: false,
     // },
 
-    price: 11000,
-    fullPrice: 16000,
+    price: 10000,
+    fullPrice: 15000,
     sizes: ["600x2000", "700x2000", "800x2000", "900x2000"],
     colors: [
       "emal"
@@ -226,8 +226,8 @@ export const DB_Doors_Wood: TItemWood[] = [
     name: "L-2 (стекло)",
     id: "0010",
     material: "эмаль",
-    price: 90010,
-    fullPrice: 5500,
+    price: 12200,
+    fullPrice: 17200,
     sizes: ["600x2000", "700x2000", "800x2000", "900x2000"],
     colors: [
       "emal"
@@ -241,8 +241,8 @@ export const DB_Doors_Wood: TItemWood[] = [
     name: "L-2",
     id: "0011",
     material: "эмаль",
-    price: 90011,
-    fullPrice: 5500,
+    price: 11200,
+    fullPrice: 16200,
     sizes: ["600x2000", "700x2000", "800x2000", "900x2000"],
     colors: [
       "emal"
@@ -256,8 +256,8 @@ export const DB_Doors_Wood: TItemWood[] = [
     name: "LINE",
     id: "0012",
     material: "эмаль",
-    price: 90012,
-    fullPrice: 5500,
+    price: 11200,
+    fullPrice: 16200,
     sizes: ["600x2000", "700x2000", "800x2000", "900x2000"],
     colors: [
       "emal"
@@ -271,8 +271,8 @@ export const DB_Doors_Wood: TItemWood[] = [
     name: "ДП-46",
     id: "0013",
     material: "экошпон",
-    price: 90012,
-    fullPrice: 5500,
+    price: 11200,
+    fullPrice: 16200,
     sizes: ["600x2000", "700x2000", "800x2000", "900x2000"],
     colors: [
       "whiteSilk"
@@ -286,8 +286,8 @@ export const DB_Doors_Wood: TItemWood[] = [
     name: "ДП-61",
     id: "0014",
     material: "экошпон",
-    price: 90012,
-    fullPrice: 5500,
+    price: 11200,
+    fullPrice: 16200,
     sizes: ["600x2000", "700x2000", "800x2000", "900x2000"],
     colors: [
       "silverGray",
@@ -303,8 +303,8 @@ export const DB_Doors_Wood: TItemWood[] = [
     name: "ЛУ-45",
     id: "0015",
     material: "экошпон",
-    price: 90012,
-    fullPrice: 5500,
+    price: 7200,
+    fullPrice: 11200,
     sizes: ["600x2000", "700x2000", "800x2000", "900x2000"],
     colors: [
       "arctic",
@@ -320,8 +320,8 @@ export const DB_Doors_Wood: TItemWood[] = [
     name: "ЛУ-17",
     id: "0016",
     material: "экошпон",
-    price: 90012,
-    fullPrice: 5500,
+    price: 5800,
+    fullPrice: 9800,
     sizes: ["600x2000", "700x2000", "800x2000", "900x2000"],
     colors: [
       "darkNut",
@@ -343,8 +343,8 @@ export const DB_Doors_Wood: TItemWood[] = [
     name: "ЛУ-51",
     id: "0017",
     material: "эмалит",
-    price: 90012,
-    fullPrice: 5500,
+    price: 8000,
+    fullPrice: 13000,
     sizes: ["600x2000", "700x2000", "800x2000", "900x2000"],
     colors: [
       "emalit",
@@ -360,8 +360,8 @@ export const DB_Doors_Wood: TItemWood[] = [
     name: "ЛУ-52",
     id: "0018",
     material: "эмалит",
-    price: 90012,
-    fullPrice: 5500,
+    price: 9000,
+    fullPrice: 14000,
     sizes: ["600x2000", "700x2000", "800x2000", "900x2000"],
     colors: [
       "emalit",
@@ -377,8 +377,8 @@ export const DB_Doors_Wood: TItemWood[] = [
     name: "Скин-5",
     id: "0019",
     material: "эмаль",
-    price: 90012,
-    fullPrice: 5500,
+    price: 9200,
+    fullPrice: 14200,
     sizes: ["600x2000", "700x2000", "800x2000", "900x2000"],
     colors: [
       "emal"
@@ -392,8 +392,8 @@ export const DB_Doors_Wood: TItemWood[] = [
     name: "Флоренс",
     id: "0020",
     material: "экошпон",
-    price: 9000,
-    fullPrice: 5500,
+    price: 12700,
+    fullPrice: 19700,
     sizes: ["600x2000", "700x2000", "800x2000", "900x2000"],
     colors: [
       "lightGraySerena",

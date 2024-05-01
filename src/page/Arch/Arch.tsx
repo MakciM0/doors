@@ -36,7 +36,7 @@ const Arch: FC<ArchProps> = () => {
         </div> 
         <section id="palermo">
           <h2>Арки Палермо</h2>
-          <span>Цена</span>
+          <span>8000 руб.</span>
           <div className={styles.images}>
             {/* <div className={styles.item}>
               <h4>Цвет</h4>
@@ -81,7 +81,7 @@ const Arch: FC<ArchProps> = () => {
 
         <section id="roman">
           <h2>Арки Романские</h2>
-          <span>Цена</span>
+          <span>8000 руб.</span>
           <div className={styles.images}>
             {/* <div className={styles.item}>
               <h4>Название</h4>

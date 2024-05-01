@@ -37,7 +37,7 @@ const Laminate: FC<LaminateProps> = () => {
             <a href="#bastion">Ламинат «Бастион»</a>
             <a href="#perfect">Ламинат «Imperial Perfect»</a>
         </div> 
-        <div id="bastion" className={styles.item}>
+        {/* <div id="bastion" className={styles.item}>
           <div className={styles.info}>
             <div className={styles.text}>
               <h3>Ламинат Bastion </h3>
@@ -56,14 +56,14 @@ const Laminate: FC<LaminateProps> = () => {
             <img src="images/laminate/example01.5.jpg" alt="" />
             <img src="images/laminate/example01.6.jpg" alt="" />
           </div>
-        </div>
+        </div> */}
 
 
         <div id="perfect" className={styles.item}>
           <div className={styles.info}>
             <div className={styles.text}>
               <h3>Ламинат «Imperial Perfect»</h3>
-              <p>12мм.34класс. цена 1620м2</p>
+              <p>12мм.34класс. цена 1780м2</p>
             </div>
             <div className={styles.main}>
               {/* <img src="images/laminate/example01.jpg" alt="Ламинат Bastion" /> */}
