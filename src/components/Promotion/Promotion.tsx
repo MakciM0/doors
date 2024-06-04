@@ -2,8 +2,10 @@ import React, {FC, useEffect} from "react";
 
 import styles from './Promotion.module.scss'
 import { useLocation } from "react-router-dom";
+import { animateScroll as scroll } from "react-scroll";
 
 import Slider from 'react-slick';
+import { NavLink } from "react-router-dom";
 
 interface PromotionProps {
   
@@ -76,6 +78,10 @@ const Promotion: FC<PromotionProps> = () => {
     }
 }, [location,])
 
+const scrollToTop = () => {
+  scroll.scrollToTop();
+};
+
   return (
     <div className={styles.Promotion}>
       <div id='promotion' className={styles.title}>
@@ -143,6 +149,9 @@ const Promotion: FC<PromotionProps> = () => {
               <img src="/images/icons/promotion.png" alt=""></img>
             </div>
           </div>
+        </div>
+        <div className={styles.GoToSale}>
+          <NavLink onClick={() => scrollToTop()} to="/Sale"><span>Перейти к распродажам</span> <img src="images/main/sale.png" alt="распродажам" /></NavLink>
         </div>
       </div>
     </div>  

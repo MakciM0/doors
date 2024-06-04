@@ -13,6 +13,7 @@ import Arch from "./page/Arch/Arch";
 import Laminate from "./page/Laminate/Laminate";
 import Ceiling from "./page/Ceiling/Ceiling";
 import Cart from "./page/Cart/Cart";
+import Sale from "./page/Sale/Sale";
 
 
 function App() {
@@ -49,6 +50,10 @@ function App() {
             <Route
               path={"/Cart"}
               element={<Cart></Cart>}>
+            </Route>
+            <Route
+              path={"/Sale"}
+              element={<Sale></Sale>}>
             </Route>
         </Routes>
         <Footer></Footer>

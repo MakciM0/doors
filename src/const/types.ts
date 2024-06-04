@@ -96,3 +96,15 @@ export type TAcrhItem ={
   back_text: string,
 
 }
+
+export type TItemSale ={
+   id: number,
+   kind: 'wood' | 'metal',
+   name: string,
+   old_Price: number,
+   new_Price: number,
+   material: string,
+   color: string,
+   size: string,
+
+}

@@ -47,6 +47,24 @@
       .not_slider{
         display: none;
       }
+      .GoToSale{
+        
+        text-align: center;
+        margin-top: 50px;
+        a{
+          display: flex;
+          flex-direction: column;
+          span{
+            font-size: 22px;
+            color: var(--red-color);
+          }
+          img{
+            width: 400px;
+            margin: 0 auto;
+          }
+        }
+        
+      }
     }
   }
 
