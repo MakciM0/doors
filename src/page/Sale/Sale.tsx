@@ -39,7 +39,7 @@ const Sale: FC<SaleProps> = () => {
   <div className={styles.Sale}>
     <div className={styles.content}>
       <div className={styles.info}>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime suscipit, a ipsum itaque recusandae cupiditate libero eveniet velit, vero error sint deserunt debitis, quisquam laboriosam molestiae dolorem dignissimos facere. Possimus?</p>
+        <p>Вашему вниманию предлагается распродажа межкомнатных и металлических дверей, когда остаётся 1 дверь из модельного ряда, или с витрины,  или сняли с производства. Все двери в хорошем состоянии,  так же действует гарантия.</p>
       </div>
       <div className={styles.items}>
         {DB_Sale.map((item) =>(
@@ -50,12 +50,13 @@ const Sale: FC<SaleProps> = () => {
             <div className={styles.item_info}>
               {/* <h3>желез или межк + название</h3> */}
               <h3>{item.kind === "wood" ? 'Межкомнатная дверь ' + item.name : item.kind === "metal" ? 'Железная дверь ' + item.name : '' }</h3>
+              <p>{item.desc}</p>
               <div className={styles.prices}>
                 <p className={styles.old}>{item.old_Price} Руб.</p>
                 <p className={styles.new}>{item.new_Price} Руб.</p>
               </div>
-              <p>Материал : {item.material}</p>
-              <p>Цвет: {item.color}</p>
+              <p>{item.material}</p>
+              <p>{item.color}</p>
               <p>Размер: {item.size}</p>
               <p>Узнать больше по телефону +7 (910) 188-24-74</p>
             </div>
