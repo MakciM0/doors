@@ -25,18 +25,20 @@ const Cart: FC<CartProps> = () => {
   
     const sendEmail = (e : any) => {
       e.preventDefault();
-      // emailjs
-      //   .sendForm('service_eqebxuf', 'template_lk5d4yo', form.current, {
-      //     publicKey: 'SPc-lfJOCs1fz7svo',
-      //   })
-      //   .then(
-      //     () => {
-      //       console.log('SUCCESS!');
-      //     },
-      //     (error) => {
-      //       console.log('FAILED...', error.text);
-      //     },
-      //   );
+      emailjs
+        .sendForm('service_eqebxuf', 'template_lk5d4yo', form.current, {
+          publicKey: 'SPc-lfJOCs1fz7svo',
+        })
+        .then(
+          () => {
+            console.log('SUCCESS!');
+          },
+          (error) => {
+            console.log('FAILED...', error.text);
+          },
+        );
+        setOpenOrder(false)
+        alert("Заказ отправлен")
         console.log(form.current)
     };
 
@@ -171,6 +173,7 @@ useEffect(() => {
             <label>Ваш Телефон</label> {/*Добавить на сайт*/}
             <input type="tel" name="user_phone" required />
             <label>Комментарий к заказу</label>
+            <input type="hidden" id="token" name="token"/>
             <textarea name="message" />{/*Добавить стили*/}
             <textarea name="order" className={styles.orderTextArea} value={orderText}/>
             <input type="submit" value="Сделать заказ" /> 

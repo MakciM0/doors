@@ -102,6 +102,7 @@ export type TItemSale ={
    kind: 'wood' | 'metal',
    name: string,
    desc: string,
+   addit_images: string,
    old_Price: number,
    new_Price: number,
    material: string,

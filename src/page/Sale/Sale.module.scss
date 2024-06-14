@@ -4,7 +4,12 @@
     max-width: var(--main-size);
     margin: 0 auto;
     .info{
-
+      padding-top: 10px;
+      text-align: center;
+      width: 60%;
+      margin: 0 auto;
+      font-size: 22px;
+      line-height: 30px;
     }
     .items{
       .item{
@@ -14,17 +19,20 @@
         justify-content: space-between;
         border-bottom: 2px solid var(--red-color);
         .item_img{
-          width: 40%;
+          width: 70%;
           text-align: center;
+          display: flex;
+          justify-content: space-between;
           img{
-            max-width: 100%;
+            max-width: 50%;
             max-height: 500px;
+            margin-left: 5px;
           }
         }
         .item_info{
           width: 60%;
-          padding-left: 100px;
-          padding-top: 110px;
+          padding-left: 50px;
+          padding-top: 50px;
           font-size: 18px;
           p{
             margin-bottom: 10px;

@@ -45,7 +45,8 @@ const Sale: FC<SaleProps> = () => {
         {DB_Sale.map((item) =>(
           <div className={styles.item}>
             <div className={styles.item_img}>
-              <img src={`images/doors/sale/door${item.id}.jpg`} alt="" /> 
+              <img src={`images/doors/sale/door${item.id}.jpg`} alt="" />
+              <img src={`images/doors/sale/door${item.id}_01.jpg`} alt="" />
             </div>
             <div className={styles.item_info}>
               {/* <h3>желез или межк + название</h3> */}

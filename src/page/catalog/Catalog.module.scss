@@ -185,3 +185,38 @@
     }
   }
 }
+
+@media screen and (max-width: 850px){
+  .catalog{
+    max-width: 100vw;
+    padding-left: 20px;
+    padding-right: 20px;
+    .filters{
+      ul{
+        .article{
+          li{
+            padding-left: 0px;
+          }
+        }
+      }
+    }
+    .shop{
+      .pagination_items{
+        justify-content: space-between;
+        .item{
+          text-align: center;
+          width: 40%;
+          img{
+            width: 100%;
+            height: auto;
+            margin: 0 auto;
+          }
+        }
+      }
+    } 
+  }
+  
+  
+  
+  
+}
